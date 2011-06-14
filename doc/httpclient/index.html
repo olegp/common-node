@@ -1,0 +1,275 @@
+<!DOCTYPE html >
+
+<html lang="de" dir="ltr">
+<head>
+    <title>httpclient - Common Node</title>
+    <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/jsdoc.css" />
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/jsdoc.js"></script>
+<script>
+$(document).ready(jsdocSetup);
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="main">
+        <div class="content">
+                    <h1 class="modulename">Module httpclient</h1>
+            <div class="fileoverview">
+                <p>HTTP Client as defined in 
+<a href="http://wiki.commonjs.org/wiki/HTTP_Client/A">CommonJS HTTP Client/A</a>.</p>
+
+
+            </div>
+
+            <div class="classoverview">
+
+                <div class="classes">
+                                        <h2>Class <a href="#HttpClient" class="jsdoc-title">HttpClient</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#HttpClient.prototype.connect" class="jsdoc-title"> connect</a>()
+                            </li>
+                                                        <li>
+                                <a href="#HttpClient.prototype.finish" class="jsdoc-title"> finish</a>()
+                            </li>
+                                                        <li>
+                                <a href="#HttpClient.prototype.read" class="jsdoc-title"> read</a>()
+                            </li>
+                                                        <li>
+                                <a href="#HttpClient.prototype.set" class="jsdoc-title"> set</a>(key, val)
+                            </li>
+                                                        <li>
+                                <a href="#HttpClient.prototype.setHeader" class="jsdoc-title"> setHeader</a>(key, val)
+                            </li>
+                                                        <li>
+                                <a href="#HttpClient.prototype.setHeaders" class="jsdoc-title"> setHeaders</a>(headers)
+                            </li>
+                                                        <li>
+                                <a href="#HttpClient.prototype.write" class="jsdoc-title"> write</a>(data)
+                            </li>
+                            </ul>
+                    </div>
+                    </div>
+            </div>
+                <hr/>
+                <div class="details">
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="HttpClient">
+                            <h3>
+                                <span class="itemtitle"><a id="HttpClient" href="#HttpClient" class="itemtitle itemname">HttpClient</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="HttpClient.prototype.connect">
+                            <h3>
+                                <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.connect" href="#HttpClient.prototype.connect" class="itemtitle itemname">connect</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Open the connection to the URL using the method supplied. If the method or url is missing, throw an error.
+After connecting, write() will have no effect.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="HttpClient.prototype.finish">
+                            <h3>
+                                <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.finish" href="#HttpClient.prototype.finish" class="itemtitle itemname">finish</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Alias for .connect().read()</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="HttpClient.prototype.read">
+                            <h3>
+                                <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.read" href="#HttpClient.prototype.read" class="itemtitle itemname">read</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Read the request and return a JSGI-style object consisting of 
+{status:Integer, headers:Objecct, body:Iterable<ByteString>}.
+Calling read() does block the application until the request is completed, 
+but it does open the input stream such that the data can be read.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="HttpClient.prototype.set">
+                            <h3>
+                                <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.set" href="#HttpClient.prototype.set" class="itemtitle itemname">set</a></span>
+                                <span class="itemtitle light">(key, val)</span></h3>
+                            <div>
+                                <p>Set the body, headers, method, or url, or any combination thereof in 
+the settings object. Attribute validity is enforced.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">key</td>
+                                        <td>one of body, headers, method or url</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">val</td>
+                                        <td>the value to set</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="HttpClient.prototype.setHeader">
+                            <h3>
+                                <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.setHeader" href="#HttpClient.prototype.setHeader" class="itemtitle itemname">setHeader</a></span>
+                                <span class="itemtitle light">(key, val)</span></h3>
+                            <div>
+                                <p>Set a header on the header object in a case-insensitive manner. 
+That is, if the user sets "content-type", and then later sets "Content-Type", then the first setting is lost.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">key</td>
+                                        <td>header name</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">val</td>
+                                        <td>header value</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="HttpClient.prototype.setHeaders">
+                            <h3>
+                                <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.setHeaders" href="#HttpClient.prototype.setHeaders" class="itemtitle itemname">setHeaders</a></span>
+                                <span class="itemtitle light">(headers)</span></h3>
+                            <div>
+                                <p>Set a bunch of headers expressed as name-value pairs.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">headers</td>
+                                        <td>headers to set</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="HttpClient.prototype.write">
+                            <h3>
+                                <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.write" href="#HttpClient.prototype.write" class="itemtitle itemname">write</a></span>
+                                <span class="itemtitle light">(data)</span></h3>
+                            <div>
+                                <p>Append data to the outgoing request, that is, to the iterable body object.
+This method return an error if a body was provided earlier via settings
+that does not implement push.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">data</td>
+                                        <td>{Binary} object to write</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+    <div class="menu" style="margin-top: 1em; font-size: 13px;">
+    <p>
+        <a class="repositoryname" href="../index.html">Common Node </a>
+    </p>
+
+        Filter:<br />
+    <input id="jsdoc-leftnavsearch" type="search" size="14">
+    <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../assert/index.html"> assert </a></li>
+                <li><a href="../binary/index.html"> binary </a></li>
+                <li><a href="../fs/index.html"> fs </a></li>
+                <li><a href="../httpclient/index.html"> httpclient </a></li>
+                <li><a href="../io/index.html"> io </a></li>
+                <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../system/index.html"> system </a></li>
+                <li><a href="../test/index.html"> test </a></li>
+        </ul>
+
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+

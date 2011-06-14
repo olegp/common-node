@@ -8,20 +8,24 @@
   <style type="text/css">
     body {
       margin-top: 1.0em;
-      background-color: #ebc610;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
+      background: none repeat scroll 0 0 #22252A;
+      font-family: sans-serif;
+      font-size: 0.8em;
+      color: #EEEEEE;
     }
     #container {
       margin: 0 auto;
       width: 700px;
     }
-    h1 { font-size: 3.8em; color: #1439ef; margin-bottom: 3px; }
+    h1 { font-size: 3.8em; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #1439ef; }
-    h3 { text-align: center; color: #1439ef; }
-    a { color: #1439ef; }
+    h2 { font-size: 1.5em; }
+    h3 { text-align: center; }
+    a {
+      color: #CCDD55;
+      text-decoration: none;
+    }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
     pre { background: #000; color: #fff; padding: 15px;}
@@ -42,18 +46,40 @@
         <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
 
-    <h1><a href="http://github.com/olegp/common-node">common-node</a>
-      <span class="small">by <a href="http://github.com/olegp">olegp</a></span></h1>
+    <h1><a href="http://github.com/olegp/common-node">Common Node</a></h1>
 
     <div class="description">
       Synchronous CommonJS compatibility layer using node-fibers
     </div>
+    <p>This package implements a number of <a href="http://www.commonjs.org">CommonJS</a> proposals on top of <a href="http://nodejs.org">Node.js</a> using <a href="https://github.com/laverdet/node-fibers">node-fibers</a>. Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:</p>
+    <ul>
+    <li>write fast CRUD webapps that run on Node.js without callback spaghetti</li>
+    <li>run webapps, middleware and libraries written for <a href="http://ringojs.org">RingoJS</a> and <a href="http://wiki.commonjs.org/wiki/Implementations">other implementations</a>
+    </li>
+    <li>mix &amp; match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner</li>
+    <li>write concise, legible shell scripts</li>
 
-    <h2>Authors</h2>
-<p>Oleg Podsechin (oleg@ionsquare.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Oleg Podsechin (oleg@ionsquare.com)<br/>      </p>
+    </ul><p>The following modules are included:</p>
 
+    <ul>
+    <li>assert - <a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.0">Unit Testing/1.0</a> &amp; a suite for running tests</li>
+    <li>console - <a href="http://wiki.commonjs.org/wiki/Console">Console</a> - partial implementation available in Node</li>
+    <li>system - <a href="http://wiki.commonjs.org/wiki/System/1.0">System/1.0</a> &amp; methods for managing threads and child processes</li>
+
+    <li>binary - <a href="http://wiki.commonjs.org/wiki/Binary/B">Binary/B</a>
+    </li>
+    <li>io - <a href="http://wiki.commonjs.org/wiki/IO/A">IO/A</a>, including a <code>ByteArray</code> backed <code>MemoryStream</code>
+    </li>
+    <li>fs - <a href="http://wiki.commonjs.org/wiki/Filesystem/A">Filesystem/A</a> (partial implementation)</li>
+
+    <li>jsgi - <a href="http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2">JSGI 0.3</a>
+    </li>
+    <li>httpclient - <a href="http://wiki.commonjs.org/wiki/HTTP_Client/A">HTTP Client/A</a>
+    </li>
+    </ul>
+   
+    <p><a href="https://github.com/olegp/common-node#readme">Read More...</a>
+    </p>
 
     <h2>Download</h2>
     <p>
@@ -65,11 +91,7 @@
       by running:
       <pre>$ git clone git://github.com/olegp/common-node</pre>
     </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/olegp/common-node">olegp/common-node</a>
-    </div>
-
+    
   </div>
 
   

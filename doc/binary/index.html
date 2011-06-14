@@ -1,0 +1,1916 @@
+<!DOCTYPE html >
+
+<html lang="de" dir="ltr">
+<head>
+    <title>binary - Common Node</title>
+    <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/jsdoc.css" />
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/jsdoc.js"></script>
+<script>
+$(document).ready(jsdocSetup);
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="main">
+        <div class="content">
+                    <h1 class="modulename">Module binary</h1>
+            <div class="fileoverview">
+                <p>Binary, ByteArray and ByteString classes as defined in 
+<a href="http://wiki.commonjs.org/wiki/Binary/B">CommonJS Binary/B</a>.</p>
+
+
+            </div>
+
+            <div class="classoverview">
+
+                <div class="classes">
+                                        <h2>Class <a href="#Binary" class="jsdoc-title">Binary</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#Binary.prototype.decodeToString" class="jsdoc-title"> decodeToString</a>(charset)
+                            </li>
+                                                        <li>
+                                <a href="#Binary.prototype.get" class="jsdoc-title"> get</a>(offset)
+                            </li>
+                                                        <li>
+                                <a href="#Binary.prototype.indexOf" class="jsdoc-title"> indexOf</a>(sequence, start, stop)
+                            </li>
+                                                        <li>
+                                <a href="#Binary.prototype.lastIndexOf" class="jsdoc-title"> lastIndexOf</a>(sequence, start, stop)
+                            </li>
+                                                        <li>
+                                <a href="#Binary.prototype.toArray" class="jsdoc-title"> toArray</a>(charset)
+                            </li>
+                            </ul>
+                    </div>
+                                        <h2>Class <a href="#ByteArray" class="jsdoc-title">ByteArray</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#ByteArray.prototype.concat" class="jsdoc-title"> concat</a>(arg...)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.copy" class="jsdoc-title"> copy</a>(start, end, target, targetOffset)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.decodeToString" class="jsdoc-title"> decodeToString</a>(encoding)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.every" class="jsdoc-title"> every</a>(callback, thisObj)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.filter" class="jsdoc-title"> filter</a>(callback, thisObj)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.forEach" class="jsdoc-title"> forEach</a>(fn, thisObj)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.indexOf" class="jsdoc-title"> indexOf</a>(sequence, start, stop)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.lastIndexOf" class="jsdoc-title"> lastIndexOf</a>(sequence, start, stop)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.map" class="jsdoc-title"> map</a>(callback, thisObj)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.pop" class="jsdoc-title"> pop</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.push" class="jsdoc-title"> push</a>(num...)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.reduce" class="jsdoc-title"> reduce</a>(callback, initialValue)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.reduceRight" class="jsdoc-title"> reduceRight</a>(callback, initialValue)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.reverse" class="jsdoc-title"> reverse</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.set" class="jsdoc-title"> set</a>(offset, value)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.shift" class="jsdoc-title"> shift</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.slice" class="jsdoc-title"> slice</a>(begin, end)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.some" class="jsdoc-title"> some</a>(callback, thisObj)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.sort" class="jsdoc-title"> sort</a>(compareFunction)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.splice" class="jsdoc-title"> splice</a>(index, howMany, elements...)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.split" class="jsdoc-title"> split</a>(delimiter, options)
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.toArray" class="jsdoc-title"> toArray</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.toByteArray" class="jsdoc-title"> toByteArray</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.toByteString" class="jsdoc-title"> toByteString</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.toString" class="jsdoc-title"> toString</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.unshift" class="jsdoc-title"> unshift</a>(num...)
+                            </li>
+                            </ul>
+                    </div>
+                                        <div>
+                        <h3>Instance Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#ByteArray.prototype.length" class="jsdoc-title"> length</a>
+                            </li>
+                                                        <li>
+                                <a href="#ByteArray.prototype.length" class="jsdoc-title"> length</a>
+                            </li>
+                            </ul>
+                    </div>
+                                        <h2>Class <a href="#ByteArray.prototype" class="jsdoc-title">ByteArray.prototype</a></h2>
+                                        <h2>Class <a href="#ByteString" class="jsdoc-title">ByteString</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#ByteString.prototype.byteAt" class="jsdoc-title"> byteAt</a>(offset)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.charAt" class="jsdoc-title"> charAt</a>(offset)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.charCodeAt" class="jsdoc-title"> charCodeAt</a>(offset)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.concat" class="jsdoc-title"> concat</a>(arg...)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.copy" class="jsdoc-title"> copy</a>(start, end, target, targetStart)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.decodeToString" class="jsdoc-title"> decodeToString</a>(charset)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.get" class="jsdoc-title"> get</a>(offset)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.indexOf" class="jsdoc-title"> indexOf</a>(sequence, start, stop)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.lastIndexOf" class="jsdoc-title"> lastIndexOf</a>(sequence, start, stop)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.slice" class="jsdoc-title"> slice</a>(begin, end)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.split" class="jsdoc-title"> split</a>(delimiter, options)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.toArray" class="jsdoc-title"> toArray</a>(charset)
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.toByteArray" class="jsdoc-title"> toByteArray</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.toByteString" class="jsdoc-title"> toByteString</a>()
+                            </li>
+                                                        <li>
+                                <a href="#ByteString.prototype.toString" class="jsdoc-title"> toString</a>()
+                            </li>
+                            </ul>
+                    </div>
+                                        <div>
+                        <h3>Instance Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#ByteString.prototype.length" class="jsdoc-title"> length</a>
+                            </li>
+                            </ul>
+                    </div>
+                                        <h2>Class <a href="#ByteString.prototype" class="jsdoc-title">ByteString.prototype</a></h2>
+                    </div>
+            </div>
+                <hr/>
+                <div class="details">
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Binary">
+                            <h3>
+                                <span class="itemtitle"><a id="Binary" href="#Binary" class="itemtitle itemname">Binary</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Abstract base class for ByteArray and ByteString</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Binary.prototype.decodeToString">
+                            <h3>
+                                <span class="itemtitle">Binary.prototype.<a id="Binary.prototype.decodeToString" href="#Binary.prototype.decodeToString" class="itemtitle itemname">decodeToString</a></span>
+                                <span class="itemtitle light">(charset)</span></h3>
+                            <div>
+                                <p>Returns this ByteString as string, decoded using the given charset.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">charset</td>
+                                        <td>the name of the string encoding</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Binary.prototype.get">
+                            <h3>
+                                <span class="itemtitle">Binary.prototype.<a id="Binary.prototype.get" href="#Binary.prototype.get" class="itemtitle itemname">get</a></span>
+                                <span class="itemtitle light">(offset)</span></h3>
+                            <div>
+                                <p>Returns the byte at the given offset.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">offset</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteString</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Binary.prototype.indexOf">
+                            <h3>
+                                <span class="itemtitle">Binary.prototype.<a id="Binary.prototype.indexOf" href="#Binary.prototype.indexOf" class="itemtitle itemname">indexOf</a></span>
+                                <span class="itemtitle light">(sequence, start, stop)</span></h3>
+                            <div>
+                                <p>Returns the index of the first occurrence of sequence (a Number or a
+ByteString or ByteArray of any length), or -1 if none was found. If start
+and/or stop are specified, only elements between the indexes start and stop
+are searched.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number|Binary</td>
+                                        <td class="paramname">sequence</td>
+                                        <td>the number or binary to look for</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">start</td>
+                                        <td>optional index position at which to start searching</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">stop</td>
+                                        <td>optional index position at which to stop searching</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the index of the first occurrence of sequence, or -1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Binary.prototype.lastIndexOf">
+                            <h3>
+                                <span class="itemtitle">Binary.prototype.<a id="Binary.prototype.lastIndexOf" href="#Binary.prototype.lastIndexOf" class="itemtitle itemname">lastIndexOf</a></span>
+                                <span class="itemtitle light">(sequence, start, stop)</span></h3>
+                            <div>
+                                <p>Returns the index of the last occurrence of sequence (a Number or a
+ByteString or ByteArray of any length) or -1 if none was found. If start
+and/or stop are specified, only elements between the indexes start and stop
+are searched.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number|Binary</td>
+                                        <td class="paramname">sequence</td>
+                                        <td>the number or binary to look for</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">start</td>
+                                        <td>optional index position at which to start searching</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">stop</td>
+                                        <td>optional index position at which to stop searching</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the index of the last occurrence of sequence, or -1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Binary.prototype.toArray">
+                            <h3>
+                                <span class="itemtitle">Binary.prototype.<a id="Binary.prototype.toArray" href="#Binary.prototype.toArray" class="itemtitle itemname">toArray</a></span>
+                                <span class="itemtitle light">(charset)</span></h3>
+                            <div>
+                                <p>Returns an array containing the bytes as numbers.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">charset</td>
+                                        <td>optional the name of the string encoding</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray">
+                            <h3>
+                                <span class="itemtitle"><a id="ByteArray" href="#ByteArray" class="itemtitle itemname">ByteArray</a></span>
+                                <span class="itemtitle light">(contentOrLength, [charset])</span></h3>
+                            <div>
+                                <p>Constructs a writable and growable byte array.</p>
+
+<p>If the first argument to this constructor is a number, it specifies
+the initial length of the ByteArray in bytes.</p>
+
+<p>Else, the argument defines the content of the ByteArray. If the argument
+is a String, the constructor requires a second argument containing the
+name of the String's encoding. If called without arguments, an empty ByteArray
+is returned.</p>
+
+<p>The constructor also accepts a <a href="http://nodejs.org/docs/v0.4.8/api/buffers.html#buffers">Node.js Buffer</a>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Binary|Array|String|Number|Buffer</td>
+                                        <td class="paramname">contentOrLength</td>
+                                        <td>content or length of the ByteArray.</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">[charset]</td>
+                                        <td>the encoding name if the first argument is a String.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.length">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.length" href="#ByteArray.prototype.length" class="itemtitle itemname">length</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype">
+                            <h3>
+                                <span class="itemtitle">ByteArray.<a id="ByteArray.prototype" href="#ByteArray.prototype" class="itemtitle itemname">prototype</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.concat">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.concat" href="#ByteArray.prototype.concat" class="itemtitle itemname">concat</a></span>
+                                <span class="itemtitle light">(arg...)</span></h3>
+                            <div>
+                                <p>Returns a ByteArray composed of itself concatenated with the given
+ByteString, ByteArray, and Array values.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Binary|Array</td>
+                                        <td class="paramname">arg...</td>
+                                        <td>one or more elements to concatenate</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteArray</td>
+                                        <td> a new ByteArray</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.copy">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.copy" href="#ByteArray.prototype.copy" class="itemtitle itemname">copy</a></span>
+                                <span class="itemtitle light">(start, end, target, targetOffset)</span></h3>
+                            <div>
+                                <p>Copy a range of bytes between start and stop from this object to another
+ByteArray at the given target offset.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">start</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">end</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>ByteArray</td>
+                                        <td class="paramname">target</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">targetOffset</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.decodeToString">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.decodeToString" href="#ByteArray.prototype.decodeToString" class="itemtitle itemname">decodeToString</a></span>
+                                <span class="itemtitle light">(encoding)</span></h3>
+                            <div>
+                                <p>Returns the ByteArray decoded to a String using the given encoding</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">encoding</td>
+                                        <td>the name of the encoding to use</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.every">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.every" href="#ByteArray.prototype.every" class="itemtitle itemname">every</a></span>
+                                <span class="itemtitle light">(callback, thisObj)</span></h3>
+                            <div>
+                                <p>Tests whether all elements in the array pass the test implemented by the
+provided function.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">callback</td>
+                                        <td>the callback function</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">thisObj</td>
+                                        <td>optional this-object for callback</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> true if every invocation of callback returns true</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.filter">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.filter" href="#ByteArray.prototype.filter" class="itemtitle itemname">filter</a></span>
+                                <span class="itemtitle light">(callback, thisObj)</span></h3>
+                            <div>
+                                <p>Return a ByteArray containing the elements of this ByteArray for which
+the callback function returns true.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">callback</td>
+                                        <td>the filter function</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">thisObj</td>
+                                        <td>optional this-object for callback</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteArray</td>
+                                        <td> a new ByteArray</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.forEach">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.forEach" href="#ByteArray.prototype.forEach" class="itemtitle itemname">forEach</a></span>
+                                <span class="itemtitle light">(fn, thisObj)</span></h3>
+                            <div>
+                                <p>Apply a function for each element in the ByteArray.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">fn</td>
+                                        <td>the function to call for each element</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">thisObj</td>
+                                        <td>optional this-object for callback</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.indexOf">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.indexOf" href="#ByteArray.prototype.indexOf" class="itemtitle itemname">indexOf</a></span>
+                                <span class="itemtitle light">(sequence, start, stop)</span></h3>
+                            <div>
+                                <p>Returns the index of the first occurrence of sequence (a Number or a
+ByteString or ByteArray of any length) or -1 if none was found. If start
+and/or stop are specified, only elements between the indexes start and stop
+are searched.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number|Binary</td>
+                                        <td class="paramname">sequence</td>
+                                        <td>the number or binary to look for</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">start</td>
+                                        <td>optional index position at which to start searching</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">stop</td>
+                                        <td>optional index position at which to stop searching</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the index of the first occurrence of sequence, or -1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.lastIndexOf">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.lastIndexOf" href="#ByteArray.prototype.lastIndexOf" class="itemtitle itemname">lastIndexOf</a></span>
+                                <span class="itemtitle light">(sequence, start, stop)</span></h3>
+                            <div>
+                                <p>Returns the index of the last occurrence of sequence (a Number or a
+ByteString or ByteArray of any length) or -1 if none was found. If start
+and/or stop are specified, only elements between the indexes start and stop
+are searched.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number|Binary</td>
+                                        <td class="paramname">sequence</td>
+                                        <td>the number or binary to look for</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">start</td>
+                                        <td>optional index position at which to start searching</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">stop</td>
+                                        <td>optional index position at which to stop searching</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the index of the last occurrence of sequence, or -1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.length">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.length" href="#ByteArray.prototype.length" class="itemtitle itemname">length</a></span>
+                                </h3>
+                            <div>
+                                <p>The length in bytes. This property is writable. Setting it to a value higher
+than the current value fills the new slots with 0, setting it to a lower
+value truncates the byte array.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.map">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.map" href="#ByteArray.prototype.map" class="itemtitle itemname">map</a></span>
+                                <span class="itemtitle light">(callback, thisObj)</span></h3>
+                            <div>
+                                <p>Returns a new ByteArray whose content is the result of calling the provided
+function with every element of the original ByteArray</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">callback</td>
+                                        <td>the callback</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">thisObj</td>
+                                        <td>optional this-object for callback</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteArray</td>
+                                        <td> a new ByteArray</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.pop">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.pop" href="#ByteArray.prototype.pop" class="itemtitle itemname">pop</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Removes the last element from an array and returns that element.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.push">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.push" href="#ByteArray.prototype.push" class="itemtitle itemname">push</a></span>
+                                <span class="itemtitle light">(num...)</span></h3>
+                            <div>
+                                <p>Appends the given elements and returns the new length of the array.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">num...</td>
+                                        <td>one or more numbers to append</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the new length of the ByteArray</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.reduce">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.reduce" href="#ByteArray.prototype.reduce" class="itemtitle itemname">reduce</a></span>
+                                <span class="itemtitle light">(callback, initialValue)</span></h3>
+                            <div>
+                                <p>Apply a function to each element in this ByteArray as to reduce its content
+to a single value.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">callback</td>
+                                        <td>the function to call with each element of the
+       ByteArray</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">initialValue</td>
+                                        <td>optional argument to be used as the first argument to
+       the first call to the callback</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>the return value of the last callback invocation</td>
+                                    </tr>
+                                </table>
+                            </div>
+                                                        <div>
+                                <h4>See</h4>
+                                <div class="extrainfo">
+                                    <a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Array/reduce">https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Array/reduce</a>
+                                </div>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.reduceRight">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.reduceRight" href="#ByteArray.prototype.reduceRight" class="itemtitle itemname">reduceRight</a></span>
+                                <span class="itemtitle light">(callback, initialValue)</span></h3>
+                            <div>
+                                <p>Apply a function to each element in this ByteArray starting at the last
+element as to reduce its content to a single value.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">callback</td>
+                                        <td>the function to call with each element of the
+       ByteArray</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">initialValue</td>
+                                        <td>optional argument to be used as the first argument to
+       the first call to the callback</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>the return value of the last callback invocation</td>
+                                    </tr>
+                                </table>
+                            </div>
+                                                        <div>
+                                <h4>See</h4>
+                                <div class="extrainfo">
+                                    <a href="#ByteArray.prototype.reduce">ByteArray.prototype.reduce</a><br /><a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Array/reduceRight">https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Array/reduceRight</a>
+                                </div>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.reverse">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.reverse" href="#ByteArray.prototype.reverse" class="itemtitle itemname">reverse</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Reverses the content of the ByteArray in-place</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteArray</td>
+                                        <td> this ByteArray with its elements reversed</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.set">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.set" href="#ByteArray.prototype.set" class="itemtitle itemname">set</a></span>
+                                <span class="itemtitle light">(offset, value)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">offset</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">value</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.shift">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.shift" href="#ByteArray.prototype.shift" class="itemtitle itemname">shift</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Removes the first element from the ByteArray and returns that element.
+This method changes the length of the ByteArray</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the removed first element</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.slice">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.slice" href="#ByteArray.prototype.slice" class="itemtitle itemname">slice</a></span>
+                                <span class="itemtitle light">(begin, end)</span></h3>
+                            <div>
+                                <p>Returns a new ByteArray containing a portion of this ByteArray.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">begin</td>
+                                        <td>Zero-based index at which to begin extraction.
+       As a negative index, begin indicates an offset from the end of the
+       sequence.</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">end</td>
+                                        <td> Zero-based index at which to end extraction.
+       slice extracts up to but not including end.
+       As a negative index, end indicates an offset from the end of the
+       sequence.
+       If end is omitted, slice extracts to the end of the sequence.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteArray</td>
+                                        <td> a new ByteArray</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.some">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.some" href="#ByteArray.prototype.some" class="itemtitle itemname">some</a></span>
+                                <span class="itemtitle light">(callback, thisObj)</span></h3>
+                            <div>
+                                <p>Tests whether some element in the array passes the test implemented by the
+provided function.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">callback</td>
+                                        <td>the callback function</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">thisObj</td>
+                                        <td>optional this-object for callback</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> true if at least one invocation of callback returns true</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.sort">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.sort" href="#ByteArray.prototype.sort" class="itemtitle itemname">sort</a></span>
+                                <span class="itemtitle light">(compareFunction)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">compareFunction</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.splice">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.splice" href="#ByteArray.prototype.splice" class="itemtitle itemname">splice</a></span>
+                                <span class="itemtitle light">(index, howMany, elements...)</span></h3>
+                            <div>
+                                <p>Changes the content of the ByteArray, adding new elements while removing old
+elements.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">index</td>
+                                        <td>the index at which to start changing the ByteArray</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">howMany</td>
+                                        <td>The number of elements to remove at the given
+       position</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">elements...</td>
+                                        <td>the new elements to add at the given position</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.split">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.split" href="#ByteArray.prototype.split" class="itemtitle itemname">split</a></span>
+                                <span class="itemtitle light">(delimiter, options)</span></h3>
+                            <div>
+                                <p>Split at delimiter, which can by a Number, a ByteString, a ByteArray or an
+Array of the prior (containing multiple delimiters, i.e., "split at any of
+these delimiters"). Delimiters can have arbitrary size.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number|Binary</td>
+                                        <td class="paramname">delimiter</td>
+                                        <td>one or more delimiter items</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">options</td>
+                                        <td>optional object parameter with the following
+       optional properties: <ul>
+       <li>count - Maximum number of elements (ignoring delimiters) to
+       return. The last returned element may contain delimiters.</li>
+       <li>includeDelimiter - Whether the delimiter should be included in
+       the result.</li></ul></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.toArray">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.toArray" href="#ByteArray.prototype.toArray" class="itemtitle itemname">toArray</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns an array containing the bytes as numbers.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.toByteArray">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.toByteArray" href="#ByteArray.prototype.toByteArray" class="itemtitle itemname">toByteArray</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.toByteString">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.toByteString" href="#ByteArray.prototype.toByteString" class="itemtitle itemname">toByteString</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.toString">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.toString" href="#ByteArray.prototype.toString" class="itemtitle itemname">toString</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns a String representation of the ByteArray.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteArray.prototype.unshift">
+                            <h3>
+                                <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.unshift" href="#ByteArray.prototype.unshift" class="itemtitle itemname">unshift</a></span>
+                                <span class="itemtitle light">(num...)</span></h3>
+                            <div>
+                                <p>Adds one or more elements to the beginning of the ByteArray and returns its
+new length.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">num...</td>
+                                        <td>one or more numbers to append</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the new length of the ByteArray</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString">
+                            <h3>
+                                <span class="itemtitle"><a id="ByteString" href="#ByteString" class="itemtitle itemname">ByteString</a></span>
+                                <span class="itemtitle light">(content, charset)</span></h3>
+                            <div>
+                                <p>Constructs an immutable byte string.</p>
+
+<p>If the first argument is a String, the constructor requires a second
+argument containing the name of the String's encoding. If called
+without arguments, an empty ByteString is returned.</p>
+
+<p>The constructor also accepts a <a href="http://nodejs.org/docs/v0.4.8/api/buffers.html#buffers">Node.js Buffer</a>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Binary|Array|String|Buffer</td>
+                                        <td class="paramname">content</td>
+                                        <td>the content of the ByteString.</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">charset</td>
+                                        <td>the encoding name if the first argument is a String.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.length">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.length" href="#ByteString.prototype.length" class="itemtitle itemname">length</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype">
+                            <h3>
+                                <span class="itemtitle">ByteString.<a id="ByteString.prototype" href="#ByteString.prototype" class="itemtitle itemname">prototype</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.byteAt">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.byteAt" href="#ByteString.prototype.byteAt" class="itemtitle itemname">byteAt</a></span>
+                                <span class="itemtitle light">(offset)</span></h3>
+                            <div>
+                                <p>Returns the byte at the given offset as a ByteString.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">offset</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.charAt">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.charAt" href="#ByteString.prototype.charAt" class="itemtitle itemname">charAt</a></span>
+                                <span class="itemtitle light">(offset)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">offset</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.charCodeAt">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.charCodeAt" href="#ByteString.prototype.charCodeAt" class="itemtitle itemname">charCodeAt</a></span>
+                                <span class="itemtitle light">(offset)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">offset</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.concat">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.concat" href="#ByteString.prototype.concat" class="itemtitle itemname">concat</a></span>
+                                <span class="itemtitle light">(arg...)</span></h3>
+                            <div>
+                                <p>Returns a ByteString composed of itself concatenated with the given
+ByteString, ByteArray, and Array values.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Binary|Array</td>
+                                        <td class="paramname">arg...</td>
+                                        <td>one or more elements to concatenate</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteString</td>
+                                        <td> a new ByteString</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.copy">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.copy" href="#ByteString.prototype.copy" class="itemtitle itemname">copy</a></span>
+                                <span class="itemtitle light">(start, end, target, targetStart)</span></h3>
+                            <div>
+                                <p>Copy a range of bytes between start and stop from this ByteString to a
+target ByteArray at the given targetStart offset.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">start</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">end</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>ByteArray</td>
+                                        <td class="paramname">target</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">targetStart</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.decodeToString">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.decodeToString" href="#ByteString.prototype.decodeToString" class="itemtitle itemname">decodeToString</a></span>
+                                <span class="itemtitle light">(charset)</span></h3>
+                            <div>
+                                <p>Returns this ByteString as string, decoded using the given charset.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">charset</td>
+                                        <td>the name of the string encoding</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.get">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.get" href="#ByteString.prototype.get" class="itemtitle itemname">get</a></span>
+                                <span class="itemtitle light">(offset)</span></h3>
+                            <div>
+                                <p>Returns the byte at the given offset.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">offset</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteString</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.indexOf">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.indexOf" href="#ByteString.prototype.indexOf" class="itemtitle itemname">indexOf</a></span>
+                                <span class="itemtitle light">(sequence, start, stop)</span></h3>
+                            <div>
+                                <p>Returns the index of the first occurrence of sequence (a Number or a
+ByteString or ByteArray of any length), or -1 if none was found. If start
+and/or stop are specified, only elements between the indexes start and stop
+are searched.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number|Binary</td>
+                                        <td class="paramname">sequence</td>
+                                        <td>the number or binary to look for</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">start</td>
+                                        <td>optional index position at which to start searching</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">stop</td>
+                                        <td>optional index position at which to stop searching</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the index of the first occurrence of sequence, or -1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.lastIndexOf">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.lastIndexOf" href="#ByteString.prototype.lastIndexOf" class="itemtitle itemname">lastIndexOf</a></span>
+                                <span class="itemtitle light">(sequence, start, stop)</span></h3>
+                            <div>
+                                <p>Returns the index of the last occurrence of sequence (a Number or a
+ByteString or ByteArray of any length) or -1 if none was found. If start
+and/or stop are specified, only elements between the indexes start and stop
+are searched.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number|Binary</td>
+                                        <td class="paramname">sequence</td>
+                                        <td>the number or binary to look for</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">start</td>
+                                        <td>optional index position at which to start searching</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">stop</td>
+                                        <td>optional index position at which to stop searching</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> the index of the last occurrence of sequence, or -1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.slice">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.slice" href="#ByteString.prototype.slice" class="itemtitle itemname">slice</a></span>
+                                <span class="itemtitle light">(begin, end)</span></h3>
+                            <div>
+                                <p>Returns a new ByteString containing a portion of this ByteString.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">begin</td>
+                                        <td>Zero-based index at which to begin extraction.
+       As a negative index, begin indicates an offset from the end of the
+       sequence.</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">end</td>
+                                        <td>Zero-based index at which to end extraction. slice
+       extracts up to but not including end. As a negative index, end
+       indicates an offset from the end of the sequence. If end is omitted,
+       slice extracts to the end of the sequence.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteString</td>
+                                        <td> a new ByteString</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.split">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.split" href="#ByteString.prototype.split" class="itemtitle itemname">split</a></span>
+                                <span class="itemtitle light">(delimiter, options)</span></h3>
+                            <div>
+                                <p>Split at delimiter, which can by a Number, a ByteString, a ByteArray or an
+Array of the prior (containing multiple delimiters, i.e., "split at any of
+these delimiters"). Delimiters can have arbitrary size.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number|Binary</td>
+                                        <td class="paramname">delimiter</td>
+                                        <td>one or more delimiter items</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">options</td>
+                                        <td>optional object parameter with the following
+       optional properties: <ul>
+       <li>count - Maximum number of elements (ignoring delimiters) to
+       return. The last returned element may contain delimiters.</li>
+       <li>includeDelimiter - Whether the delimiter should be included in
+       the result.</li></ul></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.toArray">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.toArray" href="#ByteString.prototype.toArray" class="itemtitle itemname">toArray</a></span>
+                                <span class="itemtitle light">(charset)</span></h3>
+                            <div>
+                                <p>Returns an array containing the bytes as numbers.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">charset</td>
+                                        <td>optional the name of the string encoding</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.toByteArray">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.toByteArray" href="#ByteString.prototype.toByteArray" class="itemtitle itemname">toByteArray</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns a byte for byte copy of this immutable ByteString as a mutable
+ByteArray.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.toByteString">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.toByteString" href="#ByteString.prototype.toByteString" class="itemtitle itemname">toByteString</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns this ByteString itself.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="ByteString.prototype.toString">
+                            <h3>
+                                <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.toString" href="#ByteString.prototype.toString" class="itemtitle itemname">toString</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns a debug representation such as <code>"[ByteString 10]"</code> where 10 is the
+length of this ByteString.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+    <div class="menu" style="margin-top: 1em; font-size: 13px;">
+    <p>
+        <a class="repositoryname" href="../index.html">Common Node </a>
+    </p>
+
+        Filter:<br />
+    <input id="jsdoc-leftnavsearch" type="search" size="14">
+    <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../assert/index.html"> assert </a></li>
+                <li><a href="../binary/index.html"> binary </a></li>
+                <li><a href="../fs/index.html"> fs </a></li>
+                <li><a href="../httpclient/index.html"> httpclient </a></li>
+                <li><a href="../io/index.html"> io </a></li>
+                <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../system/index.html"> system </a></li>
+                <li><a href="../test/index.html"> test </a></li>
+        </ul>
+
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+
