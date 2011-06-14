@@ -82,5 +82,3 @@ Although `common-node` is optimized for developer efficiency rather than perform
   * Hannes Wallnoefer and others from [RingoJS](http://ringojs.org) - this project uses a number of its tests & the Ringo code was used as a starting point for some modules
   * Kris Kowal, Tom Robinson, Isaac Schlueter for [Narwhal](http://narwhaljs.org/) - this project used a number of its modules as a starting point and some methods in e.g. Binary have been copied as is
   * everybody on the [CommonJS](http://groups.google.com/group/commonjs) mailing list 
-
-![Analytics](http://in.getclicky.com/122924ns.gif)
