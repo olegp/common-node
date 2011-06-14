@@ -7,10 +7,10 @@ exports.app = function(request) {
     sleep(10000);
     console.log('Hello Server!');
   });
-	return {
-			status : 200,
-			headers : {},
-			body : ['Hello Client!\n']
+  return {
+      status : 200,
+      headers : {},
+      body : ['Hello Client!\n']
   };
 }
 
