@@ -34,7 +34,7 @@ To install the latest version of `common-node`, clone the repository (an npm pac
 
 Change to the package directory and run the "Hello World" example server:
 
-    cd common-node; node-sync examples/hello.js
+    cd common-node; node-fibers examples/hello.js
 
 To test that it's working as expected, make an HTTP request from another prompt:
 
@@ -64,11 +64,11 @@ Documentation is work in progress -  for the time being it is recommended that y
 
 To run the unit tests execute the following command:
 
-    node-sync test/all.js
+    node-fibers test/all.js
 
 You can also run individual tests, for example:
 
-    node-sync test/io.js
+    node-fibers test/io.js
 
 ### Benchmarks
 
