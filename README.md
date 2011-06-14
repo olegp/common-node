@@ -58,7 +58,7 @@ For more usage examples, please refer to the tests in the  [common-node/test](ht
 
 ### Documentation
 
-Documentation is work in progress -  for the time being it is recommended that you use the [RingoJS documentation](http://ringojs.org/api/master/) or the proposal wiki pages linked to in the introduction above.
+The API reference is available at <http://olegp.github.com/common-node/doc/>
 
 ### Tests
 
