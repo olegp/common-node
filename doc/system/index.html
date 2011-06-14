@@ -1,0 +1,310 @@
+<!DOCTYPE html >
+
+<html lang="de" dir="ltr">
+<head>
+    <title>system - Common Node</title>
+    <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/jsdoc.css" />
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/jsdoc.js"></script>
+<script>
+$(document).ready(jsdocSetup);
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="main">
+        <div class="content">
+                    <h1 class="modulename">Module system</h1>
+            <div class="fileoverview">
+                <p>System module
+compliant with the <a href="http://wiki.commonjs.org/wiki/System/1.0">CommonJS
+System/1.0</a> specification. Includes additional non-standard methods for sleeping on the current thread,
+spawning a new thread and spawning processes are provided.</p>
+
+
+            </div>
+
+            <div class="classoverview">
+
+                                <div>
+                    <h3>Functions</h3>
+                    <ul class="propertyoverview">
+                                                <li>
+                            <a href="#command" class="jsdoc-title"> command</a>()
+                        </li>
+                                                <li>
+                            <a href="#createProcess" class="jsdoc-title"> createProcess</a>()
+                        </li>
+                                                <li>
+                            <a href="#exit" class="jsdoc-title"> exit</a>(status)
+                        </li>
+                                                <li>
+                            <a href="#print" class="jsdoc-title"> print</a>()
+                        </li>
+                                                <li>
+                            <a href="#sleep" class="jsdoc-title"> sleep</a>(milliseconds)
+                        </li>
+                                                <li>
+                            <a href="#spawn" class="jsdoc-title"> spawn</a>(run)
+                        </li>
+                        </ul>
+                </div>
+                                <div>
+                    <h3>Properties</h3>
+                    <ul class="propertyoverview">
+                                                <li>
+                            <a href="#args" class="jsdoc-title"> args</a>
+                        </li>
+                                                <li>
+                            <a href="#env" class="jsdoc-title"> env</a>
+                        </li>
+                                                <li>
+                            <a href="#stderr" class="jsdoc-title"> stderr</a>
+                        </li>
+                                                <li>
+                            <a href="#stdin" class="jsdoc-title"> stdin</a>
+                        </li>
+                                                <li>
+                            <a href="#stdout" class="jsdoc-title"> stdout</a>
+                        </li>
+                        </ul>
+                </div>
+                <div class="classes">
+                    </div>
+            </div>
+                <hr/>
+                <div class="details">
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="args">
+                            <h3>
+                                <span class="itemtitle"><a id="args" href="#args" class="itemtitle itemname">args</a></span>
+                                </h3>
+                            <div>
+                                <p>An array of strings representing the command line arguments passed to the running script.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="command">
+                            <h3>
+                                <span class="itemtitle"><a id="command" href="#command" class="itemtitle itemname">command</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="createProcess">
+                            <h3>
+                                <span class="itemtitle"><a id="createProcess" href="#createProcess" class="itemtitle itemname">createProcess</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="env">
+                            <h3>
+                                <span class="itemtitle"><a id="env" href="#env" class="itemtitle itemname">env</a></span>
+                                </h3>
+                            <div>
+                                <p>An object containing our environment variables.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="exit">
+                            <h3>
+                                <span class="itemtitle"><a id="exit" href="#exit" class="itemtitle itemname">exit</a></span>
+                                <span class="itemtitle light">(status)</span></h3>
+                            <div>
+                                <p>Terminates the current process.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>number</td>
+                                        <td class="paramname">status</td>
+                                        <td>The exit status, defaults to 0.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="print">
+                            <h3>
+                                <span class="itemtitle"><a id="print" href="#print" class="itemtitle itemname">print</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>A utility function to write to stdout.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="sleep">
+                            <h3>
+                                <span class="itemtitle"><a id="sleep" href="#sleep" class="itemtitle itemname">sleep</a></span>
+                                <span class="itemtitle light">(milliseconds)</span></h3>
+                            <div>
+                                <p>Suspends the current process for the specified number of milliseconds.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">milliseconds</td>
+                                        <td>The number of milliseconds to sleep.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="spawn">
+                            <h3>
+                                <span class="itemtitle"><a id="spawn" href="#spawn" class="itemtitle itemname">spawn</a></span>
+                                <span class="itemtitle light">(run)</span></h3>
+                            <div>
+                                <p>Spawns a new thread.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">run</td>
+                                        <td>entry point of the new thread.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="stderr">
+                            <h3>
+                                <span class="itemtitle"><a id="stderr" href="#stderr" class="itemtitle itemname">stderr</a></span>
+                                </h3>
+                            <div>
+                                <p>A TextStream to write to stderr.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="stdin">
+                            <h3>
+                                <span class="itemtitle"><a id="stdin" href="#stdin" class="itemtitle itemname">stdin</a></span>
+                                </h3>
+                            <div>
+                                <p>A TextStream to read from stdin.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="stdout">
+                            <h3>
+                                <span class="itemtitle"><a id="stdout" href="#stdout" class="itemtitle itemname">stdout</a></span>
+                                </h3>
+                            <div>
+                                <p>A TextStream to write to stdout.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+    <div class="menu" style="margin-top: 1em; font-size: 13px;">
+    <p>
+        <a class="repositoryname" href="../index.html">Common Node </a>
+    </p>
+
+        Filter:<br />
+    <input id="jsdoc-leftnavsearch" type="search" size="14">
+    <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../assert/index.html"> assert </a></li>
+                <li><a href="../binary/index.html"> binary </a></li>
+                <li><a href="../fs/index.html"> fs </a></li>
+                <li><a href="../httpclient/index.html"> httpclient </a></li>
+                <li><a href="../io/index.html"> io </a></li>
+                <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../system/index.html"> system </a></li>
+                <li><a href="../test/index.html"> test </a></li>
+        </ul>
+
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+

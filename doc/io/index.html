@@ -1,0 +1,1233 @@
+<!DOCTYPE html >
+
+<html lang="de" dir="ltr">
+<head>
+    <title>io - Common Node</title>
+    <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/jsdoc.css" />
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/jsdoc.js"></script>
+<script>
+$(document).ready(jsdocSetup);
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="main">
+        <div class="content">
+                    <h1 class="modulename">Module io</h1>
+            <div class="fileoverview">
+                <p>Stream and TextStream classes as per
+<a href="http://wiki.commonjs.org/wiki/IO/A">CommonJS IO/A</a>
+as well as a ByteArray based in memory MemoryStream.</p>
+
+
+            </div>
+
+            <div class="classoverview">
+
+                <div class="classes">
+                                        <h2>Class <a href="#MemoryStream" class="jsdoc-title">MemoryStream</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#MemoryStream.prototype.close" class="jsdoc-title"> close</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.closed" class="jsdoc-title"> closed</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.flush" class="jsdoc-title"> flush</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.read" class="jsdoc-title"> read</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.readInto" class="jsdoc-title"> readInto</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.readable" class="jsdoc-title"> readable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.seekable" class="jsdoc-title"> seekable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.skip" class="jsdoc-title"> skip</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.writable" class="jsdoc-title"> writable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.write" class="jsdoc-title"> write</a>()
+                            </li>
+                            </ul>
+                    </div>
+                                        <div>
+                        <h3>Instance Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#MemoryStream.prototype.content" class="jsdoc-title"> content</a>
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.length" class="jsdoc-title"> length</a>
+                            </li>
+                                                        <li>
+                                <a href="#MemoryStream.prototype.position" class="jsdoc-title"> position</a>
+                            </li>
+                            </ul>
+                    </div>
+                                        <h2>Class <a href="#Stream" class="jsdoc-title">Stream</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#Stream.prototype.close" class="jsdoc-title"> close</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.closed" class="jsdoc-title"> closed</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.copy" class="jsdoc-title"> copy</a>(output)
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.flush" class="jsdoc-title"> flush</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.forEach" class="jsdoc-title"> forEach</a>(fn, [thisObj])
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.read" class="jsdoc-title"> read</a>(n)
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.readInto" class="jsdoc-title"> readInto</a>(buffer, begin, end)
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.readable" class="jsdoc-title"> readable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.seekable" class="jsdoc-title"> seekable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.skip" class="jsdoc-title"> skip</a>(num)
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.writable" class="jsdoc-title"> writable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.write" class="jsdoc-title"> write</a>(source, begin, end)
+                            </li>
+                                                        <li>
+                                <a href="#Stream.prototype.writeable" class="jsdoc-title"> writeable</a>()
+                            </li>
+                            </ul>
+                    </div>
+                                        <div>
+                        <h3>Instance Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#Stream.prototype.stream" class="jsdoc-title"> stream</a>
+                            </li>
+                            </ul>
+                    </div>
+                                        <h2>Class <a href="#TextStream" class="jsdoc-title">TextStream</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#TextStream.prototype.close" class="jsdoc-title"> close</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.copy" class="jsdoc-title"> copy</a>(output)
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.flush" class="jsdoc-title"> flush</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.forEach" class="jsdoc-title"> forEach</a>(callback, thisObj)
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.iterator" class="jsdoc-title"> iterator</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.next" class="jsdoc-title"> next</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.print" class="jsdoc-title"> print</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.read" class="jsdoc-title"> read</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.readInto" class="jsdoc-title"> readInto</a>(buffer)
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.readLine" class="jsdoc-title"> readLine</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.readLines" class="jsdoc-title"> readLines</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.readable" class="jsdoc-title"> readable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.seekable" class="jsdoc-title"> seekable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.writable" class="jsdoc-title"> writable</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.write" class="jsdoc-title"> write</a>()
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.writeLine" class="jsdoc-title"> writeLine</a>(line)
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.writeLines" class="jsdoc-title"> writeLines</a>(lines)
+                            </li>
+                            </ul>
+                    </div>
+                                        <div>
+                        <h3>Instance Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#TextStream.prototype.content" class="jsdoc-title"> content</a>
+                            </li>
+                                                        <li>
+                                <a href="#TextStream.prototype.raw" class="jsdoc-title"> raw</a>
+                            </li>
+                            </ul>
+                    </div>
+                    </div>
+            </div>
+                <hr/>
+                <div class="details">
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream">
+                            <h3>
+                                <span class="itemtitle"><a id="MemoryStream" href="#MemoryStream" class="itemtitle itemname">MemoryStream</a></span>
+                                <span class="itemtitle light">(bufferOrCapacity)</span></h3>
+                            <div>
+                                <p>In binary stream that reads from and/or writes to an in-memory byte array. If the stream
+is writable, its internal buffer will automatically on demand.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Binary|number</td>
+                                        <td class="paramname">bufferOrCapacity</td>
+                                        <td>the buffer to use, or the capacity of the buffer
+to allocate . If this is a number, a ByteArray with the given length is allocated.
+If this is a ByteArray, the resulting stream is both readable, writable, and seekable.
+If this is a ByteString, the resulting stream is readable and seekable but not writable.
+If undefined, a ByteArray of length 1024 is allocated as buffer.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.close">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.close" href="#MemoryStream.prototype.close" class="itemtitle itemname">close</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Closes the stream, freeing the resources it is holding.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.closed">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.closed" href="#MemoryStream.prototype.closed" class="itemtitle itemname">closed</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns true if the stream is closed, false otherwise.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.content">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.content" href="#MemoryStream.prototype.content" class="itemtitle itemname">content</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.flush">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.flush" href="#MemoryStream.prototype.flush" class="itemtitle itemname">flush</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.length">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.length" href="#MemoryStream.prototype.length" class="itemtitle itemname">length</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.position">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.position" href="#MemoryStream.prototype.position" class="itemtitle itemname">position</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.read">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.read" href="#MemoryStream.prototype.read" class="itemtitle itemname">read</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.readInto">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.readInto" href="#MemoryStream.prototype.readInto" class="itemtitle itemname">readInto</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.readable">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.readable" href="#MemoryStream.prototype.readable" class="itemtitle itemname">readable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.seekable">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.seekable" href="#MemoryStream.prototype.seekable" class="itemtitle itemname">seekable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.skip">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.skip" href="#MemoryStream.prototype.skip" class="itemtitle itemname">skip</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.writable">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.writable" href="#MemoryStream.prototype.writable" class="itemtitle itemname">writable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="MemoryStream.prototype.write">
+                            <h3>
+                                <span class="itemtitle">MemoryStream.prototype.<a id="MemoryStream.prototype.write" href="#MemoryStream.prototype.write" class="itemtitle itemname">write</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream">
+                            <h3>
+                                <span class="itemtitle"><a id="Stream" href="#Stream" class="itemtitle itemname">Stream</a></span>
+                                <span class="itemtitle light">(stream)</span></h3>
+                            <div>
+                                <p>This class implements an I/O stream used to read and write raw bytes.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">stream</td>
+                                        <td>a <a href="http://nodejs.org/docs/v0.4.8/api/streams.html#streams">Node.js Stream</a> that can be readable, writeable or both</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.stream">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.stream" href="#Stream.prototype.stream" class="itemtitle itemname">stream</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.close">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.close" href="#Stream.prototype.close" class="itemtitle itemname">close</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Closes the stream, freeing the resources it is holding.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.closed">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.closed" href="#Stream.prototype.closed" class="itemtitle itemname">closed</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns true if the stream has been closed, false otherwise.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.copy">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.copy" href="#Stream.prototype.copy" class="itemtitle itemname">copy</a></span>
+                                <span class="itemtitle light">(output)</span></h3>
+                            <div>
+                                <p>Reads all data available from this stream and writes the result to the
+given output stream, flushing afterwards. Note that this function does
+not close this stream or the output stream after copying.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Stream</td>
+                                        <td class="paramname">output</td>
+                                        <td>The target Stream to be written to.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.flush">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.flush" href="#Stream.prototype.flush" class="itemtitle itemname">flush</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Flushes the bytes written to the stream to the underlying medium.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.forEach">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.forEach" href="#Stream.prototype.forEach" class="itemtitle itemname">forEach</a></span>
+                                <span class="itemtitle light">(fn, [thisObj])</span></h3>
+                            <div>
+                                <p>Read all data from this stream and invoke function <code>fn</code> for each chunk of data read.
+The callback function is called with a ByteArray as single argument. Note that
+the stream is not closed after reading.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">fn</td>
+                                        <td>the callback function</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">[thisObj]</td>
+                                        <td>optional this-object to use for callback</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.read">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.read" href="#Stream.prototype.read" class="itemtitle itemname">read</a></span>
+                                <span class="itemtitle light">(n)</span></h3>
+                            <div>
+                                <p>Read up to n bytes from the stream, or until the end of the stream has been
+reached. If n is null, a block is read with a block-size specific to the
+underlying device. If n is not specified, the full stream is read until its
+end is reached. Reading from a stream where the end has been reached returns
+an empty ByteString.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">n</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>ByteString</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.readInto">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.readInto" href="#Stream.prototype.readInto" class="itemtitle itemname">readInto</a></span>
+                                <span class="itemtitle light">(buffer, begin, end)</span></h3>
+                            <div>
+                                <p>Read bytes from this stream into the given buffer. This method does
+<i>not</i> increase the length of the buffer.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>ByteArray</td>
+                                        <td class="paramname">buffer</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">begin</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">end</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> The number of bytes read or -1 if the end of the stream
+         has been reached</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.readable">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.readable" href="#Stream.prototype.readable" class="itemtitle itemname">readable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns true if the stream supports reading, false otherwise.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.seekable">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.seekable" href="#Stream.prototype.seekable" class="itemtitle itemname">seekable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns true if the stream is randomly accessible and supports the length
+and position properties, false otherwise.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.skip">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.skip" href="#Stream.prototype.skip" class="itemtitle itemname">skip</a></span>
+                                <span class="itemtitle light">(num)</span></h3>
+                            <div>
+                                <p>Try to skip over num bytes in the stream. Returns the number of acutal bytes skipped
+or throws an error if the operation could not be completed.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">num</td>
+                                        <td>bytes to skip</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Number</td>
+                                        <td> actual bytes skipped</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.writable">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.writable" href="#Stream.prototype.writable" class="itemtitle itemname">writable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns true if the stream supports writing, false otherwise.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.write">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.write" href="#Stream.prototype.write" class="itemtitle itemname">write</a></span>
+                                <span class="itemtitle light">(source, begin, end)</span></h3>
+                            <div>
+                                <p>Write bytes from b to this stream. If begin and end are specified, only the
+range starting at begin and ending before end is written.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Binary</td>
+                                        <td class="paramname">source</td>
+                                        <td>The source to be written from</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">begin</td>
+                                        <td>optional</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">end</td>
+                                        <td>optional</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Stream.prototype.writeable">
+                            <h3>
+                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.writeable" href="#Stream.prototype.writeable" class="itemtitle itemname">writeable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns true if the stream supports writing, false otherwise.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream">
+                            <h3>
+                                <span class="itemtitle"><a id="TextStream" href="#TextStream" class="itemtitle itemname">TextStream</a></span>
+                                <span class="itemtitle light">(io, options)</span></h3>
+                            <div>
+                                <p>A TextStream implements an I/O stream used to read and write strings. It
+wraps a raw Stream and exposes a similar interface.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Stream</td>
+                                        <td class="paramname">io</td>
+                                        <td>The raw Stream to be wrapped.</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">options</td>
+                                        <td>the options object. Supports the following properties:
+       <ul><li>charset: string containing the name of the encoding to use.
+           Defaults to "utf8".</li>
+       <li>newline: string containing the newline character sequence to use.
+           Defaults to "\n".</li>
+       <li>delimiter: string containing the delimiter to use in print().
+           Defaults to " ".</li></ul></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.close">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.close" href="#TextStream.prototype.close" class="itemtitle itemname">close</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>See <code>Stream.prototype.close</code>.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.content">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.content" href="#TextStream.prototype.content" class="itemtitle itemname">content</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.copy">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.copy" href="#TextStream.prototype.copy" class="itemtitle itemname">copy</a></span>
+                                <span class="itemtitle light">(output)</span></h3>
+                            <div>
+                                <p>Reads from this stream with <code>readLine</code>, writing the results to the
+target stream and flushing, until the end of this stream is reached.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">output</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.flush">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.flush" href="#TextStream.prototype.flush" class="itemtitle itemname">flush</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>See <code>Stream.prototype.flush</code>.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.forEach">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.forEach" href="#TextStream.prototype.forEach" class="itemtitle itemname">forEach</a></span>
+                                <span class="itemtitle light">(callback, thisObj)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">callback</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">thisObj</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.iterator">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.iterator" href="#TextStream.prototype.iterator" class="itemtitle itemname">iterator</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns this stream (which also is an Iterator).</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.next">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.next" href="#TextStream.prototype.next" class="itemtitle itemname">next</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns the next line of input without the newline. Throws
+<code>StopIteration</code> if the end of the stream is reached.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.print">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.print" href="#TextStream.prototype.print" class="itemtitle itemname">print</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Writes all argument values as a single line, delimiting the values using
+a single blank.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.raw">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.raw" href="#TextStream.prototype.raw" class="itemtitle itemname">raw</a></span>
+                                </h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.read">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.read" href="#TextStream.prototype.read" class="itemtitle itemname">read</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Read the full stream until the end is reached and return the data read
+as string.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>String</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.readInto">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.readInto" href="#TextStream.prototype.readInto" class="itemtitle itemname">readInto</a></span>
+                                <span class="itemtitle light">(buffer)</span></h3>
+                            <div>
+                                <p>Not implemented for TextStraim. Calling this method will raise an error.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">buffer</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.readLine">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.readLine" href="#TextStream.prototype.readLine" class="itemtitle itemname">readLine</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Reads a line from this stream. If the end of the stream is reached
+before any data is gathered, returns an empty string. Otherwise, returns
+the line including the newline.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>String</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.readLines">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.readLines" href="#TextStream.prototype.readLines" class="itemtitle itemname">readLines</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns an Array of Strings, accumulated by calling <code>readLine</code> until it
+returns an empty string. The returned array does not include the final
+empty string, but it does include a trailing newline at the end of every
+line.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.readable">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.readable" href="#TextStream.prototype.readable" class="itemtitle itemname">readable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>See <code>Stream.prototype.readable</code>.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.seekable">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.seekable" href="#TextStream.prototype.seekable" class="itemtitle itemname">seekable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Always returns false, as a TextStream is not randomly accessible.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.writable">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.writable" href="#TextStream.prototype.writable" class="itemtitle itemname">writable</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>See <code>Stream.prototype.writable</code>.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.write">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.write" href="#TextStream.prototype.write" class="itemtitle itemname">write</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.writeLine">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.writeLine" href="#TextStream.prototype.writeLine" class="itemtitle itemname">writeLine</a></span>
+                                <span class="itemtitle light">(line)</span></h3>
+                            <div>
+                                <p>Writes the given line, followed by a newline.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">line</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="TextStream.prototype.writeLines">
+                            <h3>
+                                <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.writeLines" href="#TextStream.prototype.writeLines" class="itemtitle itemname">writeLines</a></span>
+                                <span class="itemtitle light">(lines)</span></h3>
+                            <div>
+                                <p>Writens the given lines, terminating each line with a newline.</p>
+
+<p>This is a non-standard extension, not part of CommonJS IO/A.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">lines</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+    <div class="menu" style="margin-top: 1em; font-size: 13px;">
+    <p>
+        <a class="repositoryname" href="../index.html">Common Node </a>
+    </p>
+
+        Filter:<br />
+    <input id="jsdoc-leftnavsearch" type="search" size="14">
+    <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../assert/index.html"> assert </a></li>
+                <li><a href="../binary/index.html"> binary </a></li>
+                <li><a href="../fs/index.html"> fs </a></li>
+                <li><a href="../httpclient/index.html"> httpclient </a></li>
+                <li><a href="../io/index.html"> io </a></li>
+                <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../system/index.html"> system </a></li>
+                <li><a href="../test/index.html"> test </a></li>
+        </ul>
+
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+
