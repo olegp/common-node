@@ -7,9 +7,10 @@ This package implements a number of [CommonJS](http://www.commonjs.org) proposal
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
-The following modules are implemented:
+The following modules are included:
 
 * assert - [Unit Testing/1.0](http://wiki.commonjs.org/wiki/Unit_Testing/1.0) & a suite for running tests
+* console - [Console](http://wiki.commonjs.org/wiki/Console) - partial implementation available in Node
 * system - [System/1.0](http://wiki.commonjs.org/wiki/System/1.0) & methods for managing threads and child processes
 * binary - [Binary/B](http://wiki.commonjs.org/wiki/Binary/B)
 * io - [IO/A](http://wiki.commonjs.org/wiki/IO/A), including a `ByteArray` backed `MemoryStream`
@@ -19,7 +20,7 @@ The following modules are implemented:
 
 ### Installation
 
-If you don't already have them, install [Node](https://github.com/joyent/node/wiki/Installation) and the [Node Package Manager npm](http://npmjs.org):
+If you don't already have them, [install Node](https://github.com/joyent/node/wiki/Installation) and the [Node Package Manager npm](http://npmjs.org):
 
     curl http://npmjs.org/install.sh | sh
 
@@ -81,3 +82,5 @@ Although `common-node` is optimized for developer efficiency rather than perform
   * Hannes Wallnoefer and others from [RingoJS](http://ringojs.org) - this project uses a number of its tests & the Ringo code was used as a starting point for some modules
   * Kris Kowal, Tom Robinson, Isaac Schlueter for [Narwhal](http://narwhaljs.org/) - this project used a number of its modules as a starting point and some methods in e.g. Binary have been copied as is
   * everybody on the [CommonJS](http://groups.google.com/group/commonjs) mailing list 
+
+![Analytics](http://in.getclicky.com/122924ns.gif)
