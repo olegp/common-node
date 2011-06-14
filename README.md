@@ -45,7 +45,7 @@ To install `common-node` as a global package:
 
 ### Examples
 
-A number of examples are available in [common-node/examples](https://github.com/olegp/node-common/tree/master/examples):
+A number of examples are available in [common-node/examples](https://github.com/olegp/common-node/tree/master/examples):
 
   * `hello.js` - Hello World webapp using JSGI to return a simple text response
   * `static.js` - streams a static file as a response
@@ -53,7 +53,7 @@ A number of examples are available in [common-node/examples](https://github.com/
   * `sleep.js` -  sleeps for one second before returning a response
   * `spawn.js` -  spawns a new fiber which prints to stdout ten seconds after processing a request
 
-For more usage examples, please refer to the tests in the  [common-node/test](https://github.com/olegp/node-common/tree/master/test) directory.
+For more usage examples, please refer to the tests in the  [common-node/test](https://github.com/olegp/common-node/tree/master/test) directory.
 
 ### Documentation
 
@@ -71,7 +71,7 @@ You can also run individual tests, for example:
 
 ### Benchmarks
 
-Although `common-node` is optimized for developer efficiency rather than performance, a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/node-common/tree/master/benchmarks). A `common-node` version and an asynchronous version using Connect of each benchmark are provided. Results of these benchmarks will be included below.
+Although `common-node` is optimized for developer efficiency rather than performance, a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/common-node/tree/master/benchmarks). A `common-node` version and an asynchronous version using Connect of each benchmark are provided. Results of these benchmarks will be included below.
 
   * hello 
   * static
