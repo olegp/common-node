@@ -40,32 +40,38 @@
 
   <div id="container">
 
-    <div class="download">
-      <a href="http://github.com/olegp/common-node/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/olegp/common-node/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+  <div class="download">
+    <a href="http://github.com/olegp/common-node/zipball/master">
+      <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+    <a href="http://github.com/olegp/common-node/tarball/master">
+      <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+  </div>
 
-    <h1><a href="http://github.com/olegp/common-node">Common Node</a></h1>
+  <h1><a href="http://github.com/olegp/common-node">Common Node</a></h1>
 
-    <div class="description">
-      Synchronous CommonJS compatibility layer for Node.js
-    </div>
-    
-    <h2>Overview</h2>
-    <p>Common Node implements a number of <a href="http://www.commonjs.org">CommonJS</a> proposals on top of <a href="http://nodejs.org">Node.js</a> using <a href="https://github.com/laverdet/node-fibers">node-fibers</a>. By emulating multi-threading within a single process, you can now:</p>
-    <ul>
-    <li>write fast CRUD webapps that run on Node.js without messy callbacks</li>
-    <li>run apps, middleware and libs written for <a href="http://ringojs.org">RingoJS</a> &amp; <a href="http://wiki.commonjs.org/wiki/Implementations">other platforms</a>
-    </li>
-    <li>write concise, legible shell scripts in JavaScript</li>
-    <li>use the best tool for the job by writing maintainable business logic in a sync manner, even inside an async app</li>
-    </ul>
-        
-    <h2>Common Node versus plain Node</h2>
-    
-   <p>
+  <div class="description">
+    Synchronous CommonJS compatibility layer for Node.js
+  </div>
+ 
+  <div style="float: right; padding: 15px">
+  <a href="http://twitter.com/share" " class="twitter-share-button" data-text="common-node for #nodejs - you can have it both ways" data-count="vertical" data-via="olegpodsechin">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  </div>
+   
+  <h2>Overview</h2>
+
+  <p>
+  Common Node implements a number of <a href="http://www.commonjs.org">CommonJS</a> proposals on top of <a href="http://nodejs.org">Node.js</a> using <a href="https://github.com/laverdet/node-fibers">node-fibers</a>. By emulating multi-threading within a single process, you can now:</p>
+  <ul>
+  <li>write fast CRUD webapps that run on Node.js without messy callbacks</li>
+  <li>run apps, middleware and libs written for <a href="http://ringojs.org">RingoJS</a> &amp; <a href="http://wiki.commonjs.org/wiki/Implementations">other platforms</a>
+  </li>
+  <li>write concise, legible shell scripts in JavaScript</li>
+  <li>use the best tool for the job by writing maintainable business logic in a sync manner, even inside an async app</li>
+  </ul>
+      
+  <h2>Common Node versus plain Node</h2>
+  
+ <p>
 <pre style="width: 300px; float: left">
 var httpclient = require('httpclient');
 exports.app = function() {
@@ -110,28 +116,34 @@ http.createServer(function (req, res) {
 </pre>
 </p>
   
-    <h2>Get Started</h2>
-    <p><a href="https://github.com/olegp/common-node#readme">Install</a> Common Node,
-    check out more <a href="https://github.com/olegp/common-node/tree/master/examples">examples</a> or read the <a href="./doc/index.html">API reference</a>.
-    </p>
-    <p>For more background on each module, browse the CommonJS wiki pages:</p>
-    <ul>
-    <li>assert - <a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.0">Unit Testing/1.0</a> &amp; a suite for running tests</li>
-    <li>console - <a href="http://wiki.commonjs.org/wiki/Console">Console</a> - partial implementation available in Node</li>
-    <li>system - <a href="http://wiki.commonjs.org/wiki/System/1.0">System/1.0</a> &amp; methods for managing threads and child processes</li>
+  <h2>Get Started</h2>
+  <p><a href="https://github.com/olegp/common-node#readme">Install</a> Common Node,
+  check out more <a href="https://github.com/olegp/common-node/tree/master/examples">examples</a> or read the <a href="./doc/index.html">API reference</a>.
+  </p>
+  <p>For more background on each module, browse the CommonJS wiki pages:</p>
+  <ul>
+  <li>assert - <a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.0">Unit Testing/1.0</a> &amp; a suite for running tests</li>
+  <li>console - <a href="http://wiki.commonjs.org/wiki/Console">Console</a> - partial implementation available in Node</li>
+  <li>system - <a href="http://wiki.commonjs.org/wiki/System/1.0">System/1.0</a> &amp; methods for managing threads and child processes</li>
 
-    <li>binary - <a href="http://wiki.commonjs.org/wiki/Binary/B">Binary/B</a>
-    </li>
-    <li>io - <a href="http://wiki.commonjs.org/wiki/IO/A">IO/A</a>, including a <code>ByteArray</code> backed <code>MemoryStream</code>
-    </li>
-    <li>fs - <a href="http://wiki.commonjs.org/wiki/Filesystem/A">Filesystem/A</a> (partial implementation)</li>
+  <li>binary - <a href="http://wiki.commonjs.org/wiki/Binary/B">Binary/B</a>
+  </li>
+  <li>io - <a href="http://wiki.commonjs.org/wiki/IO/A">IO/A</a>, including a <code>ByteArray</code> backed <code>MemoryStream</code>
+  </li>
+  <li>fs - <a href="http://wiki.commonjs.org/wiki/Filesystem/A">Filesystem/A</a> (partial implementation)</li>
 
-    <li>jsgi - <a href="http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2">JSGI 0.3</a>
-    </li>
-    <li>httpclient - <a href="http://wiki.commonjs.org/wiki/HTTP_Client/A">HTTP Client/A</a>
-    </li>
-    </ul>
+  <li>jsgi - <a href="http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2">JSGI 0.3</a>
+  </li>
+  <li>httpclient - <a href="http://wiki.commonjs.org/wiki/HTTP_Client/A">HTTP Client/A</a>
+  </li>
+  </ul>
     
+  <p>
+  <!--
+  <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="40" show_faces="false" colorscheme="dark" font="verdana"></fb:like>  
+  <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="in/share" data-counter="right"></script>
+-->
+  </p>
 
   </div>
 
