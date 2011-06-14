@@ -1,0 +1,9 @@
+{
+  "name": "common-node",
+  "description": "Synchronous CommonJS compatibility layer using node-fibers",
+  "version": "0.1.0",
+  "author": "Oleg Podsechin <oleg@ionsquare.com>",
+  "repository": "git://github.com/olegp/common-node",
+  "main": "./lib/main.js",
+  "engines": { "node": ">= 0.4.0" }
+}
