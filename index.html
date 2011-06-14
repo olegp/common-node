@@ -10,7 +10,7 @@
       margin-top: 1.0em;
       background: none repeat scroll 0 0 #22252A;
       font-family: sans-serif;
-      font-size: 0.8em;
+      font-size: 1.0em;
       color: #EEEEEE;
     }
     #container {
@@ -26,6 +26,7 @@
       color: #CCDD55;
       text-decoration: none;
     }
+    li { margin: 10px 0; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
     pre { background: #000; color: #fff; padding: 15px;}
@@ -49,18 +50,71 @@
     <h1><a href="http://github.com/olegp/common-node">Common Node</a></h1>
 
     <div class="description">
-      Synchronous CommonJS compatibility layer using node-fibers
+      Synchronous CommonJS compatibility layer for Node.js
     </div>
-    <p>This package implements a number of <a href="http://www.commonjs.org">CommonJS</a> proposals on top of <a href="http://nodejs.org">Node.js</a> using <a href="https://github.com/laverdet/node-fibers">node-fibers</a>. Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:</p>
+    
+    <h2>Overview</h2>
+    <p>Common Node implements a number of <a href="http://www.commonjs.org">CommonJS</a> proposals on top of <a href="http://nodejs.org">Node.js</a> using <a href="https://github.com/laverdet/node-fibers">node-fibers</a>. By emulating multi-threading within a single process, you can now:</p>
     <ul>
-    <li>write fast CRUD webapps that run on Node.js without callback spaghetti</li>
-    <li>run webapps, middleware and libraries written for <a href="http://ringojs.org">RingoJS</a> and <a href="http://wiki.commonjs.org/wiki/Implementations">other implementations</a>
+    <li>write fast CRUD webapps that run on Node.js without messy callbacks</li>
+    <li>run apps, middleware and libs written for <a href="http://ringojs.org">RingoJS</a> &amp; <a href="http://wiki.commonjs.org/wiki/Implementations">other platforms</a>
     </li>
-    <li>mix &amp; match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner</li>
-    <li>write concise, legible shell scripts</li>
+    <li>write concise, legible shell scripts in JavaScript</li>
+    <li>use the best tool for the job by writing maintainable business logic in a sync manner, even inside an async app</li>
+    </ul>
+        
+    <h2>Common Node versus plain Node</h2>
+    
+   <p>
+<pre style="width: 300px; float: left">
+var httpclient = require('httpclient');
+exports.app = function() {
+  return { 
+    status : 200, 
+    headers : {}, 
+    body: new httpclient
+      .HttpClient({
+        url: 'http://google.com'
+      }).finish().body 
+  };
+}
 
-    </ul><p>The following modules are included:</p>
 
+
+
+
+
+
+
+</pre>
+<pre style="width: 300px; float: left; margin-left: 40px">
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {});
+  http.get({
+    host: 'google.com', 
+    port: 80, path: '/'}, 
+      function(r) {
+        var chunks = [];
+        r.on('data', function (chunk) {
+          chunks.push(chunk);
+        });
+        r.on('end', function() {
+          chunks.forEach(function(chunk) {
+            res.write(chunk);
+          });
+          res.end();
+        });
+    });
+}).listen(8080);
+</pre>
+</p>
+  
+    <h2>Get Started</h2>
+    <p><a href="https://github.com/olegp/common-node#readme">Install</a> Common Node,
+    check out more <a href="https://github.com/olegp/common-node/tree/master/examples">examples</a> or read the <a href="./doc/index.html">API reference</a>.
+    </p>
+    <p>For more background on each module, browse the CommonJS wiki pages:</p>
     <ul>
     <li>assert - <a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.0">Unit Testing/1.0</a> &amp; a suite for running tests</li>
     <li>console - <a href="http://wiki.commonjs.org/wiki/Console">Console</a> - partial implementation available in Node</li>
@@ -77,21 +131,8 @@
     <li>httpclient - <a href="http://wiki.commonjs.org/wiki/HTTP_Client/A">HTTP Client/A</a>
     </li>
     </ul>
-   
-    <p><a href="https://github.com/olegp/common-node#readme">Read More...</a>
-    </p>
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/olegp/common-node/zipball/master">zip</a> or
-      <a href="http://github.com/olegp/common-node/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/olegp/common-node</pre>
-    </p>
     
+
   </div>
 
 <script type="text/javascript">
