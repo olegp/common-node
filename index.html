@@ -92,6 +92,7 @@ exports.app = function() {
 
 
 
+
 </pre>
 <pre style="width: 300px; float: left; margin-left: 40px">
 var http = require('http');
@@ -106,9 +107,10 @@ http.createServer(function (req, res) {
           chunks.push(chunk);
         });
         r.on('end', function() {
-          chunks.forEach(function(chunk) {
-            res.write(chunk);
-          });
+          chunks.forEach(
+            function(chunk) {
+              res.write(chunk);
+            });
           res.end();
         });
     });
