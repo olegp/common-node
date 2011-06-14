@@ -3,7 +3,7 @@ var fs = require("../lib/fs");
 var ByteString = require('../lib/binary').ByteString;
 
 function getContents(file) {
-	return require("fs").readFileSync(file, "utf8");
+  return require("fs").readFileSync(file, "utf8");
 }
 
 function getRandomInt(min, max) {

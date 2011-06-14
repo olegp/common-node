@@ -6,11 +6,11 @@ var TextStream = io.TextStream;
 var ByteArray = require('../lib/binary').ByteArray;
 
 function getStream(file) {
-	return new Stream(fs.createReadStream(file));
+  return new Stream(fs.createReadStream(file));
 }
 
 function getContents(file) {
-	return fs.readFileSync(file, "utf8");
+  return fs.readFileSync(file, "utf8");
 }
 
 function getRandomInt(min, max) {
@@ -19,9 +19,9 @@ function getRandomInt(min, max) {
 
 /*
 exports.testNodeWriteStream = function() {
-	var io = new Stream(fs.createWriteStream('/tmp/test.txt'));
-	io.write(new ByteArray("Hello World " + new Date().getTime() + '\n'));
-	io.close();
+  var io = new Stream(fs.createWriteStream('/tmp/test.txt'));
+  io.write(new ByteArray("Hello World " + new Date().getTime() + '\n'));
+  io.close();
 }
 */
 
@@ -36,7 +36,7 @@ exports.testReadFixed = function() {
 }
 
 exports.testReadIndefinite = function() {
-		var resource = getContents('./lib/assert.js');
+    var resource = getContents('./lib/assert.js');
     var io = getStream('./lib/assert.js');
     var bytes = io.read();
     assert.strictEqual(bytes.length, resource.length);
@@ -44,7 +44,7 @@ exports.testReadIndefinite = function() {
 }
 
 exports.testReadBlock = function() {
-	var resource = getContents('./lib/assert.js');
+  var resource = getContents('./lib/assert.js');
   var io = getStream('./lib/assert.js');
   var bytes = io.read(null);
   //assert.notEqual(bytes.length, resource.length);
@@ -52,7 +52,7 @@ exports.testReadBlock = function() {
 
 
 exports.testStreamForEach = function() {
-		var resource = getContents('./lib/assert.js');
+    var resource = getContents('./lib/assert.js');
     var io = getStream('./lib/assert.js');
     var str = "";
     var read = 0;
@@ -65,7 +65,7 @@ exports.testStreamForEach = function() {
 }
 
 exports.testReadInto = function() {
-	var resource = getContents('./lib/assert.js');
+  var resource = getContents('./lib/assert.js');
   var io = getStream('./lib/assert.js');
   var bytes = new ByteArray(7);
   io.readInto(bytes);
@@ -73,7 +73,7 @@ exports.testReadInto = function() {
 }
 
 exports.testReadLine = function() {
-	var resource = getContents('./lib/assert.js');
+  var resource = getContents('./lib/assert.js');
   var io = new TextStream(getStream('./lib/assert.js'));
   var lines = io.readLines();
   assert.equal(lines.length, 475);
@@ -84,7 +84,7 @@ exports.testWrite = function() {
   var io = new Stream(fs.createWriteStream(file));
   io.write(new ByteArray('test'));
   io.flush();
-	io.close();
+  io.close();
   var resource = getContents(file);
   assert.strictEqual('test', resource);
 }
