@@ -19,7 +19,7 @@ The following modules are implemented:
 
 ### Installation
 
-If you don't already have it, install the [Node Package Manager](http://npmjs.org):
+If you don't already have them, install [Node](https://github.com/joyent/node/wiki/Installation) and the [Node Package Manager npm](http://npmjs.org):
 
     curl http://npmjs.org/install.sh | sh
 
