@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fs = require('fs-base');
 var assert = require("../lib/assert");
 var io = require('../lib/io');
 var Stream = io.Stream;
