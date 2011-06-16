@@ -1,5 +1,5 @@
-var assert = require("assert");
-var fs = require('fs');
+var assert = require('../../lib/assert');
+var fs = require('../../lib/fs-base');
 var separator = '/', roots = ['/'];
 
 var tests = [
