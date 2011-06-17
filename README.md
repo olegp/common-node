@@ -1,6 +1,8 @@
 # Common Node
 
-This package implements a number of [CommonJS](http://www.commonjs.org) proposals on top of [Node.js](http://nodejs.org) using [node-fibers](https://github.com/laverdet/node-fibers). Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:
+This package implements a number of [CommonJS](http://www.commonjs.org) 
+proposals on top of [Node.js](http://nodejs.org) using 
+[node-fibers](https://github.com/laverdet/node-fibers). Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:
 
 * write fast CRUD webapps that run on Node.js without callback spaghetti
 * run webapps, middleware and libraries written for [RingoJS](http://ringojs.org) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
@@ -76,6 +78,24 @@ Although `common-node` is optimized for developer efficiency rather than perform
 
   * hello 
   * static
+  
+### Contributing
+
+To contribute to this project, you can start by trying to run the tests on your system and posting your results (even all tests PASS) on the issue tracker.
+The installation of `node-fibers` has been particularly problematic,
+so if you run into problems with it, please post an issue on that project's [issue tracker](https://github.com/laverdet/node-fibers).
+
+If you run into any issues along the way, whether related to using this library
+in your own project or to the documentation, please post your comments on the issue tracker.
+
+The issue tracker is also a great place to contribute ideas and find out
+what development work needs doing.
+
+Finally, to find specific issues not listed on the tracker, you can run the following command from inside the `common-node` directory.
+
+    grep 'TODO' lib/*  
+
+To contribute code, fork the project, make and commit your changes and send a pull request.
 
 ### Acknowledgements
 
