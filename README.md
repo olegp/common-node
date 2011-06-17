@@ -11,7 +11,7 @@ proposals on top of [Node.js](http://nodejs.org) using
 
 The following modules are included:
 
-* assert - [Unit Testing/1.0](http://wiki.commonjs.org/wiki/Unit_Testing/1.0) & a suite for running tests
+* assert - [Unit Testing/1.0](httprin://wiki.commonjs.org/wiki/Unit_Testing/1.0) & a suite for running tests
 * console - [Console](http://wiki.commonjs.org/wiki/Console) - partial implementation available in Node
 * system - [System/1.0](http://wiki.commonjs.org/wiki/System/1.0) & methods for managing "threads" and child processes
 * binary - [Binary/B](http://wiki.commonjs.org/wiki/Binary/B)
@@ -75,23 +75,22 @@ You can also run individual tests or sets of tests, for example:
 
 ### Benchmarks
 
-Although `common-node` is optimized for developer efficiency rather than performance, a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/common-node/tree/master/benchmarks). A `common-node` version and an asynchronous version using Connect of each benchmark are provided. Results of these benchmarks will be included below.
+Although `common-node` is optimized for developer efficiency rather than performance, a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/common-node/tree/master/benchmarks). A `common-node` version and an asynchronous version using Connect of each benchmark are provided.
 
-  * hello - returns a dynamically generated string 
-  * static - returns a file served from the file system
+  * hello - returns a dynamically generated string; common is around 50% of plain, 66% of connect
+  * static - returns a file served from the file system; common is a few percent faster than connect
   * http - makes a request to google and returns the response
   
 ### Contributing
 
-To contribute to this project, you can start by trying to run the tests on your system and posting your results (even all tests PASS) on the issue tracker.
+To contribute to this project, you can start by trying to run the tests on your system and posting your results (even if all tests pass) on the issue tracker.
 The installation of `node-fibers` has been particularly problematic,
-so if you run into problems with it, please post an issue on that project's [issue tracker](https://github.com/laverdet/node-fibers).
+so if you run into problems with it, please post an issue on that project's [issue tracker](https://github.com/laverdet/node-fibers/issues/).
 
 If you run into any issues along the way, whether related to using this library
-in your own project or to the documentation, please post your comments on the issue tracker.
+in your own project or to the documentation, please post your comments on the [issue tracker](https://github.com/olegp/common-node/issues/).
 
-The issue tracker is also a great place to contribute ideas and find out
-what development work needs doing.
+The issue tracker is also a great place to contribute ideas and find out what needs doing.
 
 Finally, to find specific issues not listed on the tracker, you can run the following command from inside the `common-node` directory.
 

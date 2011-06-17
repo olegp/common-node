@@ -8,5 +8,5 @@ exports.app = function(request) {
 
 if (require.main === module) {
   //TODO get this to work globally as well
-  require('../lib/jsgi').run(exports);
+  require('../lib/jsgi').run(exports, 1443, {key: null, cert: null});
 }

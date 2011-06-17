@@ -1,6 +1,6 @@
-var assert = require("../lib/assert");
-var fs = require("../lib/fs-base");
-var ByteString = require('../lib/binary').ByteString;
+var assert = require("../../lib/assert");
+var fs = require("../../lib/fs-base");
+var ByteString = require('../../lib/binary').ByteString;
 
 function getContents(file) {
   return require("fs").readFileSync(file, "utf8");
@@ -10,6 +10,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+//TODO cleanup files after use, don't use tmp dir
 exports.testCopy = function() {
   var file1 = '/tmp/test' + getRandomInt(0, 1000000);
   var file2 = '/tmp/test' + getRandomInt(0, 1000000);
@@ -18,10 +19,6 @@ exports.testCopy = function() {
   var resource = getContents(file2);
   
   assert.strictEqual(resource, 'abcd');
-}
-
-exports.fail = function() {
-  throw new Error('done')
 }
 
 exports.testOpen = function() {
@@ -54,5 +51,5 @@ exports.testWrite = function() {
 }
 
 if (require.main == module) {
-  require("../lib/test").run(exports);
+  require("../../lib/test").run(exports);
 }
