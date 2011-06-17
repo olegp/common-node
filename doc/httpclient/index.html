@@ -54,6 +54,9 @@ $(document).ready(jsdocSetup);
                                 <a href="#HttpClient.prototype.setHeaders" class="jsdoc-title"> setHeaders</a>(headers)
                             </li>
                                                         <li>
+                                <a href="#HttpClient.prototype.setOption" class="jsdoc-title"> setOption</a>(key, val)
+                            </li>
+                                                        <li>
                                 <a href="#HttpClient.prototype.write" class="jsdoc-title"> write</a>(data)
                             </li>
                             </ul>
@@ -117,7 +120,7 @@ After connecting, write() will have no effect.</p>
                             <div>
                                 <p>Read the request and return a JSGI-style object consisting of 
 {status:Integer, headers:Objecct, body:Iterable<ByteString>}.
-Calling read() does block the application until the request is completed, 
+Calling read() does not block the application until the request is completed, 
 but it does open the input stream such that the data can be read.</p>
 
 
@@ -215,6 +218,36 @@ That is, if the user sets "content-type", and then later sets "Content-Type", th
 
                                         <!-- tpl-docitem -->
                     <div>
+                        <div class="docitem" docitem="HttpClient.prototype.setOption">
+                            <h3>
+                                <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.setOption" href="#HttpClient.prototype.setOption" class="itemtitle itemname">setOption</a></span>
+                                <span class="itemtitle light">(key, val)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">key</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">val</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
                         <div class="docitem" docitem="HttpClient.prototype.write">
                             <h3>
                                 <span class="itemtitle">HttpClient.prototype.<a id="HttpClient.prototype.write" href="#HttpClient.prototype.write" class="itemtitle itemname">write</a></span>
@@ -256,7 +289,7 @@ that does not implement push.</p>
     <ul class="jsdoc-leftnav leftnav">
                 <li><a href="../assert/index.html"> assert </a></li>
                 <li><a href="../binary/index.html"> binary </a></li>
-                <li><a href="../fs/index.html"> fs </a></li>
+                <li><a href="../fs-base/index.html"> fs-base </a></li>
                 <li><a href="../httpclient/index.html"> httpclient </a></li>
                 <li><a href="../io/index.html"> io </a></li>
                 <li><a href="../jsgi/index.html"> jsgi </a></li>
