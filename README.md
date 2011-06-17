@@ -4,7 +4,7 @@ This package implements a number of [CommonJS](http://www.commonjs.org)
 proposals on top of [Node.js](http://nodejs.org) using 
 [node-fibers](https://github.com/laverdet/node-fibers). Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:
 
-* write fast CRUD webapps that run on Node.js without callback spaghetti
+* write fast CRUD webapps that run on Node.js without messy callbacks
 * run webapps, middleware and libraries written for [RingoJS](http://ringojs.org) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
@@ -16,7 +16,7 @@ The following modules are included:
 * system - [System/1.0](http://wiki.commonjs.org/wiki/System/1.0) & methods for managing "threads" and child processes
 * binary - [Binary/B](http://wiki.commonjs.org/wiki/Binary/B)
 * io - [IO/A](http://wiki.commonjs.org/wiki/IO/A), including a `ByteArray` backed `MemoryStream`
-* fs - [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A) (partial implementation)
+* fs - [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A)
 * jsgi - [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2)
 * httpclient - [HTTP Client/A](http://wiki.commonjs.org/wiki/HTTP_Client/A)
 
@@ -68,16 +68,18 @@ To run the unit tests execute the following command:
 
     node-fibers test/all.js
 
-You can also run individual tests, for example:
+You can also run individual tests or sets of tests, for example:
 
     node-fibers test/io.js
+    node-fibers test/fs-base/all.js
 
 ### Benchmarks
 
 Although `common-node` is optimized for developer efficiency rather than performance, a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/common-node/tree/master/benchmarks). A `common-node` version and an asynchronous version using Connect of each benchmark are provided. Results of these benchmarks will be included below.
 
-  * hello 
-  * static
+  * hello - returns a dynamically generated string 
+  * static - returns a file served from the file system
+  * http - makes a request to google and returns the response
   
 ### Contributing
 
@@ -95,7 +97,7 @@ Finally, to find specific issues not listed on the tracker, you can run the foll
 
     grep 'TODO' lib/*  
 
-To contribute code, fork the project, make and commit your changes and send a pull request.
+To contribute code: fork the project, make and commit your changes and send a pull request.
 
 ### Acknowledgements
 
