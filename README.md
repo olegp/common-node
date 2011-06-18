@@ -83,8 +83,7 @@ Although `common-node` is optimized for development efficiency rather than perfo
 To use the package in your async app, you will need to:
 
   * run your app with `node-fibers` instead of `node`
-  * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;`
-  * if you want to avoid requiring as above, you will need to run the following on initialization: `require.paths.push(path.dirname(require.resolve('common-node')));`
+  * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;` or run the following on initialization: `require.paths.push(path.dirname(require.resolve('common-node')));`
 
 ### Contributing
 
