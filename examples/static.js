@@ -1,13 +1,9 @@
-var openRaw = require('../lib/fs').openRaw;
+var openRaw = require('fs-base').openRaw;
 
 exports.app = function(request) {
   return {
     status: 200,
     headers: {},
-    body: openRaw('examples/static.js')
+    body: openRaw(module.filename)
   };
-}
-
-if (require.main === module) {
-  require('../lib/jsgi').run(exports);
 }

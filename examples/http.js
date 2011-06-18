@@ -1,4 +1,4 @@
-var HttpClient = require('../lib/httpclient').HttpClient;
+var HttpClient = require('httpclient').HttpClient;
 
 exports.app = function(request) {
   return {
@@ -6,8 +6,4 @@ exports.app = function(request) {
       headers : {},
       body : new HttpClient({url: 'http://google.com'}).finish().body
   };
-}
-
-if (require.main === module) {
-  require('../lib/jsgi').run(exports);
 }

@@ -1,4 +1,4 @@
-var system = require('../lib/system');
+var system = require('system');
 var spawn = system.spawn,
     sleep = system.sleep;
 
@@ -12,8 +12,4 @@ exports.app = function(request) {
       headers : {},
       body : ['Hello Client!\n']
   };
-}
-
-if (require.main === module) {
-  require('../lib/jsgi').run(exports);
 }

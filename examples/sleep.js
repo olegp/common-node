@@ -1,4 +1,4 @@
-var sleep = require('../lib/system').sleep;
+var sleep = require('system').sleep;
 
 exports.app = function(request) {
   sleep(1000);
@@ -7,8 +7,4 @@ exports.app = function(request) {
       headers : {},
       body : ['Hello Sleep!\n']
   };
-}
-
-if (require.main === module) {
-  require('../lib/jsgi').run(exports);
 }
