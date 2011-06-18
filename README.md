@@ -26,25 +26,22 @@ If you don't already have them, [install Node](https://github.com/joyent/node/wi
 
     curl http://npmjs.org/install.sh | sh
 
-Using `npm` install a global copy of `node-fibers` as root:
-
-    sudo npm install -g fibers 
-
-To install the latest version of `common-node`, clone the repository (an npm package will be made available once we have a stable release):
+Clone the repository (an npm package will be made available once we have a stable release):
 
     git clone git://github.com/olegp/common-node.git
+    
+To install `node-fibers` & `common-node` as global packages:
 
-Change to the package directory and run the "Hello World" example server:
+    sudo npm -g install fibers common-node  
 
-    cd common-node; node-fibers examples/hello.js
+Run the "Hello World" example:
 
-To test that it's working as expected, make an HTTP request from another prompt:
+    common-node common-node/examples/hello.js
+
+To test that it's working, make an HTTP request from another prompt:
 
     curl http://localhost:8080/
 
-To install `common-node` as a global package:
-
-    sudo npm -g install .
 
 ### Examples
 
