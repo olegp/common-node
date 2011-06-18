@@ -72,12 +72,20 @@ You can also run individual tests or sets of tests, for example:
 
 ### Benchmarks
 
-Although `common-node` is optimized for developer efficiency rather than performance, a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/common-node/tree/master/benchmarks). A `common-node` version and an asynchronous version using Connect of each benchmark are provided.
+Although `common-node` is optimized for development efficiency rather than performance, a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/common-node/tree/master/benchmarks). A `common-node` version and an asynchronous version using Connect of each benchmark are provided.
 
   * hello - returns a dynamically generated string; common is around 50% of plain, 66% of connect
   * static - returns a file served from the file system; common is a few percent faster than connect
   * http - makes a request to google and returns the response
   
+### Embedding
+
+To use the package in your async app, you will need to:
+
+  * run your app with `node-fibers` instead of `node`
+  * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;`
+  * if you want to avoid requiring as above, you will need to run the following on initialization: `require.paths.push(path.dirname(require.resolve('common-node')));`
+
 ### Contributing
 
 To contribute to this project, you can start by trying to run the tests on your system and posting your results (even if all tests pass) on the issue tracker.
