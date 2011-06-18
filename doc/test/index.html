@@ -50,7 +50,9 @@ $(document).ready(jsdocSetup);
                                 <span class="itemtitle"><a id="run" href="#run" class="itemtitle itemname">run</a></span>
                                 <span class="itemtitle light">(tests)</span></h3>
                             <div>
-                                <p>Runs the tests in the module provided.</p>
+                                <p>Runs the test function in the module provided. If the module
+doesn't export function, recursively looks inside the exported
+objects and runs them as tests as well. See 'test/all.js' for an example.</p>
 
 
                             </div>
@@ -82,6 +84,7 @@ $(document).ready(jsdocSetup);
         Filter:<br />
     <input id="jsdoc-leftnavsearch" type="search" size="14">
     <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../all/index.html"> all </a></li>
                 <li><a href="../assert/index.html"> assert </a></li>
                 <li><a href="../binary/index.html"> binary </a></li>
                 <li><a href="../fs-base/index.html"> fs-base </a></li>
