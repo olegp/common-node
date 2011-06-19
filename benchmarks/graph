@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+# based on http://github.com/senchalabs/connect/tree/master/benchmarks/
+
+COL=${COL-9}
+ABFLAGS=$(cat results/flags)
+
+# Log <msg ...>
+#
+# <msg ...>
+#
+
+log(){
+  echo "... $@"
+}
+
+#
+# Output gnuplot script for line graph.
+#
+# <title> <node> <connect>
+#
+
+function line() {
+  cat <<-EOF
+set terminal png # enhanced size 600 380 fname "Sans" fsize 11
+set output "results/graphs/$1.png"
+set title "$2 ($ABFLAGS)"
+# set size 0.97,0.97
+set grid y
+set key left top
+set xlabel "requests"
+set ylabel "response time (ms)"
+plot "$3" using $COL smooth sbezier with lines title "common", \\
+     "$4" using $COL smooth sbezier with lines title "connect", \\
+     "$5" using $COL smooth sbezier with lines title "ringo"
+EOF
+}
+
+#
+# Output gnuplot script for bar graph.
+#
+# <title> <node> <connect>
+#
+
+function bar() {
+cat <<-EOF
+set terminal png
+set output "results/graphs/$1.rps.png"
+set title "$1 $ABFLAGS"
+set size 0.7,0.5
+set grid y
+set key left top
+set ylabel "requests per second"
+plot "$1.rps.dat" using 2: xtic(1) with histogram title ""
+EOF
+}
+
+#
+# Graph the output of the given <dir>.
+#
+# <dir>
+#
+
+function graph(){
+  log graphing $1
+local dir=results/$1
+line $1 "$2" \
+$dir/common-node.dat \
+$dir/node.dat \
+$dir/ringo.dat \
+> results/$1.p
+gnuplot results/$1.p
+}
+
+# Make ./results/graphs
+mkdir -p results/graphs
+
+graph no-alloc "no alloc"
+graph hello "hello world"
+graph static "static file"
+

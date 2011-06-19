@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+# based on http://github.com/senchalabs/connect/tree/master/benchmarks/
+
+ABFLAGS=${ABFLAGS-"-n 50000 -c 50"}
+ADDR=${ADDR-http://0.0.0.0:8080/}
+AB=${AB-ab}
+
+#
+# Log <msg ...>
+#
+# <msg ...>
+#
+
+log(){
+  echo "... $@"
+}
+
+#
+# Benchmark the given <dir> and [path].
+#
+# <dir> [path]
+#
+
+bm(){
+   local dir=$1;
+   for platform in common-node node ringo
+   do
+       local flags=""
+       if [ $platform = "ringo" ]; then
+           # disable module reloading on ringo
+           flags="-p"
+       fi
+       $platform $flags $dir/$platform.js &
+       local pid=$!
+       sleep 2
+       local dirname=results/$dir
+       mkdir -p $dirname
+       # jvm needs warmup time to reach final speed. If you run smaller
+       # batches you'll need more runs for warmup.
+       for runs in {1..2}
+       do
+           $AB $ABFLAGS -g $dirname/$platform.dat $ADDR/$path > $dirname/$platform.out
+           sleep 1
+       done
+       log $(cat $dirname/$platform.out | grep Requests)
+       kill $pid
+       sleep 2
+   done
+}
+
+# Make ./results
+mkdir -p results
+
+# Store flags
+echo "$ABFLAGS" > results/flags
+
+# Run benchmarks
+log $AB $ABFLAGS $ADDR
+bm buffer-alloc
+bm hello-world
+bm no-alloc
+bm parse-json
+bm static-file /README.md
+bm string-alloc
+

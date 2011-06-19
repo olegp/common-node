@@ -8,7 +8,8 @@ if(process.argv.length < 2) {
   var path = require('path');
   var lib = path.resolve(path.dirname(module.filename), '../lib/');
   require.paths.push(lib);
-  require('system').spawn(function() {
+  require('global');
+  spawn(function() {
     var main = require(path.resolve(process.cwd(), process.argv[1]));
     if(main.app) {
       require('jsgi').run(main.app, process.argv[2] || 8080);
