@@ -5,7 +5,7 @@ proposals on top of [Node.js](http://nodejs.org) using
 [node-fibers](https://github.com/laverdet/node-fibers). Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:
 
 * write fast CRUD webapps that run on Node.js without messy callbacks
-* run webapps, middleware and libraries written for [RingoJS](http://ringojs.org) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
+* run webapps, middleware and [libraries](https://github.com/olegp/common-node/wiki) written for [RingoJS](http://ringojs.org) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
@@ -72,11 +72,33 @@ You can also run individual tests or sets of tests, for example:
 
 ### Benchmarks
 
-Although `common-node` is optimized for development efficiency rather than performance, a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/common-node/tree/master/benchmarks). A `common-node` version and an asynchronous version using Connect of each benchmark are provided.
+Although `common-node` is optimized for development efficiency rather than performance, 
+a number of benchmarks are included in [common-node/benchmarks](https://github.com/olegp/common-node/tree/master/benchmarks). 
+A `common-node` version, an asynchronous Node version using Connect & a RingoJS version of each benchmark is provided. 
+The scripts are based on the [Ringo/Node benchmark scripts](https://github.com/hns/ringo-node-benchmark), with a couple of additions.
 
-  * hello - returns a dynamically generated string; common is around 50% of plain, 66% of connect
-  * static - returns a file served from the file system; common is a few percent faster than connect
-  * http - makes a request to google and returns the response
+The benchmarks have the following dependencies:
+
+  * `connect` for Node which can be installed via npm
+  * `ringo` which can be installed by following the instructions in the (RingoJS repository)[https://github.com/ringo/ringojs]
+  * `ab` - installed with `sudo apt-get install apache2-utils` on Debian/Ubuntu
+  * `gnuplot` - installed with `sudo apt-get install gnuplot-nox`
+  
+To run them and generate graphs, execute the following command:
+
+    benchmarks/run; benchmarks graph
+    
+This will generate PNG images of the graphs in `benchmarks/results/graphs/`. Some results are provided below: 
+
+  * (buffer-alloc)[http://olegp.github.com/common-node/graphs/buffer-alloc.png]
+  * (hello-world)[http://olegp.github.com/common-node/graphs/hello-world.png]- returns a dynamically generated string
+  * (no-alloc)[http://olegp.github.com/common-node/graphs/no-alloc.png]
+  * (parse-json)[http://olegp.github.com/common-node/graphs/parse-json.png] 
+  * (static-file)[http://olegp.github.com/common-node/graphs/static-file.png] - returns a file served from the file system
+  * (string-alloc)[http://olegp.github.com/common-node/graphs/string-alloc.png]
+  
+As you can see from the results and given no profiling or optimization work has been so far, there's room for improvement. 
+Any patches or suggestions on how to improve performance would be greatly appreciated.
   
 ### Embedding
 

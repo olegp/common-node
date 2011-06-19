@@ -74,7 +74,11 @@ gnuplot results/$1.p
 # Make ./results/graphs
 mkdir -p results/graphs
 
+graph buffer-alloc "buffer alloc"
+graph hello-world "hello world"
 graph no-alloc "no alloc"
-graph hello "hello world"
-graph static "static file"
+graph parse-json "parse json"
+graph static-file "static file"
+graph string-alloc "string alloc"
+
 
