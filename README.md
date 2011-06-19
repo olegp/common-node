@@ -86,7 +86,7 @@ The benchmarks have the following dependencies:
   
 To run them and generate graphs, execute the following command:
 
-    benchmarks/run; benchmarks graph
+    cd benchmarks/; ./run; ./graph
     
 This will generate PNG images of the graphs in `benchmarks/results/graphs/`. Some results are provided below: 
 
