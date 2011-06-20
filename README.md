@@ -5,7 +5,7 @@ proposals on top of [Node.js](http://nodejs.org) using
 [node-fibers](https://github.com/laverdet/node-fibers). Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:
 
 * write fast CRUD webapps that run on Node.js without messy callbacks
-* run webapps, middleware and [libraries](https://github.com/olegp/common-node/wiki) written for [RingoJS](http://ringojs.org) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
+* run [webapps, middleware and libraries](https://github.com/olegp/common-node/wiki) written for [RingoJS](http://ringojs.org), [Narwhal](http://narwhaljs.org/), [Akshell](http://www.akshell.com) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
@@ -114,9 +114,7 @@ The installation of `node-fibers` has been particularly problematic,
 so if you run into problems with it, please post an issue on that project's [issue tracker](https://github.com/laverdet/node-fibers/issues/).
 
 If you run into any issues along the way, whether related to using this library
-in your own project or to the documentation, please post your comments on the [issue tracker](https://github.com/olegp/common-node/issues/).
-
-The issue tracker is also a great place to contribute ideas and find out what needs doing.
+in your own project or to the documentation, please post your comments on the [issue tracker](https://github.com/olegp/common-node/issues/). The tracker is also a great place to contribute ideas and find out what needs doing.
 
 Finally, to find specific issues not listed on the tracker, you can run the following command from inside the `common-node` directory.
 
