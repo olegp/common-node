@@ -94,6 +94,7 @@ This will generate PNG images of the graphs in `benchmarks/results/graphs/`. Som
   * [hello-world](http://olegp.github.com/common-node/graphs/hello-world.png) - returns a dynamically generated string
   * [no-alloc](http://olegp.github.com/common-node/graphs/no-alloc.png)
   * [parse-json](http://olegp.github.com/common-node/graphs/parse-json.png) 
+  * [set-timeout](http://olegp.github.com/common-node/graphs/set-timeout.png) - sleep for 100ms before returning a response
   * [static-file](http://olegp.github.com/common-node/graphs/static-file.png) - returns a file served from the file system
   * [string-alloc](http://olegp.github.com/common-node/graphs/string-alloc.png)
   
