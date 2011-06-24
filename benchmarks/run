@@ -60,6 +60,7 @@ bm buffer-alloc
 bm hello-world
 bm no-alloc
 bm parse-json
+bm set-timeout
 bm static-file /README.md
 bm string-alloc
 
