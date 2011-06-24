@@ -90,7 +90,7 @@ To run them and generate graphs, execute the following command:
     
 This will generate PNG images of the graphs in `benchmarks/results/graphs/`. Some results are provided below: 
 
-  * [buffer-alloc](http://olegp.github.com/common-node/graphs/buffer-alloc.png)
+  * [buffer-alloc](http://olegp.github.com/common-node/graphs/buffer-alloc.png) - creates a number of byte arrays per request; the difference in performance compared to Node is due to the [array being cleared](https://github.com/olegp/common-node/issues/6)
   * [hello-world](http://olegp.github.com/common-node/graphs/hello-world.png) - returns a dynamically generated string
   * [no-alloc](http://olegp.github.com/common-node/graphs/no-alloc.png)
   * [parse-json](http://olegp.github.com/common-node/graphs/parse-json.png) 
@@ -98,7 +98,7 @@ This will generate PNG images of the graphs in `benchmarks/results/graphs/`. Som
   * [static-file](http://olegp.github.com/common-node/graphs/static-file.png) - returns a file served from the file system
   * [string-alloc](http://olegp.github.com/common-node/graphs/string-alloc.png)
   
-As you can see from the results and given no profiling or optimization work has been so far, there's room for improvement. 
+As you can see from the results and given no profiling or optimization work has been done so far, there's room for improvement. 
 Any patches or suggestions on how to improve performance would be greatly appreciated.
   
 ### Embedding
