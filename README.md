@@ -5,7 +5,7 @@ proposals on top of [Node.js](http://nodejs.org) using
 [node-fibers](https://github.com/laverdet/node-fibers). Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:
 
 * write fast CRUD webapps that run on Node.js without messy callbacks
-* run [webapps, middleware and libraries](https://github.com/olegp/common-node/wiki) written for [RingoJS](http://ringojs.org), [Narwhal](http://narwhaljs.org/), [Akshell](http://www.akshell.com) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
+* run [webapps, middleware and libraries](https://github.com/olegp/common-node/wiki) written for [RingoJS](http://ringojs.org), [Narwhal](http://narwhaljs.org/), [Akshell](http://www.akshell.com), [Erbix](http://www.erbix.com/), [Wakanda](http://www.wakanda.org/) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
