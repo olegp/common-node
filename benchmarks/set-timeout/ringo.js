@@ -5,7 +5,7 @@ exports.app = function() {
     headers : {}, 
     body : [] 
   };
-}
+};
 
 if (require.main === module) {
   require("ringo/httpserver").main(module.id);

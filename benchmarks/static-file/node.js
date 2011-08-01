@@ -1,5 +1,3 @@
 var connect = require('connect');
 
-connect(
-  connect.static('../')
-).listen(8080);
+connect(connect.static('../')).listen(8080);

@@ -5,7 +5,7 @@ exports.app = function() {
     headers: {'Content-Type': 'text/plain'}, 
     body:  openRaw('../README.md')
   };
-}
+};
 
 if (require.main === module) {
   require("ringo/httpserver").main(module.id);
