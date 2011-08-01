@@ -2,31 +2,22 @@ var assert = require('../../lib/assert');
 var fs = require('../../lib/fs-base');
 var separator = '/';
 
-var tests = [
-  ['', ''],
-  ['.', ''],
-  ['./', ''],
-  ['../', '../'],
-  ['../a', '../a'],
-  ['../a/', '../a/'],
-  ['a/..', ''],
-  ['a/../', ''],
-  ['a/../b', 'b'],
-  ['a/../b/', 'b/'],
-];
+var tests = [['', ''], ['.', ''], ['./', ''], ['../', '../'], ['../a', '../a'],
+		['../a/', '../a/'], ['a/..', ''], ['a/../', ''], ['a/../b', 'b'],
+		['a/../b/', 'b/'], ];
 
 tests.forEach(function(args) {
-  exports['test "' + args[0] + '"'] = function () {
-    var result = fs.normal(localize(args[0]));
-    assert.strictEqual(localize(args[1]), result);
-  };
+	exports['test "' + args[0] + '"'] = function() {
+		var result = fs.normal(localize(args[0]));
+		assert.strictEqual(localize(args[1]), result);
+	};
 });
 
 // adapt path to the platform we're running on
 function localize(path) {
-  return path.replace(/\//g, separator);
+	return path.replace(/\//g, separator);
 }
 
-if (require.main == module) {
-  require("../../lib/test").run(exports);
+if(require.main == module) {
+	require("../../lib/test").run(exports);
 }

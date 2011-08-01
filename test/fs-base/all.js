@@ -6,6 +6,6 @@ exports.normal = require('./normal');
 exports.relative = require('./relative');
 exports.resolve = require('./resolve');
 
-if (require.main == module) {
-  require("../../lib/test").run(exports);
+if(require.main == module) {
+	require("../../lib/test").run(exports);
 }

@@ -19,28 +19,28 @@ exports.testCopy = function() {
   var resource = getContents(file2);
   
   assert.strictEqual(resource, 'abcd');
-}
+};
 
 exports.testOpen = function() {
   var resource = getContents('./lib/assert.js');
   var io = fs.open('./lib/assert.js');
   
   assert.strictEqual(io.read().length, resource.length);
-}
+};
 
 exports.testOpenRaw = function() {
   var resource = getContents('./lib/assert.js');
   var io = fs.openRaw('./lib/assert.js');
   
   assert.strictEqual(io.read().decodeToString().length, resource.length);
-}
+};
 
 exports.testRead = function() {
   var resource = getContents('./lib/assert.js');
   var file = fs.read('./lib/assert.js');
   
   assert.strictEqual(file.length, resource.length);
-}
+};
 
 exports.testWrite = function() {
   var file = '/tmp/test' + getRandomInt(0, 1000000);
@@ -48,7 +48,7 @@ exports.testWrite = function() {
   var resource = getContents(file);
   
   assert.strictEqual('test', resource);
-}
+};
 
 if (require.main == module) {
   require("../../lib/test").run(exports);
