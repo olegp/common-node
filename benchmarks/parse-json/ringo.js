@@ -2,13 +2,14 @@ var json = require('./common').json;
 
 exports.app = function(request) {
 	JSON.parse(json);
-	return {
+	var response = {
 		status: 200,
 		headers: {
 			"Content-Type": "text/plain"
 		},
 		body: [json]
 	};
+	return response;
 };
 
 if(require.main === module) {

@@ -6,7 +6,8 @@ var fs = require('../../lib/fs-base');
  * removes any files created therein afterward
  */
 var Test = function(block) {
-	var exported = function() {
+	var exported = null;
+	exported = function() {
 		for( var name in exports) {
 			if(exports[name] === exported) {
 				try {

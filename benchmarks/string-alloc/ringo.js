@@ -8,13 +8,14 @@ for( var i = 0; i < n; i++)
 exports.app = function(request) {
 	for( var i = 1; i <= 50; i++)
 		b.decodeToString("ascii");
-	return {
+	var response = {
 		status: 200,
 		headers: {
 			"Content-Type": "text/plain"
 		},
 		body: [b]
 	};
+	return response;
 };
 
 if(require.main === module) {

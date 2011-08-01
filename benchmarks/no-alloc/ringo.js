@@ -6,13 +6,14 @@ for( var i = 0; i < n; i++)
 	b[i] = 100;
 
 exports.app = function(request) {
-	return {
+	var response = {
 		status: 200,
 		headers: {
 			"Content-Type": "text/plain"
 		},
 		body: [b]
 	};
+	return response;
 };
 
 if(require.main === module) {

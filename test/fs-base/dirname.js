@@ -1,7 +1,8 @@
 var assert = require('../../lib/assert');
 var fs = require('../../lib/fs-base');
 
-var tests = [['', '.'], ['.', '.'], ['foo', '.'], ['foo/bar', 'foo']];
+var tests;
+tests = [['', '.'], ['.', '.'], ['foo', '.'], ['foo/bar', 'foo']];
 
 tests.forEach(function(dirs) {
 	exports['test "' + dirs[0] + '"'] = function() {
