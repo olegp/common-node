@@ -35,8 +35,6 @@ exports.testByteStringConstructor = function() {
 
 	// ByteString(arrayOfNumbers)
 	// Use the numbers in arrayOfNumbers as the bytes.
-	// If any element is outside the range 0...255, an exception (TODO) is
-	// thrown.
 	var b3 = new ByteString(testArray);
 	assert.strictEqual(testArray.length, b3.length);
 	b3.length = 123;
