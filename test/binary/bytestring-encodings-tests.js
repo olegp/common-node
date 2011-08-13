@@ -56,9 +56,6 @@ exports.testDecodeToString = function() {
 			.decodeToString("UTF-8"));
 	assert.strictEqual("\u20AC", new ByteString([0xE2, 0x82, 0xAC])
 			.decodeToString("UTF-8"));
-	// FIXME:
-	// assert.strictEqual("\u10ABCD", (new
-	// ByteString([0xF4,0x8A,0xAF,0x8D])).decodeToString("UTF-8"));
 
 	assert.strictEqual("\u0024", new ByteString("\u0024", "UTF-8")
 			.decodeToString("UTF-8"));
