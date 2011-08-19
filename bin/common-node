@@ -11,10 +11,16 @@ if(process.argv.length < 2) {
   var lib = path.resolve(path.dirname(module.filename), '../lib/');
   require.paths.push(lib);
   require('global');
+  
   spawn(function() {
-    var main = require(path.resolve(process.cwd(), process.argv[1]));
-    if(main.app) {
-      require('jsgi').run(main.app, process.argv[2] || 8080);
+  	try {
+    	var main = require(path.resolve(process.cwd(), process.argv[1]));
+	    if(main.app) {
+	      require('jsgi').run(main.app, process.argv[2] || 8080);
+	    }
+    } catch(e) {
+    	e.stack = e.stack.split('\n').slice(0, -6).join('\n');
+    	console.log(e.stack);
     }
   });
 }
