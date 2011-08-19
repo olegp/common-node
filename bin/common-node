@@ -1,6 +1,5 @@
 #!/usr/bin/env node-fibers
 //TODO add REPL support
-//TODO preload system module
 //TODO separate out into bootstrap script
 process.argv.shift(); // remove node-fibers, which is first arg
 if(process.argv.length < 2) {
@@ -9,6 +8,7 @@ if(process.argv.length < 2) {
 } else {
   var path = require('path');
   var lib = path.resolve(path.dirname(module.filename), '../lib/');
+  //TODO deprecate require.paths.push
   require.paths.push(lib);
   require('global');
   
