@@ -1,5 +1,7 @@
 #!/usr/bin/env node-fibers
 //TODO add REPL support
+//TODO preload system module
+//TODO separate out into bootstrap script
 process.argv.shift(); // remove node-fibers, which is first arg
 if(process.argv.length < 2) {
   console.log('usage: "common-node module [port]", e.g. "common-node main.js"');
