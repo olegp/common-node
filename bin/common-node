@@ -20,7 +20,7 @@ if(process.argv.length < 2) {
 	    }
     } catch(e) {
     	e.stack = e.stack.split('\n').slice(0, -6).join('\n');
-    	console.log(e.stack);
+    	console.error(e.stack);
     }
   });
 }
