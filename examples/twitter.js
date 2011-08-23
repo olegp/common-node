@@ -1,25 +1,25 @@
+/**
+ * @fileOverview Twitter Streaming API usage example. Returns streaming search
+ *               results. To quickly see results search for "test". Run with
+ * 
+ * <pre>
+ * common-node twitter.js username password keyword
+ * </pre>
+ */
 var HttpClient = require('httpclient').HttpClient;
 var TextStream = require('io').TextStream;
-// var spawn = require('system').spawn;
-var encode = function() {
-}; // require('./base64').encode;
+var encode = require('./base64').encode;
 
-var user = '', pass = '';
-var url = 'http://127.0.0.1/1/statuses/filter.json';
-var headers = {
-	'Authorization': 'Basic ' + encode(user + ':' + pass),
-	'Content-Type': 'application/x-www-form-urlencoded'
-};
-var body = ['track=test'];
-
-var client = new HttpClient({
+var stream = new TextStream(new HttpClient({
 	method: 'POST',
-	url: url,
-	headers: headers,
-	body: body,
+	url: 'http://stream.twitter.com/1/statuses/filter.json',
+	headers: {
+		'Authorization': 'Basic ' + encode(system.args[2] + ':' + system.args[3]),
+		'Content-Type': 'application/x-www-form-urlencoded'
+	},
+	body: ['track=' + system.args[4]],
 	timeout: 10000
-});
-var stream = new TextStream(client.finish().body);
+}).finish().body);
 
 var line;
 for(;;) {
