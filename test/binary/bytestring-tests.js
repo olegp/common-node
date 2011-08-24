@@ -75,7 +75,6 @@ exports.testToArray = function() {
 exports.testToString = function() {
 	// the format of the resulting string isn't specified, but it shouldn't be
 	// the decoded string
-	// TODO: is this an ok test?
 
 	var testString = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			+ "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", testArray = [];

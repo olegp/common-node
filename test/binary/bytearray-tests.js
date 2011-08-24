@@ -52,7 +52,6 @@ exports.testByteArrayConstructor = function() {
 
 	// ByteArray(arrayOfBytes)
 	// Use numbers in arrayOfBytes as contents.
-	// Throws an exception if any element is outside the range 0...255 (TODO).
 	b = new ByteArray(testArray);
 	assert.strictEqual(testArray.length, b.length);
 	b.length = 567;
@@ -128,7 +127,6 @@ exports.testToArray = function() {
 exports.testToString = function() {
 	// the format of the resulting string isn't specified, but it shouldn't be the
 	// decoded string
-	// TODO: is this an ok test?
 
 	var testString = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			+ "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", testArray = [];
