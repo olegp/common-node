@@ -6,6 +6,7 @@
  * common-node twitter.js username password keyword
  * </pre>
  */
+
 var HttpClient = require('httpclient').HttpClient;
 var TextStream = require('io').TextStream;
 var encode = require('./base64').encode;

@@ -1,3 +1,7 @@
+/**
+ * @fileOverview Sleep example. Sleep for one second before returning a
+ *               response.
+ */
 var sleep = require('system').sleep;
 
 exports.app = function(request) {
@@ -5,6 +9,6 @@ exports.app = function(request) {
 	return {
 		status: 200,
 		headers: {},
-		body: [ 'Hello Sleep!\n' ]
+		body: ['Hello Sleep!\n']
 	};
 };

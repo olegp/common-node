@@ -1,3 +1,7 @@
+/**
+ * @fileOverview Base 64 decoding and encoding methods in pure JavaScript.
+ */
+
 var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
  
 // public method for encoding
