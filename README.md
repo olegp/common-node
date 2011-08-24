@@ -19,10 +19,11 @@ The following modules are included:
 * fs - [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A)
 * jsgi - [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2)
 * httpclient - [HTTP Client/A](http://wiki.commonjs.org/wiki/HTTP_Client/A)
+* subprocess - methods for launching subprocesses modeled after Ringo (work in progress)
 
 ### Installation
 
-If you don't already have them, [install Node](https://github.com/joyent/node/wiki/Installation) and the [Node Package Manager npm](http://npmjs.org):
+If you don't already have them, [install Node version 4.8.X](https://github.com/joyent/node/wiki/Installation) and the [Node Package Manager npm](http://npmjs.org):
 
     curl http://npmjs.org/install.sh | sh
 
@@ -52,6 +53,7 @@ A number of examples are available in [common-node/examples](https://github.com/
   * `http.js` - makes an HTTP request to another server and returns the result in the response
   * `sleep.js` -  sleeps for one second before returning a response
   * `spawn.js` -  spawns a new fiber which prints to stdout ten seconds after processing a request
+  & `twitter.js` - an example of using Twitter's streaming API, uses HttpClient & TextStream for reading one line at a time
 
 For more usage examples, please refer to the tests in the  [common-node/test](https://github.com/olegp/common-node/tree/master/test) directory.
 
@@ -116,6 +118,8 @@ so if you run into problems with it, please post an issue on that project's [iss
 
 If you run into any issues along the way, whether related to using this library
 in your own project or to the documentation, please post your comments on the [issue tracker](https://github.com/olegp/common-node/issues/). The tracker is also a great place to contribute ideas and find out what needs doing.
+
+If you're coming from Ringo or Narwhal, please try running the tests for some of your existing packages. If the tests pass and the packages is compatible with Common Node, feel free to add it to the [wiki](https://github.com/olegp/common-node/wiki).
 
 Finally, to find specific issues not listed on the tracker, you can run the following command from inside the `common-node` directory.
 
