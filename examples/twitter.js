@@ -11,6 +11,8 @@ var HttpClient = require('httpclient').HttpClient;
 var TextStream = require('io').TextStream;
 var encode = require('./base64').encode;
 
+// make an HTTP request and wrap its response stream with TextStream, which lets
+// us read one line at a time
 var stream = new TextStream(new HttpClient({
 	method: 'POST',
 	url: 'http://stream.twitter.com/1/statuses/filter.json',
@@ -24,9 +26,12 @@ var stream = new TextStream(new HttpClient({
 
 var line;
 for(;;) {
+	// returns an empty string in case of EOF or '\n' in case of empty line
 	line = stream.readLine();
+	// EOF
 	if(!line.length)
 		break;
+	// make sure this isn't an empty line
 	if(line.length > 1) {
 		var message = JSON.parse(line);
 		console.log(message.text);
