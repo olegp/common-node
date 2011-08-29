@@ -15,6 +15,6 @@
   "main": "./lib/all.js",
   "bin": { "common-node": "./bin/common-node" },
   "engines": { "node": ">= 0.5.2" },
-  "dependencies-ignore" : { "fibers": ">= 0.6.1" },
+  "dependencies" : { "fibers": ">= 0.6.1" },
   "preferGlobal": true
 }
