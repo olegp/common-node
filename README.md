@@ -23,7 +23,7 @@ The following modules are included:
 
 ### Installation
 
-If you don't already have them, [install Node version 4.8.X](https://github.com/joyent/node/wiki/Installation) and the [Node Package Manager npm](http://npmjs.org):
+If you don't already have them, [install Node version 0.5.0 or later](https://github.com/joyent/node/wiki/Installation) and the [Node Package Manager npm](http://npmjs.org):
 
     curl http://npmjs.org/install.sh | sh
 
