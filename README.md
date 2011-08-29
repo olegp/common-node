@@ -23,23 +23,17 @@ The following modules are included:
 
 ### Installation
 
-If you don't already have them, [install Node version 0.5.0 or later](https://github.com/joyent/node/wiki/Installation) and the [Node Package Manager npm](http://npmjs.org):
+If you don't already have them, [install Node version 0.5.0 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and the [Node Package Manager npm](http://npmjs.org).
 
-    curl http://npmjs.org/install.sh | sh
+Install `common-node` as a global package:
 
-Clone the repository (an npm package will be made available once we have a stable release):
-
-    git clone git://github.com/olegp/common-node.git
-    
-To install `node-fibers` & `common-node` as global packages:
-
-    sudo npm -g install fibers common-node  
+    sudo npm -g install common-node  
 
 Run the "Hello World" example:
 
     common-node common-node/examples/hello.js
 
-To test that it's working, make an HTTP request from another prompt:
+You shouldn't see any output. To test that it's working, make an HTTP request from another prompt:
 
     curl http://localhost:8080/
 

@@ -1,5 +1,6 @@
 {
   "name": "common-node",
+  "keywords": ["commonjs"],
   "description": "Synchronous CommonJS compatibility layer using node-fibers",
   "version": "0.2.0",
   "author": "Oleg Podsechin <oleg@ionsquare.com>",
@@ -13,7 +14,7 @@
   },
   "main": "./lib/all.js",
   "bin": { "common-node": "./bin/common-node" },
-  "engines": { "node": ">= 0.5.0" },
-  "dependencies" : { "fibers": ">=0.6.1" },
+  "engines": { "node": ">= 0.5.2" },
+  "dependencies" : { "fibers": ">= 0.6.1" },
   "preferGlobal": true
 }
