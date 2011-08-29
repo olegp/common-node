@@ -78,7 +78,9 @@ graph buffer-alloc "buffer alloc"
 graph hello-world "hello world"
 graph no-alloc "no alloc"
 graph parse-json "parse json"
+graph set-timeout "set timeout"
 graph static-file "static file"
 graph string-alloc "string alloc"
+
 
 
