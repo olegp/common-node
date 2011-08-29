@@ -100,7 +100,7 @@ Any patches or suggestions on how to improve performance would be greatly apprec
 To use the package in your existing app, you will need to:
 
   * run your app with `node` instead of `common-node`
-  * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;`
+  * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;` or update your NODE_PATH to include `common-node/lib` (see `bin/common-node` for an example)
   
 For example the following modified version of `examples/http.js` can be run directly via `node http.js`
 
