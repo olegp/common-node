@@ -55,14 +55,14 @@ The API reference is available at <http://olegp.github.com/common-node/doc/>
 
 ### Tests
 
-To run the unit tests execute the following command:
+To run the unit tests run:
 
-    node-fibers test/all.js
+    node test/all.js
 
 You can also run individual tests or sets of tests, for example:
 
-    node-fibers test/io.js
-    node-fibers test/fs-base/all.js
+    node test/io.js
+    node test/fs-base/all.js
 
 ### Benchmarks
 
@@ -97,16 +97,14 @@ Any patches or suggestions on how to improve performance would be greatly apprec
   
 ### Embedding
 
-To use the package in your async app, you will need to:
+To use the package in your existing app, you will need to:
 
-  * run your app with `node-fibers` instead of `node`
-  * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;` or run the following on initialization: `require.paths.push(require('path').dirname(require.resolve('common-node')));`
+  * run your app with `node` instead of `common-node`
+  * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;`
 
 ### Contributing
 
 To contribute to this project, you can start by trying to run the tests on your system and posting your results (even if all tests pass) on the issue tracker.
-The installation of `node-fibers` has been particularly problematic,
-so if you run into problems with it, please post an issue on that project's [issue tracker](https://github.com/laverdet/node-fibers/issues/).
 
 If you run into any issues along the way, whether related to using this library
 in your own project or to the documentation, please post your comments on the [issue tracker](https://github.com/olegp/common-node/issues/). The tracker is also a great place to contribute ideas and find out what needs doing.
