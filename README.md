@@ -23,7 +23,7 @@ The following modules are included:
 
 ### Installation
 
-If you don't already have them, [install Node version 0.5.0 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and [Node Package Manager](http://npmjs.org). Install `common-node` as a global package:
+If you don't already have them, [install Node version 0.5.2 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and [Node Package Manager](http://npmjs.org). Install `common-node` as a global package:
 
     sudo npm -g install common-node  
 
@@ -101,6 +101,24 @@ To use the package in your existing app, you will need to:
 
   * run your app with `node` instead of `common-node`
   * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;`
+  
+For example the following modified version of the `http.js` can be run directly via `node http.js`
+
+  var HttpClient = require('httpclient').HttpClient;
+  
+  exports.app = function(request) {
+  	return {
+  		status: 200,
+  		headers: {},
+  		body: new HttpClient({
+  			url: 'http://google.com'
+  		}).finish().body
+  	};
+  };
+  
+  if(require.main == module) {
+  	require('common-node').run(exports);
+  }
 
 ### Contributing
 
