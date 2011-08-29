@@ -102,23 +102,23 @@ To use the package in your existing app, you will need to:
   * run your app with `node` instead of `common-node`
   * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;`
   
-For example the following modified version of the `http.js` can be run directly via `node http.js`
+For example the following modified version of `examples/http.js` can be run directly via `node http.js`
 
-  var HttpClient = require('httpclient').HttpClient;
-  
-  exports.app = function(request) {
-  	return {
-  		status: 200,
-  		headers: {},
-  		body: new HttpClient({
-  			url: 'http://google.com'
-  		}).finish().body
-  	};
-  };
-  
-  if(require.main == module) {
-  	require('common-node').run(exports);
-  }
+    var HttpClient = require('httpclient').HttpClient;
+    
+    exports.app = function(request) {
+  	  return {
+    		status: 200,
+    		headers: {},
+    		body: new HttpClient({
+    			url: 'http://google.com'
+    		}).finish().body
+    	};
+    };
+    
+    if(require.main == module) {
+    	require('common-node').run(exports);
+    }
 
 ### Contributing
 
