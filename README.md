@@ -45,7 +45,7 @@ A number of examples are available in [common-node/examples](https://github.com/
   * `http.js` - makes an HTTP request to another server and returns the result in the response
   * `sleep.js` -  sleeps for one second before returning a response
   * `spawn.js` -  spawns a new fiber which prints to stdout ten seconds after processing a request
-  & `twitter.js` - an example of using Twitter's streaming API, uses HttpClient & TextStream for reading one line at a time
+  * `twitter.js` - an example of using Twitter's streaming API, uses HttpClient & TextStream for reading one line at a time
 
 For more usage examples, please refer to the tests in the  [common-node/test](https://github.com/olegp/common-node/tree/master/test) directory.
 
