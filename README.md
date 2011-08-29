@@ -104,21 +104,21 @@ To use the package in your existing app, you will need to:
   
 For example the following modified version of the `http.js` can be run directly via `node http.js`
 
-  var HttpClient = require('httpclient').HttpClient;
-  
-  exports.app = function(request) {
-  	return {
-  		status: 200,
-  		headers: {},
-  		body: new HttpClient({
-  			url: 'http://google.com'
-  		}).finish().body
-  	};
-  };
-  
-  if(require.main == module) {
-  	require('common-node').run(exports);
-  }
+    var HttpClient = require('httpclient').HttpClient;
+    
+    exports.app = function(request) {
+  	  return {
+    		status: 200,
+    		headers: {},
+    		body: new HttpClient({
+    			url: 'http://google.com'
+    		}).finish().body
+    	};
+    };
+    
+    if(require.main == module) {
+    	require('common-node').run(exports);
+    }
 
 ### Contributing
 
