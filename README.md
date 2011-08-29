@@ -29,7 +29,7 @@ If you don't already have them, [install Node version 0.5.0 or later](https://gi
 
 Run the "Hello World" example:
 
-    common-node common-node/examples/hello.js
+    common-node $NODE_PATH/common-node/examples/hello.js
 
 You shouldn't see any output. To test that it's working, make an HTTP request from another prompt:
 
