@@ -1,5 +1,4 @@
 #!/bin/bash
-NODE=`which node`
-COMMON_PATH=`echo 'console.log(require("path").dirname(require.resolve("common-node")))' | $NODE | head -n1 | egrep -o '/[^'\'']+'`
+COMMON_PATH="$NODE_PATH/common-node/lib/"
 export NODE_PATH="$NODE_PATH:$COMMON_PATH"
 exec node $COMMON_PATH/run.js "$@"
