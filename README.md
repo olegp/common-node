@@ -13,7 +13,7 @@ The following modules are included:
 
 * assert - [Unit Testing/1.0](httprin://wiki.commonjs.org/wiki/Unit_Testing/1.0) & a suite for running tests
 * console - [Console](http://wiki.commonjs.org/wiki/Console) - partial implementation available in Node
-* system - [System/1.0](http://wiki.commonjs.org/wiki/System/1.0) & methods for managing "threads" and child processes
+* system - [System/1.0](http://wiki.commonjs.org/wiki/System/1.0)
 * binary - [Binary/B](http://wiki.commonjs.org/wiki/Binary/B)
 * io - [IO/A](http://wiki.commonjs.org/wiki/IO/A), including a `ByteArray` backed `MemoryStream`
 * fs - [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A)
