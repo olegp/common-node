@@ -15,7 +15,7 @@ var encode = require('./base64').encode;
 // us read one line at a time
 var stream = new TextStream(new HttpClient({
 	method: 'POST',
-	url: 'http://stream.twitter.com/1/statuses/filter.json',
+	url: 'https://stream.twitter.com/1/statuses/filter.json',
 	headers: {
 		'Authorization': 'Basic ' + encode(system.args[2] + ':' + system.args[3]),
 		'Content-Type': 'application/x-www-form-urlencoded'
