@@ -11,7 +11,7 @@ proposals on top of [Node.js](http://nodejs.org) using
 
 The following modules are included:
 
-* assert - [Unit Testing/1.0](httprin://wiki.commonjs.org/wiki/Unit_Testing/1.0) & a suite for running tests
+* assert - [Unit Testing/1.0](http://wiki.commonjs.org/wiki/Unit_Testing/1.0) (available in Node) & a suite for running tests
 * console - [Console](http://wiki.commonjs.org/wiki/Console) - partial implementation available in Node
 * system - [System/1.0](http://wiki.commonjs.org/wiki/System/1.0)
 * binary - [Binary/B](http://wiki.commonjs.org/wiki/Binary/B)
