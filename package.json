@@ -12,9 +12,11 @@
     "type": "git",
     "url": "git://github.com/olegp/common-node.git"
   },
+  "homepage": "http://github.com/olegp/common-node/",
   "main": "./lib/all.js",
   "bin": { "common-node": "./bin/common-node" },
   "engines": { "node": ">= 0.5.2" },
   "dependencies" : { "fibers": ">= 0.6.1", "traceur": ">= 1.0.0" },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "licenses": [ { "type": "MIT" } ]
 }
