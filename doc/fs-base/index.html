@@ -1,0 +1,1868 @@
+<!DOCTYPE html >
+
+<html lang="de" dir="ltr">
+<head>
+    <title>fs-base - Common Node</title>
+    <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/jsdoc.css" />
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/jsdoc.js"></script>
+<script>
+$(document).ready(jsdocSetup);
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="main">
+        <div class="content">
+                    <h1 class="modulename">Module fs-base</h1>
+            <div class="fileoverview">
+                <p>File and path related functionality as defined in <a href="http://wiki.commonjs.org/wiki/Filesystem/A">CommonJS Filesystem/A</a>.</p>
+
+
+            </div>
+
+            <div class="classoverview">
+
+                                <div>
+                    <h3>Functions</h3>
+                    <ul class="propertyoverview">
+                                                <li>
+                            <a href="#absolute" class="jsdoc-title"> absolute</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#base" class="jsdoc-title"> base</a>(path, ext)
+                        </li>
+                                                <li>
+                            <a href="#canonical" class="jsdoc-title"> canonical</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#changeGroup" class="jsdoc-title"> changeGroup</a>(path, group)
+                        </li>
+                                                <li>
+                            <a href="#changeOwner" class="jsdoc-title"> changeOwner</a>(path, user)
+                        </li>
+                                                <li>
+                            <a href="#changePermissions" class="jsdoc-title"> changePermissions</a>(path, permissions)
+                        </li>
+                                                <li>
+                            <a href="#changeWorkingDirectory" class="jsdoc-title"> changeWorkingDirectory</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#copy" class="jsdoc-title"> copy</a>(from, to)
+                        </li>
+                                                <li>
+                            <a href="#copyTree" class="jsdoc-title"> copyTree</a>(from, to)
+                        </li>
+                                                <li>
+                            <a href="#directory" class="jsdoc-title"> directory</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#exists" class="jsdoc-title"> exists</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#extension" class="jsdoc-title"> extension</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#group" class="jsdoc-title"> group</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#hardLink" class="jsdoc-title"> hardLink</a>(source, target)
+                        </li>
+                                                <li>
+                            <a href="#isDirectory" class="jsdoc-title"> isDirectory</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#isFile" class="jsdoc-title"> isFile</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#isReadable" class="jsdoc-title"> isReadable</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#isWritable" class="jsdoc-title"> isWritable</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#join" class="jsdoc-title"> join</a>()
+                        </li>
+                                                <li>
+                            <a href="#lastModified" class="jsdoc-title"> lastModified</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#list" class="jsdoc-title"> list</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#listDirectoryTree" class="jsdoc-title"> listDirectoryTree</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#listTree" class="jsdoc-title"> listTree</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#makeDirectory" class="jsdoc-title"> makeDirectory</a>(path, permissions)
+                        </li>
+                                                <li>
+                            <a href="#makeTree" class="jsdoc-title"> makeTree</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#move" class="jsdoc-title"> move</a>(source, target)
+                        </li>
+                                                <li>
+                            <a href="#normal" class="jsdoc-title"> normal</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#open" class="jsdoc-title"> open</a>(path, options)
+                        </li>
+                                                <li>
+                            <a href="#openRaw" class="jsdoc-title"> openRaw</a>(path, mode, permissions)
+                        </li>
+                                                <li>
+                            <a href="#owner" class="jsdoc-title"> owner</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#path" class="jsdoc-title"> path</a>()
+                        </li>
+                                                <li>
+                            <a href="#permissions" class="jsdoc-title"> permissions</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#read" class="jsdoc-title"> read</a>(path, options)
+                        </li>
+                                                <li>
+                            <a href="#readLink" class="jsdoc-title"> readLink</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#relative" class="jsdoc-title"> relative</a>(source, target)
+                        </li>
+                                                <li>
+                            <a href="#remove" class="jsdoc-title"> remove</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#removeDirectory" class="jsdoc-title"> removeDirectory</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#removeTree" class="jsdoc-title"> removeTree</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#resolve" class="jsdoc-title"> resolve</a>()
+                        </li>
+                                                <li>
+                            <a href="#same" class="jsdoc-title"> same</a>(pathA, pathB)
+                        </li>
+                                                <li>
+                            <a href="#sameFilesystem" class="jsdoc-title"> sameFilesystem</a>(pathA, pathB)
+                        </li>
+                                                <li>
+                            <a href="#size" class="jsdoc-title"> size</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#split" class="jsdoc-title"> split</a>(path)
+                        </li>
+                                                <li>
+                            <a href="#symbolicLink" class="jsdoc-title"> symbolicLink</a>(source, target)
+                        </li>
+                                                <li>
+                            <a href="#touch" class="jsdoc-title"> touch</a>(path, mtime)
+                        </li>
+                                                <li>
+                            <a href="#workingDirectory" class="jsdoc-title"> workingDirectory</a>()
+                        </li>
+                                                <li>
+                            <a href="#write" class="jsdoc-title"> write</a>(path, content, options)
+                        </li>
+                        </ul>
+                </div>
+                <div class="classes">
+                                        <h2>Class <a href="#Path" class="jsdoc-title">Path</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#Path.prototype.toString" class="jsdoc-title"> toString</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Path.prototype.from" class="jsdoc-title"> from</a>(target)
+                            </li>
+                                                        <li>
+                                <a href="#Path.prototype.join" class="jsdoc-title"> join</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Path.prototype.listPaths" class="jsdoc-title"> listPaths</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Path.prototype.resolve" class="jsdoc-title"> resolve</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Path.prototype.to" class="jsdoc-title"> to</a>(target)
+                            </li>
+                                                        <li>
+                                <a href="#Path.prototype.valueOf" class="jsdoc-title"> valueOf</a>()
+                            </li>
+                            </ul>
+                    </div>
+                                        <h2>Class <a href="#Permissions" class="jsdoc-title">Permissions</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#Permissions.prototype.toNumber" class="jsdoc-title"> toNumber</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Permissions.prototype.update" class="jsdoc-title"> update</a>(permissions)
+                            </li>
+                            </ul>
+                    </div>
+                    </div>
+            </div>
+                <hr/>
+                <div class="details">
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Path">
+                            <h3>
+                                <span class="itemtitle"><a id="Path" href="#Path" class="itemtitle itemname">Path</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Path constructor. Path is a chainable shorthand for working with paths.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Path.prototype.toString">
+                            <h3>
+                                <span class="itemtitle">Path.prototype.<a id="Path.prototype.toString" href="#Path.prototype.toString" class="itemtitle itemname">toString</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Path.prototype.from">
+                            <h3>
+                                <span class="itemtitle">Path.prototype.<a id="Path.prototype.from" href="#Path.prototype.from" class="itemtitle itemname">from</a></span>
+                                <span class="itemtitle light">(target)</span></h3>
+                            <div>
+                                <p>Return the relative path from the given source path to this path. Equivalent
+to <code>fs.Path(fs.relative(source, this))</code>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">target</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Path.prototype.join">
+                            <h3>
+                                <span class="itemtitle">Path.prototype.<a id="Path.prototype.join" href="#Path.prototype.join" class="itemtitle itemname">join</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Join a list of paths to this path.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Path.prototype.listPaths">
+                            <h3>
+                                <span class="itemtitle">Path.prototype.<a id="Path.prototype.listPaths" href="#Path.prototype.listPaths" class="itemtitle itemname">listPaths</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Return the names of all files in this path, in lexically sorted order and
+wrapped in Path objects.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Path.prototype.resolve">
+                            <h3>
+                                <span class="itemtitle">Path.prototype.<a id="Path.prototype.resolve" href="#Path.prototype.resolve" class="itemtitle itemname">resolve</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Resolve against this path.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Path.prototype.to">
+                            <h3>
+                                <span class="itemtitle">Path.prototype.<a id="Path.prototype.to" href="#Path.prototype.to" class="itemtitle itemname">to</a></span>
+                                <span class="itemtitle light">(target)</span></h3>
+                            <div>
+                                <p>Return the relative path from this path to the given target path. Equivalent
+to <code>fs.Path(fs.relative(this, target))</code>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">target</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Path.prototype.valueOf">
+                            <h3>
+                                <span class="itemtitle">Path.prototype.<a id="Path.prototype.valueOf" href="#Path.prototype.valueOf" class="itemtitle itemname">valueOf</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>This is a non-standard extension, not part of CommonJS Filesystem/A.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Permissions">
+                            <h3>
+                                <span class="itemtitle"><a id="Permissions" href="#Permissions" class="itemtitle itemname">Permissions</a></span>
+                                <span class="itemtitle light">(permissions, constructor)</span></h3>
+                            <div>
+                                <p>The Permissions class describes the permissions associated with a file.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>number|object</td>
+                                        <td class="paramname">permissions</td>
+                                        <td>a number or object representing the
+permissions.</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">constructor</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Permissions.prototype.toNumber">
+                            <h3>
+                                <span class="itemtitle">Permissions.prototype.<a id="Permissions.prototype.toNumber" href="#Permissions.prototype.toNumber" class="itemtitle itemname">toNumber</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Permissions.prototype.update">
+                            <h3>
+                                <span class="itemtitle">Permissions.prototype.<a id="Permissions.prototype.update" href="#Permissions.prototype.update" class="itemtitle itemname">update</a></span>
+                                <span class="itemtitle light">(permissions)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">permissions</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="absolute">
+                            <h3>
+                                <span class="itemtitle"><a id="absolute" href="#absolute" class="itemtitle itemname">absolute</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Make the given path absolute by resolving it against the current working
+directory.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="base">
+                            <h3>
+                                <span class="itemtitle"><a id="base" href="#base" class="itemtitle itemname">base</a></span>
+                                <span class="itemtitle light">(path, ext)</span></h3>
+                            <div>
+                                <p>Return the basename of the given path. That is the path with any leading
+directory components removed. If specified, also remove a trailing extension.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">ext</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="canonical">
+                            <h3>
+                                <span class="itemtitle"><a id="canonical" href="#canonical" class="itemtitle itemname">canonical</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns the canonical path to a given abstract path. Canonical paths are both
+absolute and intrinsic, such that all paths that refer to a given file
+(whether it exists or not) have the same corresponding canonical path.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>a file path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>the canonical path</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="changeGroup">
+                            <h3>
+                                <span class="itemtitle"><a id="changeGroup" href="#changeGroup" class="itemtitle itemname">changeGroup</a></span>
+                                <span class="itemtitle light">(path, group)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">group</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="changeOwner">
+                            <h3>
+                                <span class="itemtitle"><a id="changeOwner" href="#changeOwner" class="itemtitle itemname">changeOwner</a></span>
+                                <span class="itemtitle light">(path, user)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">user</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="changePermissions">
+                            <h3>
+                                <span class="itemtitle"><a id="changePermissions" href="#changePermissions" class="itemtitle itemname">changePermissions</a></span>
+                                <span class="itemtitle light">(path, permissions)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">permissions</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="changeWorkingDirectory">
+                            <h3>
+                                <span class="itemtitle"><a id="changeWorkingDirectory" href="#changeWorkingDirectory" class="itemtitle itemname">changeWorkingDirectory</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Set the current working directory to <code>path</code>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the new working directory</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="copy">
+                            <h3>
+                                <span class="itemtitle"><a id="copy" href="#copy" class="itemtitle itemname">copy</a></span>
+                                <span class="itemtitle light">(from, to)</span></h3>
+                            <div>
+                                <p>Read data from one file and write it into another using binary mode.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">from</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">to</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="copyTree">
+                            <h3>
+                                <span class="itemtitle"><a id="copyTree" href="#copyTree" class="itemtitle itemname">copyTree</a></span>
+                                <span class="itemtitle light">(from, to)</span></h3>
+                            <div>
+                                <p>Copy files from a source path to a target path. Files of the below the source
+path are copied to the corresponding locations relative to the target path,
+symbolic links to directories are copied but not traversed into.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">from</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">to</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="directory">
+                            <h3>
+                                <span class="itemtitle"><a id="directory" href="#directory" class="itemtitle itemname">directory</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Return the dirname of the given path. That is the path with any trailing
+non-directory component removed.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="exists">
+                            <h3>
+                                <span class="itemtitle"><a id="exists" href="#exists" class="itemtitle itemname">exists</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Return true if the file denoted by <code>path</code> exists, false otherwise.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="extension">
+                            <h3>
+                                <span class="itemtitle"><a id="extension" href="#extension" class="itemtitle itemname">extension</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Return the extension of a given path. That is everything after the last dot
+in the basename of the given path, including the last dot. Returns an empty
+string if no valid extension exists.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="group">
+                            <h3>
+                                <span class="itemtitle"><a id="group" href="#group" class="itemtitle itemname">group</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="hardLink">
+                            <h3>
+                                <span class="itemtitle"><a id="hardLink" href="#hardLink" class="itemtitle itemname">hardLink</a></span>
+                                <span class="itemtitle light">(source, target)</span></h3>
+                            <div>
+                                <p>Creates a hard link at the target path that refers to the source path.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">source</td>
+                                        <td>the source file</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">target</td>
+                                        <td>the target file</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="isDirectory">
+                            <h3>
+                                <span class="itemtitle"><a id="isDirectory" href="#isDirectory" class="itemtitle itemname">isDirectory</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns true if the file specified by path exists and is a directory.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>boolean</td>
+                                        <td> whether the file exists and is a directory</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="isFile">
+                            <h3>
+                                <span class="itemtitle"><a id="isFile" href="#isFile" class="itemtitle itemname">isFile</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns true if the file specified by path exists and is a regular file.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>boolean</td>
+                                        <td> whether the file exists and is a file</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="isReadable">
+                            <h3>
+                                <span class="itemtitle"><a id="isReadable" href="#isReadable" class="itemtitle itemname">isReadable</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns true if the file specified by path exists and can be opened for
+reading.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>boolean</td>
+                                        <td> whether the file exists and is readable</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="isWritable">
+                            <h3>
+                                <span class="itemtitle"><a id="isWritable" href="#isWritable" class="itemtitle itemname">isWritable</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns true if the file specified by path exists and can be opened for
+writing.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>boolean</td>
+                                        <td> whether the file exists and is writable</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="join">
+                            <h3>
+                                <span class="itemtitle"><a id="join" href="#join" class="itemtitle itemname">join</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Join a list of paths using the local file system's path separator. The result
+is not normalized, so <code>join("..", "foo")</code> returns <code>"../foo"</code>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>See</h4>
+                                <div class="extrainfo">
+                                    <a href="http://wiki.commonjs.org/wiki/Filesystem/Join">http://wiki.commonjs.org/wiki/Filesystem/Join</a>
+                                </div>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="lastModified">
+                            <h3>
+                                <span class="itemtitle"><a id="lastModified" href="#lastModified" class="itemtitle itemname">lastModified</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns the time a file was last modified as a Date object.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>the date the file was last modified</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="list">
+                            <h3>
+                                <span class="itemtitle"><a id="list" href="#list" class="itemtitle itemname">list</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns an array with all the names of files contained in the direcory
+<code>path</code>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the directory path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Array</td>
+                                        <td> a list of file names</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="listDirectoryTree">
+                            <h3>
+                                <span class="itemtitle"><a id="listDirectoryTree" href="#listDirectoryTree" class="itemtitle itemname">listDirectoryTree</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Return an array with all directories below (and including) the given path, as
+discovered by depth-first traversal. Entries are in lexically sorted order
+within directories. Symbolic links to directories are not traversed into.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="listTree">
+                            <h3>
+                                <span class="itemtitle"><a id="listTree" href="#listTree" class="itemtitle itemname">listTree</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Return an array with all paths (files, directories, etc.) below (and
+including) the given path, as discovered by depth-first traversal. Entries
+are in lexically sorted order within directories. Symbolic links to
+directories are returned but not traversed into.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="makeDirectory">
+                            <h3>
+                                <span class="itemtitle"><a id="makeDirectory" href="#makeDirectory" class="itemtitle itemname">makeDirectory</a></span>
+                                <span class="itemtitle light">(path, permissions)</span></h3>
+                            <div>
+                                <p>Create a single directory specified by <code>path</code>. If the directory cannot be
+created for any reason an error is thrown. This includes if the parent
+directories of <code>path</code> are not present. If a <code>permissions</code> argument is passed
+to this function it is used to create a Permissions instance which is applied
+to the given path during directory creation.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>number|object</td>
+                                        <td class="paramname">permissions</td>
+                                        <td>optional permissions</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="makeTree">
+                            <h3>
+                                <span class="itemtitle"><a id="makeTree" href="#makeTree" class="itemtitle itemname">makeTree</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Create the directory specified by "path" including any missing parent
+directories.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="move">
+                            <h3>
+                                <span class="itemtitle"><a id="move" href="#move" class="itemtitle itemname">move</a></span>
+                                <span class="itemtitle light">(source, target)</span></h3>
+                            <div>
+                                <p>Move a file from <code>source</code> to <code>target</code>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">source</td>
+                                        <td>the source path</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">target</td>
+                                        <td>the target path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Throws</h4>
+                                <div class="extrainfo">
+                                    Error
+                                </div>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="normal">
+                            <h3>
+                                <span class="itemtitle"><a id="normal" href="#normal" class="itemtitle itemname">normal</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Normalize a path by removing '.' and simplifying '..' components, wherever
+possible.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="open">
+                            <h3>
+                                <span class="itemtitle"><a id="open" href="#open" class="itemtitle itemname">open</a></span>
+                                <span class="itemtitle light">(path, options)</span></h3>
+                            <div>
+                                <p>Open an IO stream for reading/writing to the file corresponding to the given
+path.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">options</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="openRaw">
+                            <h3>
+                                <span class="itemtitle"><a id="openRaw" href="#openRaw" class="itemtitle itemname">openRaw</a></span>
+                                <span class="itemtitle light">(path, mode, permissions)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">mode</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">permissions</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="owner">
+                            <h3>
+                                <span class="itemtitle"><a id="owner" href="#owner" class="itemtitle itemname">owner</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="path">
+                            <h3>
+                                <span class="itemtitle"><a id="path" href="#path" class="itemtitle itemname">path</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>A shorthand for creating a new <code>Path</code> without the <code>new</code> keyword.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="permissions">
+                            <h3>
+                                <span class="itemtitle"><a id="permissions" href="#permissions" class="itemtitle itemname">permissions</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="read">
+                            <h3>
+                                <span class="itemtitle"><a id="read" href="#read" class="itemtitle itemname">read</a></span>
+                                <span class="itemtitle light">(path, options)</span></h3>
+                            <div>
+                                <p>Open, read, and close a file, returning the file's contents.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">options</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="readLink">
+                            <h3>
+                                <span class="itemtitle"><a id="readLink" href="#readLink" class="itemtitle itemname">readLink</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns the immediate target of the symbolic link at the given <code>path</code>.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>a file path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="relative">
+                            <h3>
+                                <span class="itemtitle"><a id="relative" href="#relative" class="itemtitle itemname">relative</a></span>
+                                <span class="itemtitle light">(source, target)</span></h3>
+                            <div>
+                                <p>Establish the relative path that links source to target by strictly
+traversing up ('..') to find a common ancestor of both paths. If the target
+is omitted, returns the path to the source from the current working
+directory.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">source</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">target</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="remove">
+                            <h3>
+                                <span class="itemtitle"><a id="remove" href="#remove" class="itemtitle itemname">remove</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Remove a file at the given <code>path</code>. Throws an error if <code>path</code> is not a file or
+a symbolic link to a file.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the path of the file to remove.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Throws</h4>
+                                <div class="extrainfo">
+                                    Error if path is not a file or could not be removed.
+                                </div>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="removeDirectory">
+                            <h3>
+                                <span class="itemtitle"><a id="removeDirectory" href="#removeDirectory" class="itemtitle itemname">removeDirectory</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Remove a file or directory identified by <code>path</code>. Throws an error if <code>path</code> is
+a directory and not empty.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td>the directory path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Throws</h4>
+                                <div class="extrainfo">
+                                    Error if the file or directory could not be removed.
+                                </div>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="removeTree">
+                            <h3>
+                                <span class="itemtitle"><a id="removeTree" href="#removeTree" class="itemtitle itemname">removeTree</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Remove the element pointed to by the given path. If path points to a
+directory, all members of the directory are removed recursively.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="resolve">
+                            <h3>
+                                <span class="itemtitle"><a id="resolve" href="#resolve" class="itemtitle itemname">resolve</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Join a list of paths by starting at an empty location and iteratively
+"walking" to each path given. Correctly takes into account both relative and
+absolute paths.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="same">
+                            <h3>
+                                <span class="itemtitle"><a id="same" href="#same" class="itemtitle itemname">same</a></span>
+                                <span class="itemtitle light">(pathA, pathB)</span></h3>
+                            <div>
+                                <p>Returns whether two paths refer to the same storage (file or directory),
+either by virtue of symbolic or hard links, such that modifying one would
+modify the other.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">pathA</td>
+                                        <td>the first path</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">pathB</td>
+                                        <td>the second path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="sameFilesystem">
+                            <h3>
+                                <span class="itemtitle"><a id="sameFilesystem" href="#sameFilesystem" class="itemtitle itemname">sameFilesystem</a></span>
+                                <span class="itemtitle light">(pathA, pathB)</span></h3>
+                            <div>
+                                <p>Returns whether two paths refer to an entity of the same file system.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">pathA</td>
+                                        <td>the first path</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">pathB</td>
+                                        <td>the second path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="size">
+                            <h3>
+                                <span class="itemtitle"><a id="size" href="#size" class="itemtitle itemname">size</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns the size of a file in bytes, or throws an exception if the path does
+not correspond to an accessible path, or is not a regular file or a link.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>number</td>
+                                        <td> the file size in bytes</td>
+                                    </tr>
+                                </table>
+                            </div>
+                                                        <div>
+                                <h4>Throws</h4>
+                                <div class="extrainfo">
+                                    Error if path is not a file
+                                </div>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="split">
+                            <h3>
+                                <span class="itemtitle"><a id="split" href="#split" class="itemtitle itemname">split</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Split a given path into an array of path components.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="symbolicLink">
+                            <h3>
+                                <span class="itemtitle"><a id="symbolicLink" href="#symbolicLink" class="itemtitle itemname">symbolicLink</a></span>
+                                <span class="itemtitle light">(source, target)</span></h3>
+                            <div>
+                                <p>Creates a symbolic link at the target path that refers to the source path.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">source</td>
+                                        <td>the source file</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">target</td>
+                                        <td>the target link</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="touch">
+                            <h3>
+                                <span class="itemtitle"><a id="touch" href="#touch" class="itemtitle itemname">touch</a></span>
+                                <span class="itemtitle light">(path, mtime)</span></h3>
+                            <div>
+                                <p>Sets the modification time of a file or directory at a given path to a
+specified time, or the current time. Creates an empty file at the given path
+if no file or directory exists, using the default permissions.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>string</td>
+                                        <td class="paramname">path</td>
+                                        <td>the file path</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Date</td>
+                                        <td class="paramname">mtime</td>
+                                        <td>optional date</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="workingDirectory">
+                            <h3>
+                                <span class="itemtitle"><a id="workingDirectory" href="#workingDirectory" class="itemtitle itemname">workingDirectory</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Return the path name of the current working directory.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>string</td>
+                                        <td> the current working directory</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="write">
+                            <h3>
+                                <span class="itemtitle"><a id="write" href="#write" class="itemtitle itemname">write</a></span>
+                                <span class="itemtitle light">(path, content, options)</span></h3>
+                            <div>
+                                <p>Open, write, flush, and close a file, writing the given content. If content
+is a binary.ByteArray or binary.ByteString, binary mode is implied.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">path</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">content</td>
+                                        <td></td>
+                                    </tr>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">options</td>
+                                        <td></td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+    <div class="menu" style="margin-top: 1em; font-size: 13px;">
+    <p>
+        <a class="repositoryname" href="../index.html">Common Node </a>
+    </p>
+
+        Filter:<br />
+    <input id="jsdoc-leftnavsearch" type="search" size="14">
+    <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../all/index.html"> all </a></li>
+                <li><a href="../assert/index.html"> assert </a></li>
+                <li><a href="../binary/index.html"> binary </a></li>
+                <li><a href="../console/index.html"> console </a></li>
+                <li><a href="../fs-base/index.html"> fs-base </a></li>
+                <li><a href="../global/index.html"> global </a></li>
+                <li><a href="../httpclient/index.html"> httpclient </a></li>
+                <li><a href="../io/index.html"> io </a></li>
+                <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../run/index.html"> run </a></li>
+                <li><a href="../subprocess/index.html"> subprocess </a></li>
+                <li><a href="../system/index.html"> system </a></li>
+                <li><a href="../test/index.html"> test </a></li>
+        </ul>
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(122924);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/122924ns.gif" /></p></noscript>
+
+</body>
+</html>

@@ -22,8 +22,7 @@ $(document).ready(jsdocSetup);
         <div class="content">
                     <h1 class="modulename">Module assert</h1>
             <div class="fileoverview">
-                <p>Assertion library covering
-<a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.0">CommonJS Unit Testing</a>.</p>
+                <p>Assertion library covering <a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.0">CommonJS Unit Testing</a>.</p>
 
 
             </div>
@@ -34,44 +33,49 @@ $(document).ready(jsdocSetup);
                     <h3>Functions</h3>
                     <ul class="propertyoverview">
                                                 <li>
-                            <a href="#deepEqual" class="jsdoc-title"> deepEqual</a>(actual, expected)
+                            <a href="#deepEqual" class="jsdoc-title"> deepEqual</a>({Object}
+, {Object}
+)
                         </li>
                                                 <li>
-                            <a href="#equal" class="jsdoc-title"> equal</a>(actual, expected)
+                            <a href="#equal" class="jsdoc-title"> equal</a>({Object}
+, {Object}
+)
                         </li>
                                                 <li>
-                            <a href="#notDeepEqual" class="jsdoc-title"> notDeepEqual</a>(actual, expected)
+                            <a href="#notDeepEqual" class="jsdoc-title"> notDeepEqual</a>({Object}
+, {Object}
+)
                         </li>
                                                 <li>
-                            <a href="#notEqual" class="jsdoc-title"> notEqual</a>(actual, expected)
+                            <a href="#notEqual" class="jsdoc-title"> notEqual</a>({Object}
+, {Object}
+)
                         </li>
                                                 <li>
-                            <a href="#notStrictEqual" class="jsdoc-title"> notStrictEqual</a>(actual, expected)
+                            <a href="#notStrictEqual" class="jsdoc-title"> notStrictEqual</a>({Object}
+, {Object}
+)
                         </li>
                                                 <li>
-                            <a href="#ok" class="jsdoc-title"> ok</a>(value)
+                            <a href="#ok" class="jsdoc-title"> ok</a>({Object}
+)
                         </li>
                                                 <li>
-                            <a href="#strictEqual" class="jsdoc-title"> strictEqual</a>(actual, expected)
+                            <a href="#strictEqual" class="jsdoc-title"> strictEqual</a>({Object}
+, {Object}
+)
                         </li>
                                                 <li>
-                            <a href="#throws" class="jsdoc-title"> throws</a>(func, expectedError)
+                            <a href="#throws" class="jsdoc-title"> throws</a>({Object}
+, {Object}
+)
                         </li>
                         </ul>
                 </div>
                 <div class="classes">
                                         <h2>Class <a href="#ArgumentsError" class="jsdoc-title">ArgumentsError</a></h2>
-                                        <div>
-                        <h3>Instance Properties</h3>
-                        <ul class="propertyoverview">
-                                                        <li>
-                                <a href="#ArgumentsError.prototype.message" class="jsdoc-title"> message</a>
-                            </li>
-                                                        <li>
-                                <a href="#ArgumentsError.prototype.stackTrace" class="jsdoc-title"> stackTrace</a>
-                            </li>
-                            </ul>
-                    </div>
+                                        <h2>Class <a href="#AssertionError" class="jsdoc-title">AssertionError</a></h2>
                     </div>
             </div>
                 <hr/>
@@ -81,7 +85,8 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="ArgumentsError">
                             <h3>
                                 <span class="itemtitle"><a id="ArgumentsError" href="#ArgumentsError" class="itemtitle itemname">ArgumentsError</a></span>
-                                <span class="itemtitle light">(message)</span></h3>
+                                <span class="itemtitle light">({String}
+)</span></h3>
                             <div>
                                 <p>Creates a new ArgumentsError instance</p>
 
@@ -91,9 +96,10 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>String</td>
-                                        <td class="paramname">message</td>
-                                        <td>The exception message</td>
+                                        <td></td>
+                                        <td class="paramname">{String}
+</td>
+                                        <td>        message The exception message</td>
                                     </tr>
                                     </table>
                             </div>
@@ -112,29 +118,26 @@ $(document).ready(jsdocSetup);
 
                                         <!-- tpl-docitem -->
                     <div>
-                        <div class="docitem" docitem="ArgumentsError.prototype.message">
+                        <div class="docitem" docitem="AssertionError">
                             <h3>
-                                <span class="itemtitle">ArgumentsError.prototype.<a id="ArgumentsError.prototype.message" href="#ArgumentsError.prototype.message" class="itemtitle itemname">message</a></span>
-                                </h3>
+                                <span class="itemtitle"><a id="AssertionError" href="#AssertionError" class="itemtitle itemname">AssertionError</a></span>
+                                <span class="itemtitle light">({Object}
+)</span></h3>
                             <div>
-                                
+                                <p>Constructs a new AssertionError instance</p>
 
 
                             </div>
-                            </div>
-                        <hr/>
-                    </div>
-
-                                        <!-- tpl-docitem -->
-                    <div>
-                        <div class="docitem" docitem="ArgumentsError.prototype.stackTrace">
-                            <h3>
-                                <span class="itemtitle">ArgumentsError.prototype.<a id="ArgumentsError.prototype.stackTrace" href="#ArgumentsError.prototype.stackTrace" class="itemtitle itemname">stackTrace</a></span>
-                                </h3>
-                            <div>
-                                
-
-
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        options An object containing error details</td>
+                                    </tr>
+                                    </table>
                             </div>
                             </div>
                         <hr/>
@@ -145,7 +148,9 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="deepEqual">
                             <h3>
                                 <span class="itemtitle"><a id="deepEqual" href="#deepEqual" class="itemtitle itemname">deepEqual</a></span>
-                                <span class="itemtitle light">(actual, expected)</span></h3>
+                                <span class="itemtitle light">({Object}
+, {Object}
+)</span></h3>
                             <div>
                                 <p>Checks if the values passed as arguments are deep equal</p>
 
@@ -155,14 +160,16 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">actual</td>
-                                        <td>The actual value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        actual The actual value</td>
                                     </tr>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">expected</td>
-                                        <td>The expected value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        expected The expected value</td>
                                     </tr>
                                     </table>
                             </div>
@@ -181,7 +188,9 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="equal">
                             <h3>
                                 <span class="itemtitle"><a id="equal" href="#equal" class="itemtitle itemname">equal</a></span>
-                                <span class="itemtitle light">(actual, expected)</span></h3>
+                                <span class="itemtitle light">({Object}
+, {Object}
+)</span></h3>
                             <div>
                                 <p>Checks if the values passed as arguments are equal.</p>
 
@@ -191,14 +200,16 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">actual</td>
-                                        <td>The actual value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        actual The actual value</td>
                                     </tr>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">expected</td>
-                                        <td>The expected value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        expected The expected value</td>
                                     </tr>
                                     </table>
                             </div>
@@ -217,7 +228,9 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="notDeepEqual">
                             <h3>
                                 <span class="itemtitle"><a id="notDeepEqual" href="#notDeepEqual" class="itemtitle itemname">notDeepEqual</a></span>
-                                <span class="itemtitle light">(actual, expected)</span></h3>
+                                <span class="itemtitle light">({Object}
+, {Object}
+)</span></h3>
                             <div>
                                 <p>Checks if the values passed as arguments are not deep equal</p>
 
@@ -227,14 +240,16 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">actual</td>
-                                        <td>The actual value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        actual The actual value</td>
                                     </tr>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">expected</td>
-                                        <td>The expected value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        expected The expected value</td>
                                     </tr>
                                     </table>
                             </div>
@@ -253,7 +268,9 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="notEqual">
                             <h3>
                                 <span class="itemtitle"><a id="notEqual" href="#notEqual" class="itemtitle itemname">notEqual</a></span>
-                                <span class="itemtitle light">(actual, expected)</span></h3>
+                                <span class="itemtitle light">({Object}
+, {Object}
+)</span></h3>
                             <div>
                                 <p>Checks if the values passed as arguments are not equal.</p>
 
@@ -263,14 +280,16 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">actual</td>
-                                        <td>The actual value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        actual The actual value</td>
                                     </tr>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">expected</td>
-                                        <td>The expected value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        expected The expected value</td>
                                     </tr>
                                     </table>
                             </div>
@@ -289,7 +308,9 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="notStrictEqual">
                             <h3>
                                 <span class="itemtitle"><a id="notStrictEqual" href="#notStrictEqual" class="itemtitle itemname">notStrictEqual</a></span>
-                                <span class="itemtitle light">(actual, expected)</span></h3>
+                                <span class="itemtitle light">({Object}
+, {Object}
+)</span></h3>
                             <div>
                                 <p>Checks if the values passed as arguments are not strictly equal</p>
 
@@ -299,14 +320,16 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">actual</td>
-                                        <td>The actual value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        actual The actual value</td>
                                     </tr>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">expected</td>
-                                        <td>The expected value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        expected The expected value</td>
                                     </tr>
                                     </table>
                             </div>
@@ -325,7 +348,8 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="ok">
                             <h3>
                                 <span class="itemtitle"><a id="ok" href="#ok" class="itemtitle itemname">ok</a></span>
-                                <span class="itemtitle light">(value)</span></h3>
+                                <span class="itemtitle light">({Object}
+)</span></h3>
                             <div>
                                 <p>Checks if the value passed as argument is truthy.</p>
 
@@ -335,9 +359,10 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">value</td>
-                                        <td>The value to check for truthiness</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        value The value to check for truthiness</td>
                                     </tr>
                                     </table>
                             </div>
@@ -356,7 +381,9 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="strictEqual">
                             <h3>
                                 <span class="itemtitle"><a id="strictEqual" href="#strictEqual" class="itemtitle itemname">strictEqual</a></span>
-                                <span class="itemtitle light">(actual, expected)</span></h3>
+                                <span class="itemtitle light">({Object}
+, {Object}
+)</span></h3>
                             <div>
                                 <p>Checks if the values passed as arguments are strictly equal</p>
 
@@ -366,14 +393,16 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">actual</td>
-                                        <td>The actual value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        actual The actual value</td>
                                     </tr>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">expected</td>
-                                        <td>The expected value</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        expected The expected value</td>
                                     </tr>
                                     </table>
                             </div>
@@ -392,7 +421,9 @@ $(document).ready(jsdocSetup);
                         <div class="docitem" docitem="throws">
                             <h3>
                                 <span class="itemtitle"><a id="throws" href="#throws" class="itemtitle itemname">throws</a></span>
-                                <span class="itemtitle light">(func, expectedError)</span></h3>
+                                <span class="itemtitle light">({Object}
+, {Object}
+)</span></h3>
                             <div>
                                 <p>Checks if the function passed as argument throws a defined exception.</p>
 
@@ -402,15 +433,17 @@ $(document).ready(jsdocSetup);
                                 <h4>Parameters</h4>
                                 <table>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">func</td>
-                                        <td>The function to call</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        func The function to call</td>
                                     </tr>
                                                                         <tr>
-                                        <td>Object</td>
-                                        <td class="paramname">expectedError</td>
-                                        <td>Optional object expected to be thrown when executing
-the function</td>
+                                        <td></td>
+                                        <td class="paramname">{Object}
+</td>
+                                        <td>        expectedError Optional object expected to be thrown when executing
+         the function</td>
                                     </tr>
                                     </table>
                             </div>
@@ -438,12 +471,17 @@ the function</td>
         Filter:<br />
     <input id="jsdoc-leftnavsearch" type="search" size="14">
     <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../all/index.html"> all </a></li>
                 <li><a href="../assert/index.html"> assert </a></li>
                 <li><a href="../binary/index.html"> binary </a></li>
-                <li><a href="../fs/index.html"> fs </a></li>
+                <li><a href="../console/index.html"> console </a></li>
+                <li><a href="../fs-base/index.html"> fs-base </a></li>
+                <li><a href="../global/index.html"> global </a></li>
                 <li><a href="../httpclient/index.html"> httpclient </a></li>
                 <li><a href="../io/index.html"> io </a></li>
                 <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../run/index.html"> run </a></li>
+                <li><a href="../subprocess/index.html"> subprocess </a></li>
                 <li><a href="../system/index.html"> system </a></li>
                 <li><a href="../test/index.html"> test </a></li>
         </ul>
@@ -451,9 +489,19 @@ the function</td>
 
 </div>
 </div>
+
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(122924);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/122924ns.gif" /></p></noscript>
+
 </body>
 </html>
-
-
-
-

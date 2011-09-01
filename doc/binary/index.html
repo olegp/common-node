@@ -22,7 +22,7 @@ $(document).ready(jsdocSetup);
         <div class="content">
                     <h1 class="modulename">Module binary</h1>
             <div class="fileoverview">
-                <p>Binary, ByteArray and ByteString classes as defined in 
+                <p>Binary, ByteArray and ByteString classes as defined in
 <a href="http://wiki.commonjs.org/wiki/Binary/B">CommonJS Binary/B</a>.</p>
 
 
@@ -414,15 +414,19 @@ are searched.</p>
                             <div>
                                 <p>Constructs a writable and growable byte array.</p>
 
-<p>If the first argument to this constructor is a number, it specifies
-the initial length of the ByteArray in bytes.</p>
+<p>If the first argument to this constructor is a number, it specifies the
+initial length of the ByteArray in bytes.</p>
 
-<p>Else, the argument defines the content of the ByteArray. If the argument
-is a String, the constructor requires a second argument containing the
-name of the String's encoding. If called without arguments, an empty ByteArray
-is returned.</p>
+<p>Else, the argument defines the content of the ByteArray. If the argument is a
+String, the constructor requires a second argument containing the name of the
+String's encoding. If called without arguments, an empty ByteArray is
+returned.</p>
 
-<p>The constructor also accepts a <a href="http://nodejs.org/docs/v0.4.8/api/buffers.html#buffers">Node.js Buffer</a>.</p>
+<p>The constructor also accepts a <a
+href="http://nodejs.org/docs/v0.4.8/api/buffers.html#buffers">Node.js Buffer</a>.</p>
+
+<p>Also, if you pass in Number as the first argument and "false" as the second,
+then the newly created array will not be cleared.</p>
 
 
                             </div>
@@ -432,12 +436,14 @@ is returned.</p>
                                                                         <tr>
                                         <td>Binary|Array|String|Number|Buffer</td>
                                         <td class="paramname">contentOrLength</td>
-                                        <td>content or length of the ByteArray.</td>
+                                        <td>content or length
+of the ByteArray.</td>
                                     </tr>
                                                                         <tr>
                                         <td>String</td>
                                         <td class="paramname">[charset]</td>
-                                        <td>the encoding name if the first argument is a String.</td>
+                                        <td>the encoding name if the first argument is a
+String.</td>
                                     </tr>
                                     </table>
                             </div>
@@ -623,8 +629,8 @@ provided function.</p>
                                 <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.filter" href="#ByteArray.prototype.filter" class="itemtitle itemname">filter</a></span>
                                 <span class="itemtitle light">(callback, thisObj)</span></h3>
                             <div>
-                                <p>Return a ByteArray containing the elements of this ByteArray for which
-the callback function returns true.</p>
+                                <p>Return a ByteArray containing the elements of this ByteArray for which the
+callback function returns true.</p>
 
 
                             </div>
@@ -914,13 +920,13 @@ to a single value.</p>
                                         <td>Function</td>
                                         <td class="paramname">callback</td>
                                         <td>the function to call with each element of the
-       ByteArray</td>
+ByteArray</td>
                                     </tr>
                                                                         <tr>
                                         <td></td>
                                         <td class="paramname">initialValue</td>
-                                        <td>optional argument to be used as the first argument to
-       the first call to the callback</td>
+                                        <td>optional argument to be used as the first argument to the
+first call to the callback</td>
                                     </tr>
                                     </table>
                             </div>
@@ -962,13 +968,13 @@ element as to reduce its content to a single value.</p>
                                         <td>Function</td>
                                         <td class="paramname">callback</td>
                                         <td>the function to call with each element of the
-       ByteArray</td>
+ByteArray</td>
                                     </tr>
                                                                         <tr>
                                         <td></td>
                                         <td class="paramname">initialValue</td>
-                                        <td>optional argument to be used as the first argument to
-       the first call to the callback</td>
+                                        <td>optional argument to be used as the first argument to the
+first call to the callback</td>
                                     </tr>
                                     </table>
                             </div>
@@ -1052,8 +1058,8 @@ element as to reduce its content to a single value.</p>
                                 <span class="itemtitle">ByteArray.prototype.<a id="ByteArray.prototype.shift" href="#ByteArray.prototype.shift" class="itemtitle itemname">shift</a></span>
                                 <span class="itemtitle light">()</span></h3>
                             <div>
-                                <p>Removes the first element from the ByteArray and returns that element.
-This method changes the length of the ByteArray</p>
+                                <p>Removes the first element from the ByteArray and returns that element. This
+method changes the length of the ByteArray</p>
 
 
                             </div>
@@ -1087,18 +1093,16 @@ This method changes the length of the ByteArray</p>
                                                                         <tr>
                                         <td>Number</td>
                                         <td class="paramname">begin</td>
-                                        <td>Zero-based index at which to begin extraction.
-       As a negative index, begin indicates an offset from the end of the
-       sequence.</td>
+                                        <td>Zero-based index at which to begin extraction. As a
+negative index, begin indicates an offset from the end of the sequence.</td>
                                     </tr>
                                                                         <tr>
                                         <td>Number</td>
                                         <td class="paramname">end</td>
-                                        <td> Zero-based index at which to end extraction.
-       slice extracts up to but not including end.
-       As a negative index, end indicates an offset from the end of the
-       sequence.
-       If end is omitted, slice extracts to the end of the sequence.</td>
+                                        <td>Zero-based index at which to end extraction. slice
+extracts up to but not including end. As a negative index, end indicates an
+offset from the end of the sequence. If end is omitted, slice extracts to the
+end of the sequence.</td>
                                     </tr>
                                     </table>
                             </div>
@@ -1204,7 +1208,7 @@ elements.</p>
                                         <td>Number</td>
                                         <td class="paramname">howMany</td>
                                         <td>The number of elements to remove at the given
-       position</td>
+position</td>
                                     </tr>
                                                                         <tr>
                                         <td>Number</td>
@@ -1241,12 +1245,14 @@ these delimiters"). Delimiters can have arbitrary size.</p>
                                                                         <tr>
                                         <td>Object</td>
                                         <td class="paramname">options</td>
-                                        <td>optional object parameter with the following
-       optional properties: <ul>
-       <li>count - Maximum number of elements (ignoring delimiters) to
-       return. The last returned element may contain delimiters.</li>
-       <li>includeDelimiter - Whether the delimiter should be included in
-       the result.</li></ul></td>
+                                        <td>optional object parameter with the following optional
+properties:
+<ul>
+<li>count - Maximum number of elements (ignoring delimiters) to return. The
+last returned element may contain delimiters.</li>
+<li>includeDelimiter - Whether the delimiter should be included in the
+result.</li>
+</ul></td>
                                     </tr>
                                     </table>
                             </div>
@@ -1358,11 +1364,12 @@ new length.</p>
                             <div>
                                 <p>Constructs an immutable byte string.</p>
 
-<p>If the first argument is a String, the constructor requires a second
-argument containing the name of the String's encoding. If called
-without arguments, an empty ByteString is returned.</p>
+<p>If the first argument is a String, the constructor requires a second argument
+containing the name of the String's encoding. If called without arguments, an
+empty ByteString is returned.</p>
 
-<p>The constructor also accepts a <a href="http://nodejs.org/docs/v0.4.8/api/buffers.html#buffers">Node.js Buffer</a>.</p>
+<p>The constructor also accepts a <a
+href="http://nodejs.org/docs/v0.4.8/api/buffers.html#buffers">Node.js Buffer</a>.</p>
 
 
                             </div>
@@ -1541,8 +1548,8 @@ ByteString, ByteArray, and Array values.</p>
                                 <span class="itemtitle">ByteString.prototype.<a id="ByteString.prototype.copy" href="#ByteString.prototype.copy" class="itemtitle itemname">copy</a></span>
                                 <span class="itemtitle light">(start, end, target, targetStart)</span></h3>
                             <div>
-                                <p>Copy a range of bytes between start and stop from this ByteString to a
-target ByteArray at the given targetStart offset.</p>
+                                <p>Copy a range of bytes between start and stop from this ByteString to a target
+ByteArray at the given targetStart offset.</p>
 
 
                             </div>
@@ -1745,17 +1752,16 @@ are searched.</p>
                                                                         <tr>
                                         <td>Number</td>
                                         <td class="paramname">begin</td>
-                                        <td>Zero-based index at which to begin extraction.
-       As a negative index, begin indicates an offset from the end of the
-       sequence.</td>
+                                        <td>Zero-based index at which to begin extraction. As a
+negative index, begin indicates an offset from the end of the sequence.</td>
                                     </tr>
                                                                         <tr>
                                         <td>Number</td>
                                         <td class="paramname">end</td>
                                         <td>Zero-based index at which to end extraction. slice
-       extracts up to but not including end. As a negative index, end
-       indicates an offset from the end of the sequence. If end is omitted,
-       slice extracts to the end of the sequence.</td>
+extracts up to but not including end. As a negative index, end indicates an
+offset from the end of the sequence. If end is omitted, slice extracts to the
+end of the sequence.</td>
                                     </tr>
                                     </table>
                             </div>
@@ -1796,12 +1802,14 @@ these delimiters"). Delimiters can have arbitrary size.</p>
                                                                         <tr>
                                         <td>Object</td>
                                         <td class="paramname">options</td>
-                                        <td>optional object parameter with the following
-       optional properties: <ul>
-       <li>count - Maximum number of elements (ignoring delimiters) to
-       return. The last returned element may contain delimiters.</li>
-       <li>includeDelimiter - Whether the delimiter should be included in
-       the result.</li></ul></td>
+                                        <td>optional object parameter with the following optional
+properties:
+<ul>
+<li>count - Maximum number of elements (ignoring delimiters) to return. The
+last returned element may contain delimiters.</li>
+<li>includeDelimiter - Whether the delimiter should be included in the
+result.</li>
+</ul></td>
                                     </tr>
                                     </table>
                             </div>
@@ -1895,12 +1903,17 @@ length of this ByteString.</p>
         Filter:<br />
     <input id="jsdoc-leftnavsearch" type="search" size="14">
     <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../all/index.html"> all </a></li>
                 <li><a href="../assert/index.html"> assert </a></li>
                 <li><a href="../binary/index.html"> binary </a></li>
-                <li><a href="../fs/index.html"> fs </a></li>
+                <li><a href="../console/index.html"> console </a></li>
+                <li><a href="../fs-base/index.html"> fs-base </a></li>
+                <li><a href="../global/index.html"> global </a></li>
                 <li><a href="../httpclient/index.html"> httpclient </a></li>
                 <li><a href="../io/index.html"> io </a></li>
                 <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../run/index.html"> run </a></li>
+                <li><a href="../subprocess/index.html"> subprocess </a></li>
                 <li><a href="../system/index.html"> system </a></li>
                 <li><a href="../test/index.html"> test </a></li>
         </ul>
@@ -1908,9 +1921,19 @@ length of this ByteString.</p>
 
 </div>
 </div>
+
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(122924);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/122924ns.gif" /></p></noscript>
+
 </body>
 </html>
-
-
-
-

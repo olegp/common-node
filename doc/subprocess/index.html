@@ -1,0 +1,436 @@
+<!DOCTYPE html >
+
+<html lang="de" dir="ltr">
+<head>
+    <title>subprocess - Common Node</title>
+    <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/jsdoc.css" />
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/jsdoc.js"></script>
+<script>
+$(document).ready(jsdocSetup);
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="main">
+        <div class="content">
+                    <h1 class="modulename">Module subprocess</h1>
+            <div class="fileoverview">
+                <p>A module for spawning processes, connecting to their
+input/output/errput and returning their response codes.</p>
+
+
+            </div>
+
+            <div class="classoverview">
+
+                                <div>
+                    <h3>Functions</h3>
+                    <ul class="propertyoverview">
+                                                <li>
+                            <a href="#command" class="jsdoc-title"> command</a>(command..., [options])
+                        </li>
+                                                <li>
+                            <a href="#createProcess" class="jsdoc-title"> createProcess</a>(args)
+                        </li>
+                                                <li>
+                            <a href="#status" class="jsdoc-title"> status</a>(command..., [options])
+                        </li>
+                                                <li>
+                            <a href="#system" class="jsdoc-title"> system</a>(command..., [options])
+                        </li>
+                        </ul>
+                </div>
+                <div class="classes">
+                                        <h2>Class <a href="#Process" class="jsdoc-title">Process</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#Process.prototype.connect" class="jsdoc-title"> connect</a>(input, output, errput)
+                            </li>
+                                                        <li>
+                                <a href="#Process.prototype.kill" class="jsdoc-title"> kill</a>()
+                            </li>
+                                                        <li>
+                                <a href="#Process.prototype.wait" class="jsdoc-title"> wait</a>()
+                            </li>
+                            </ul>
+                    </div>
+                                        <div>
+                        <h3>Instance Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#Process.prototype.stderr" class="jsdoc-title"> stderr</a>
+                            </li>
+                                                        <li>
+                                <a href="#Process.prototype.stdin" class="jsdoc-title"> stdin</a>
+                            </li>
+                                                        <li>
+                                <a href="#Process.prototype.stdout" class="jsdoc-title"> stdout</a>
+                            </li>
+                            </ul>
+                    </div>
+                    </div>
+            </div>
+                <hr/>
+                <div class="details">
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Process">
+                            <h3>
+                                <span class="itemtitle"><a id="Process" href="#Process" class="itemtitle itemname">Process</a></span>
+                                </h3>
+                            <div>
+                                <p>The Process object can be used to control and obtain information about a
+subprocess started using <a href="#createProcess">createProcess()</a>.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Process.prototype.connect">
+                            <h3>
+                                <span class="itemtitle">Process.prototype.<a id="Process.prototype.connect" href="#Process.prototype.connect" class="itemtitle itemname">connect</a></span>
+                                <span class="itemtitle light">(input, output, errput)</span></h3>
+                            <div>
+                                <p>Connects the process's steams to the argument streams and starts threads
+to copy the data asynchronously.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Stream</td>
+                                        <td class="paramname">input</td>
+                                        <td>output stream to connect to the process's input
+stream</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Stream</td>
+                                        <td class="paramname">output</td>
+                                        <td>input stream to connect to the process's output
+stream</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Stream</td>
+                                        <td class="paramname">errput</td>
+                                        <td>input stream to connect to the process's error
+stream</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Process.prototype.kill">
+                            <h3>
+                                <span class="itemtitle">Process.prototype.<a id="Process.prototype.kill" href="#Process.prototype.kill" class="itemtitle itemname">kill</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Kills the subprocess.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Process.prototype.stderr">
+                            <h3>
+                                <span class="itemtitle">Process.prototype.<a id="Process.prototype.stderr" href="#Process.prototype.stderr" class="itemtitle itemname">stderr</a></span>
+                                </h3>
+                            <div>
+                                <p>The process's error stream.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Process.prototype.stdin">
+                            <h3>
+                                <span class="itemtitle">Process.prototype.<a id="Process.prototype.stdin" href="#Process.prototype.stdin" class="itemtitle itemname">stdin</a></span>
+                                </h3>
+                            <div>
+                                <p>The process's input stream.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Process.prototype.stdout">
+                            <h3>
+                                <span class="itemtitle">Process.prototype.<a id="Process.prototype.stdout" href="#Process.prototype.stdout" class="itemtitle itemname">stdout</a></span>
+                                </h3>
+                            <div>
+                                <p>The process's output stream.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="Process.prototype.wait">
+                            <h3>
+                                <span class="itemtitle">Process.prototype.<a id="Process.prototype.wait" href="#Process.prototype.wait" class="itemtitle itemname">wait</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Wait for the process to terminate and return its exit status.</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="command">
+                            <h3>
+                                <span class="itemtitle"><a id="command" href="#command" class="itemtitle itemname">command</a></span>
+                                <span class="itemtitle light">(command..., [options])</span></h3>
+                            <div>
+                                <p>executes a given command and returns the standard output. If the exit status
+is non-zero, throws an Error.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">command...</td>
+                                        <td>command and optional arguments as single or
+multiple string parameters</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">[options]</td>
+                                        <td>options object. This may contain a `dir` string
+property specifying the directory to run the process in and a `env` object
+property specifying additional environment variable mappings.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>String the standard output of the command</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="createProcess">
+                            <h3>
+                                <span class="itemtitle"><a id="createProcess" href="#createProcess" class="itemtitle itemname">createProcess</a></span>
+                                <span class="itemtitle light">(args)</span></h3>
+                            <div>
+                                <p>Low-level function to spawn a new process. The function takes an object
+argument containing the following properties where all properties except
+command are optional: * <code>command</code> a string or array of strings containing the
+command to execute * <code>dir</code> the directory to run the process in * <code>env</code>
+alternative environment variables. If null the process inherits the
+environment of the current process. * <code>binary</code> a boolean flag that uses raw
+binary streams instead of text streams * <code>encoding</code> the character encoding to
+use for text streams</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">args</td>
+                                        <td>an object containing the process command and options.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>a Process object</td>
+                                    </tr>
+                                </table>
+                            </div>
+                                                        <div>
+                                <h4>See</h4>
+                                <div class="extrainfo">
+                                    <a href="#Process">Process</a>
+                                </div>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="status">
+                            <h3>
+                                <span class="itemtitle"><a id="status" href="#status" class="itemtitle itemname">status</a></span>
+                                <span class="itemtitle light">(command..., [options])</span></h3>
+                            <div>
+                                <p>Executes a given command quietly and returns the exit status.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">command...</td>
+                                        <td>command and optional arguments as single or
+multiple string parameters</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">[options]</td>
+                                        <td>options object. This may contain a `dir` string
+property specifying the directory to run the process in and a `env` object
+property specifying additional environment variable mappings.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>Number exit status</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="system">
+                            <h3>
+                                <span class="itemtitle"><a id="system" href="#system" class="itemtitle itemname">system</a></span>
+                                <span class="itemtitle light">(command..., [options])</span></h3>
+                            <div>
+                                <p>executes a given command, attached to this process's output and error
+streams, and returns the exit status.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">command...</td>
+                                        <td>command and optional arguments as single or
+multiple string parameters</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">[options]</td>
+                                        <td>options object. This may contain a `dir` string
+property specifying the directory to run the process in and a `env` object
+property specifying additional environment variable mappings.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>Number exit status</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+    <div class="menu" style="margin-top: 1em; font-size: 13px;">
+    <p>
+        <a class="repositoryname" href="../index.html">Common Node </a>
+    </p>
+
+        Filter:<br />
+    <input id="jsdoc-leftnavsearch" type="search" size="14">
+    <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../all/index.html"> all </a></li>
+                <li><a href="../assert/index.html"> assert </a></li>
+                <li><a href="../binary/index.html"> binary </a></li>
+                <li><a href="../console/index.html"> console </a></li>
+                <li><a href="../fs-base/index.html"> fs-base </a></li>
+                <li><a href="../global/index.html"> global </a></li>
+                <li><a href="../httpclient/index.html"> httpclient </a></li>
+                <li><a href="../io/index.html"> io </a></li>
+                <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../run/index.html"> run </a></li>
+                <li><a href="../subprocess/index.html"> subprocess </a></li>
+                <li><a href="../system/index.html"> system </a></li>
+                <li><a href="../test/index.html"> test </a></li>
+        </ul>
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(122924);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/122924ns.gif" /></p></noscript>
+
+</body>
+</html>

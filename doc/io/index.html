@@ -22,9 +22,8 @@ $(document).ready(jsdocSetup);
         <div class="content">
                     <h1 class="modulename">Module io</h1>
             <div class="fileoverview">
-                <p>Stream and TextStream classes as per
-<a href="http://wiki.commonjs.org/wiki/IO/A">CommonJS IO/A</a>
-as well as a ByteArray based in memory MemoryStream.</p>
+                <p>Stream and TextStream classes as per <a href="http://wiki.commonjs.org/wiki/IO/A">CommonJS IO/A</a> as well as a ByteArray based in
+memory MemoryStream.</p>
 
 
             </div>
@@ -122,9 +121,6 @@ as well as a ByteArray based in memory MemoryStream.</p>
                                                         <li>
                                 <a href="#Stream.prototype.write" class="jsdoc-title"> write</a>(source, begin, end)
                             </li>
-                                                        <li>
-                                <a href="#Stream.prototype.writeable" class="jsdoc-title"> writeable</a>()
-                            </li>
                             </ul>
                     </div>
                                         <div>
@@ -214,8 +210,8 @@ as well as a ByteArray based in memory MemoryStream.</p>
                                 <span class="itemtitle"><a id="MemoryStream" href="#MemoryStream" class="itemtitle itemname">MemoryStream</a></span>
                                 <span class="itemtitle light">(bufferOrCapacity)</span></h3>
                             <div>
-                                <p>In binary stream that reads from and/or writes to an in-memory byte array. If the stream
-is writable, its internal buffer will automatically on demand.</p>
+                                <p>In binary stream that reads from and/or writes to an in-memory byte array. If
+the stream is writable, its internal buffer will automatically on demand.</p>
 
 
                             </div>
@@ -225,11 +221,12 @@ is writable, its internal buffer will automatically on demand.</p>
                                                                         <tr>
                                         <td>Binary|number</td>
                                         <td class="paramname">bufferOrCapacity</td>
-                                        <td>the buffer to use, or the capacity of the buffer
-to allocate . If this is a number, a ByteArray with the given length is allocated.
-If this is a ByteArray, the resulting stream is both readable, writable, and seekable.
-If this is a ByteString, the resulting stream is readable and seekable but not writable.
-If undefined, a ByteArray of length 1024 is allocated as buffer.</td>
+                                        <td>the buffer to use, or the capacity of
+the buffer to allocate . If this is a number, a ByteArray with the given
+length is allocated. If this is a ByteArray, the resulting stream is both
+readable, writable, and seekable. If this is a ByteString, the resulting
+stream is readable and seekable but not writable. If undefined, a ByteArray
+of length 1024 is allocated as buffer.</td>
                                     </tr>
                                     </table>
                             </div>
@@ -449,7 +446,9 @@ If undefined, a ByteArray of length 1024 is allocated as buffer.</td>
                                                                         <tr>
                                         <td></td>
                                         <td class="paramname">stream</td>
-                                        <td>a <a href="http://nodejs.org/docs/v0.4.8/api/streams.html#streams">Node.js Stream</a> that can be readable, writeable or both</td>
+                                        <td>a [Node.js
+Stream](http://nodejs.org/docs/v0.4.8/api/streams.html#streams) that can be
+readable, writeable or both</td>
                                     </tr>
                                     </table>
                             </div>
@@ -509,9 +508,9 @@ If undefined, a ByteArray of length 1024 is allocated as buffer.</td>
                                 <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.copy" href="#Stream.prototype.copy" class="itemtitle itemname">copy</a></span>
                                 <span class="itemtitle light">(output)</span></h3>
                             <div>
-                                <p>Reads all data available from this stream and writes the result to the
-given output stream, flushing afterwards. Note that this function does
-not close this stream or the output stream after copying.</p>
+                                <p>Reads all data available from this stream and writes the result to the given
+output stream, flushing afterwards. Note that this function does not close
+this stream or the output stream after copying.</p>
 
 
                             </div>
@@ -551,9 +550,9 @@ not close this stream or the output stream after copying.</p>
                                 <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.forEach" href="#Stream.prototype.forEach" class="itemtitle itemname">forEach</a></span>
                                 <span class="itemtitle light">(fn, [thisObj])</span></h3>
                             <div>
-                                <p>Read all data from this stream and invoke function <code>fn</code> for each chunk of data read.
-The callback function is called with a ByteArray as single argument. Note that
-the stream is not closed after reading.</p>
+                                <p>Read all data from this stream and invoke function <code>fn</code> for each chunk of
+data read. The callback function is called with a ByteArray as single
+argument. Note that the stream is not closed after reading.</p>
 
 
                             </div>
@@ -621,8 +620,8 @@ an empty ByteString.</p>
                                 <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.readInto" href="#Stream.prototype.readInto" class="itemtitle itemname">readInto</a></span>
                                 <span class="itemtitle light">(buffer, begin, end)</span></h3>
                             <div>
-                                <p>Read bytes from this stream into the given buffer. This method does
-<i>not</i> increase the length of the buffer.</p>
+                                <p>Read bytes from this stream into the given buffer. This method does <i>not</i>
+increase the length of the buffer.</p>
 
 
                             </div>
@@ -651,8 +650,8 @@ an empty ByteString.</p>
                                 <table>
                                     <tr>
                                         <td>Number</td>
-                                        <td> The number of bytes read or -1 if the end of the stream
-         has been reached</td>
+                                        <td> The number of bytes read or -1 if the end of the stream has
+been reached</td>
                                     </tr>
                                 </table>
                             </div>
@@ -682,8 +681,8 @@ an empty ByteString.</p>
                                 <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.seekable" href="#Stream.prototype.seekable" class="itemtitle itemname">seekable</a></span>
                                 <span class="itemtitle light">()</span></h3>
                             <div>
-                                <p>Returns true if the stream is randomly accessible and supports the length
-and position properties, false otherwise.</p>
+                                <p>Returns true if the stream is randomly accessible and supports the length and
+position properties, false otherwise.</p>
 
 
                             </div>
@@ -698,8 +697,8 @@ and position properties, false otherwise.</p>
                                 <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.skip" href="#Stream.prototype.skip" class="itemtitle itemname">skip</a></span>
                                 <span class="itemtitle light">(num)</span></h3>
                             <div>
-                                <p>Try to skip over num bytes in the stream. Returns the number of acutal bytes skipped
-or throws an error if the operation could not be completed.</p>
+                                <p>Try to skip over num bytes in the stream. Returns the number of acutal bytes
+skipped or throws an error if the operation could not be completed.</p>
 
 
                             </div>
@@ -779,21 +778,6 @@ range starting at begin and ending before end is written.</p>
 
                                         <!-- tpl-docitem -->
                     <div>
-                        <div class="docitem" docitem="Stream.prototype.writeable">
-                            <h3>
-                                <span class="itemtitle">Stream.prototype.<a id="Stream.prototype.writeable" href="#Stream.prototype.writeable" class="itemtitle itemname">writeable</a></span>
-                                <span class="itemtitle light">()</span></h3>
-                            <div>
-                                <p>Returns true if the stream supports writing, false otherwise.</p>
-
-
-                            </div>
-                            </div>
-                        <hr/>
-                    </div>
-
-                                        <!-- tpl-docitem -->
-                    <div>
                         <div class="docitem" docitem="TextStream">
                             <h3>
                                 <span class="itemtitle"><a id="TextStream" href="#TextStream" class="itemtitle itemname">TextStream</a></span>
@@ -815,13 +799,16 @@ wraps a raw Stream and exposes a similar interface.</p>
                                                                         <tr>
                                         <td>Object</td>
                                         <td class="paramname">options</td>
-                                        <td>the options object. Supports the following properties:
-       <ul><li>charset: string containing the name of the encoding to use.
-           Defaults to "utf8".</li>
-       <li>newline: string containing the newline character sequence to use.
-           Defaults to "\n".</li>
-       <li>delimiter: string containing the delimiter to use in print().
-           Defaults to " ".</li></ul></td>
+                                        <td>the options object. Supports the following
+properties:
+<ul>
+<li>charset: string containing the name of the encoding to use. Defaults to
+"utf8".</li>
+<li>newline: string containing the newline character sequence to use.
+Defaults to "\n".</li>
+<li>delimiter: string containing the delimiter to use in print(). Defaults
+to " ".</li>
+</ul></td>
                                     </tr>
                                     </table>
                             </div>
@@ -866,8 +853,8 @@ wraps a raw Stream and exposes a similar interface.</p>
                                 <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.copy" href="#TextStream.prototype.copy" class="itemtitle itemname">copy</a></span>
                                 <span class="itemtitle light">(output)</span></h3>
                             <div>
-                                <p>Reads from this stream with <code>readLine</code>, writing the results to the
-target stream and flushing, until the end of this stream is reached.</p>
+                                <p>Reads from this stream with <code>readLine</code>, writing the results to the target
+stream and flushing, until the end of this stream is reached.</p>
 
 
                             </div>
@@ -952,8 +939,8 @@ target stream and flushing, until the end of this stream is reached.</p>
                                 <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.next" href="#TextStream.prototype.next" class="itemtitle itemname">next</a></span>
                                 <span class="itemtitle light">()</span></h3>
                             <div>
-                                <p>Returns the next line of input without the newline. Throws
-<code>StopIteration</code> if the end of the stream is reached.</p>
+                                <p>Returns the next line of input without the newline. Throws <code>StopIteration</code>
+if the end of the stream is reached.</p>
 
 
                             </div>
@@ -968,8 +955,8 @@ target stream and flushing, until the end of this stream is reached.</p>
                                 <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.print" href="#TextStream.prototype.print" class="itemtitle itemname">print</a></span>
                                 <span class="itemtitle light">()</span></h3>
                             <div>
-                                <p>Writes all argument values as a single line, delimiting the values using
-a single blank.</p>
+                                <p>Writes all argument values as a single line, delimiting the values using a
+single blank.</p>
 
 
                             </div>
@@ -999,8 +986,8 @@ a single blank.</p>
                                 <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.read" href="#TextStream.prototype.read" class="itemtitle itemname">read</a></span>
                                 <span class="itemtitle light">()</span></h3>
                             <div>
-                                <p>Read the full stream until the end is reached and return the data read
-as string.</p>
+                                <p>Read the full stream until the end is reached and return the data read as
+string.</p>
 
 
                             </div>
@@ -1049,9 +1036,9 @@ as string.</p>
                                 <span class="itemtitle">TextStream.prototype.<a id="TextStream.prototype.readLine" href="#TextStream.prototype.readLine" class="itemtitle itemname">readLine</a></span>
                                 <span class="itemtitle light">()</span></h3>
                             <div>
-                                <p>Reads a line from this stream. If the end of the stream is reached
-before any data is gathered, returns an empty string. Otherwise, returns
-the line including the newline.</p>
+                                <p>Reads a line from this stream. If the end of the stream is reached before
+any data is gathered, returns an empty string. Otherwise, returns the line
+including the newline.</p>
 
 
                             </div>
@@ -1212,12 +1199,17 @@ line.</p>
         Filter:<br />
     <input id="jsdoc-leftnavsearch" type="search" size="14">
     <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../all/index.html"> all </a></li>
                 <li><a href="../assert/index.html"> assert </a></li>
                 <li><a href="../binary/index.html"> binary </a></li>
-                <li><a href="../fs/index.html"> fs </a></li>
+                <li><a href="../console/index.html"> console </a></li>
+                <li><a href="../fs-base/index.html"> fs-base </a></li>
+                <li><a href="../global/index.html"> global </a></li>
                 <li><a href="../httpclient/index.html"> httpclient </a></li>
                 <li><a href="../io/index.html"> io </a></li>
                 <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../run/index.html"> run </a></li>
+                <li><a href="../subprocess/index.html"> subprocess </a></li>
                 <li><a href="../system/index.html"> system </a></li>
                 <li><a href="../test/index.html"> test </a></li>
         </ul>
@@ -1225,9 +1217,19 @@ line.</p>
 
 </div>
 </div>
+
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(122924);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/122924ns.gif" /></p></noscript>
+
 </body>
 </html>
-
-
-
-

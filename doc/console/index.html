@@ -1,0 +1,356 @@
+<!DOCTYPE html >
+
+<html lang="de" dir="ltr">
+<head>
+    <title>console - Common Node</title>
+    <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/jsdoc.css" />
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/jsdoc.js"></script>
+<script>
+$(document).ready(jsdocSetup);
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="main">
+        <div class="content">
+                    <h1 class="modulename">Module console</h1>
+            <div class="fileoverview">
+                <p>This module provides a familiar console object for logging and
+debugging defined in <a href="http://wiki.commonjs.org/wiki/Console">CommonJS Console/A</a></p>
+
+
+            </div>
+
+            <div class="classoverview">
+
+                                <div>
+                    <h3>Functions</h3>
+                    <ul class="propertyoverview">
+                                                <li>
+                            <a href="#assert" class="jsdoc-title"> assert</a>(expression, msg...)
+                        </li>
+                                                <li>
+                            <a href="#dir" class="jsdoc-title"> dir</a>(obj)
+                        </li>
+                                                <li>
+                            <a href="#error" class="jsdoc-title"> error</a>(msg...)
+                        </li>
+                                                <li>
+                            <a href="#info" class="jsdoc-title"> info</a>(msg...)
+                        </li>
+                                                <li>
+                            <a href="#log" class="jsdoc-title"> log</a>(msg...)
+                        </li>
+                                                <li>
+                            <a href="#time" class="jsdoc-title"> time</a>(name)
+                        </li>
+                                                <li>
+                            <a href="#timeEnd" class="jsdoc-title"> timeEnd</a>(name)
+                        </li>
+                                                <li>
+                            <a href="#trace" class="jsdoc-title"> trace</a>(msg...)
+                        </li>
+                                                <li>
+                            <a href="#warn" class="jsdoc-title"> warn</a>(msg...)
+                        </li>
+                        </ul>
+                </div>
+                <div class="classes">
+                    </div>
+            </div>
+                <hr/>
+                <div class="details">
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="assert">
+                            <h3>
+                                <span class="itemtitle"><a id="assert" href="#assert" class="itemtitle itemname">assert</a></span>
+                                <span class="itemtitle light">(expression, msg...)</span></h3>
+                            <div>
+                                <p>Tests that an expression is true and throws an exception if not.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">expression</td>
+                                        <td>the expression to test</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>...</td>
+                                        <td class="paramname">msg...</td>
+                                        <td>one or more error messages</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="dir">
+                            <h3>
+                                <span class="itemtitle"><a id="dir" href="#dir" class="itemtitle itemname">dir</a></span>
+                                <span class="itemtitle light">(obj)</span></h3>
+                            <div>
+                                <p>Prints a list of all properties of an object.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Object</td>
+                                        <td class="paramname">obj</td>
+                                        <td>the object</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="error">
+                            <h3>
+                                <span class="itemtitle"><a id="error" href="#error" class="itemtitle itemname">error</a></span>
+                                <span class="itemtitle light">(msg...)</span></h3>
+                            <div>
+                                <p>Logs a message with the visual "error" representation, including the file
+name and line number of the calling code.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">msg...</td>
+                                        <td>one or more message arguments</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="info">
+                            <h3>
+                                <span class="itemtitle"><a id="info" href="#info" class="itemtitle itemname">info</a></span>
+                                <span class="itemtitle light">(msg...)</span></h3>
+                            <div>
+                                <p>Logs a message with the visual "info" representation, including the file name
+and line number of the calling code.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>...</td>
+                                        <td class="paramname">msg...</td>
+                                        <td>one or more message arguments</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="log">
+                            <h3>
+                                <span class="itemtitle"><a id="log" href="#log" class="itemtitle itemname">log</a></span>
+                                <span class="itemtitle light">(msg...)</span></h3>
+                            <div>
+                                <p>Logs a message to the console.</p>
+
+<p>The first argument to log may be a string containing printf-like
+placeholders. Otherwise, multipel arguments will be concatenated separated by
+spaces.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">msg...</td>
+                                        <td>one or more message arguments</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="time">
+                            <h3>
+                                <span class="itemtitle"><a id="time" href="#time" class="itemtitle itemname">time</a></span>
+                                <span class="itemtitle light">(name)</span></h3>
+                            <div>
+                                <p>Creates a new timer under the given name. Call <code>console.timeEnd(name)</code> with
+the same name to stop the timer and log the time elapsed.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">name</td>
+                                        <td>the timer name</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="timeEnd">
+                            <h3>
+                                <span class="itemtitle"><a id="timeEnd" href="#timeEnd" class="itemtitle itemname">timeEnd</a></span>
+                                <span class="itemtitle light">(name)</span></h3>
+                            <div>
+                                <p>Stops a timer created by a call to <code>console.time(name)</code> and logs the time
+elapsed.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">name</td>
+                                        <td>the timer name</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="trace">
+                            <h3>
+                                <span class="itemtitle"><a id="trace" href="#trace" class="itemtitle itemname">trace</a></span>
+                                <span class="itemtitle light">(msg...)</span></h3>
+                            <div>
+                                <p>Prints a stack trace of JavaScript execution at the point where it is called.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>...</td>
+                                        <td class="paramname">msg...</td>
+                                        <td>optional message arguments</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="warn">
+                            <h3>
+                                <span class="itemtitle"><a id="warn" href="#warn" class="itemtitle itemname">warn</a></span>
+                                <span class="itemtitle light">(msg...)</span></h3>
+                            <div>
+                                <p>Logs a message with the visual "warn" representation, including the file name
+and line number of the calling code.</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td></td>
+                                        <td class="paramname">msg...</td>
+                                        <td>one or more message arguments</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+    <div class="menu" style="margin-top: 1em; font-size: 13px;">
+    <p>
+        <a class="repositoryname" href="../index.html">Common Node </a>
+    </p>
+
+        Filter:<br />
+    <input id="jsdoc-leftnavsearch" type="search" size="14">
+    <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../all/index.html"> all </a></li>
+                <li><a href="../assert/index.html"> assert </a></li>
+                <li><a href="../binary/index.html"> binary </a></li>
+                <li><a href="../console/index.html"> console </a></li>
+                <li><a href="../fs-base/index.html"> fs-base </a></li>
+                <li><a href="../global/index.html"> global </a></li>
+                <li><a href="../httpclient/index.html"> httpclient </a></li>
+                <li><a href="../io/index.html"> io </a></li>
+                <li><a href="../jsgi/index.html"> jsgi </a></li>
+                <li><a href="../run/index.html"> run </a></li>
+                <li><a href="../subprocess/index.html"> subprocess </a></li>
+                <li><a href="../system/index.html"> system </a></li>
+                <li><a href="../test/index.html"> test </a></li>
+        </ul>
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(122924);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/122924ns.gif" /></p></noscript>
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 <html lang="de" dir="ltr">
 <head>
-    <title>jsgi - Common Node</title>
+    <title>global - Common Node</title>
     <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../static/style.css" />
@@ -20,9 +20,10 @@ $(document).ready(jsdocSetup);
 
     <div class="main">
         <div class="content">
-                    <h1 class="modulename">Module jsgi</h1>
+                    <h1 class="modulename">Module global</h1>
             <div class="fileoverview">
-                <p>HTTP server interface as defined in <a href="http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2">CommonJS JSGI 0.3</a>.</p>
+                <p>Provides global functions
+import, include, export and spawn for RingoJS compatibility.</p></p>
 
 
             </div>
@@ -33,10 +34,18 @@ $(document).ready(jsdocSetup);
                     <h3>Functions</h3>
                     <ul class="propertyoverview">
                                                 <li>
-                            <a href="#jsgi" class="jsdoc-title"> jsgi</a>(app)
+                            <a href="#export" class="jsdoc-title"> export</a>()
                         </li>
                                                 <li>
-                            <a href="#run" class="jsdoc-title"> run</a>(module, port, options)
+                            <a href="#include" class="jsdoc-title"> include</a>(moduleName)
+                        </li>
+                        </ul>
+                </div>
+                                <div>
+                    <h3>Properties</h3>
+                    <ul class="propertyoverview">
+                                                <li>
+                            <a href="#spawn" class="jsdoc-title"> spawn</a>
                         </li>
                         </ul>
                 </div>
@@ -47,10 +56,25 @@ $(document).ready(jsdocSetup);
                 <div class="details">
                                         <!-- tpl-docitem -->
                     <div>
-                        <div class="docitem" docitem="jsgi">
+                        <div class="docitem" docitem="export">
                             <h3>
-                                <span class="itemtitle"><a id="jsgi" href="#jsgi" class="itemtitle itemname">jsgi</a></span>
-                                <span class="itemtitle light">(app)</span></h3>
+                                <span class="itemtitle"><a id="export" href="#export" class="itemtitle itemname">export</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="include">
+                            <h3>
+                                <span class="itemtitle"><a id="include" href="#include" class="itemtitle itemname">include</a></span>
+                                <span class="itemtitle light">(moduleName)</span></h3>
                             <div>
                                 
 
@@ -61,7 +85,7 @@ $(document).ready(jsdocSetup);
                                 <table>
                                                                         <tr>
                                         <td></td>
-                                        <td class="paramname">app</td>
+                                        <td class="paramname">moduleName</td>
                                         <td></td>
                                     </tr>
                                     </table>
@@ -72,34 +96,14 @@ $(document).ready(jsdocSetup);
 
                                         <!-- tpl-docitem -->
                     <div>
-                        <div class="docitem" docitem="run">
+                        <div class="docitem" docitem="spawn">
                             <h3>
-                                <span class="itemtitle"><a id="run" href="#run" class="itemtitle itemname">run</a></span>
-                                <span class="itemtitle light">(module, port, options)</span></h3>
+                                <span class="itemtitle"><a id="spawn" href="#spawn" class="itemtitle itemname">spawn</a></span>
+                                </h3>
                             <div>
                                 
 
 
-                            </div>
-                                                        <div>
-                                <h4>Parameters</h4>
-                                <table>
-                                                                        <tr>
-                                        <td></td>
-                                        <td class="paramname">module</td>
-                                        <td></td>
-                                    </tr>
-                                                                        <tr>
-                                        <td></td>
-                                        <td class="paramname">port</td>
-                                        <td></td>
-                                    </tr>
-                                                                        <tr>
-                                        <td></td>
-                                        <td class="paramname">options</td>
-                                        <td></td>
-                                    </tr>
-                                    </table>
                             </div>
                             </div>
                         <hr/>
