@@ -53,6 +53,10 @@ For more usage examples, please refer to the tests in the  [common-node/test](ht
 
 The API reference is available at <http://olegp.github.com/common-node/doc/>
 
+To generate the documentation, install RingoJS and run:
+
+    ringo-doc -n "Common Node" -s ./lib -d ./doc --file-urls
+
 ### Tests
 
 To run the unit tests run:
