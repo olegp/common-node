@@ -20,6 +20,7 @@ The following modules are included:
 * jsgi - [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2)
 * httpclient - [HTTP Client/A](http://wiki.commonjs.org/wiki/HTTP_Client/A)
 * subprocess - methods for launching subprocesses modeled after Ringo (work in progress)
+* socket - [Sockets/A](http://wiki.commonjs.org/wiki/Sockets/A) (work in progress)
 
 ### Installation
 
