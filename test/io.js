@@ -64,9 +64,10 @@ exports.testReadInto = function() {
 };
 
 exports.testReadLine = function() {
+  var resource = getContents('./lib/assert.js');
 	var io = new TextStream(getStream('./lib/assert.js'));
 	var lines = io.readLines();
-	assert.equal(lines.length, 475);
+	assert.equal(lines.length, resource.replace(/\n$/, "").split(/\n/).length);
 };
 
 exports.testWrite = function() {
