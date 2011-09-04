@@ -127,7 +127,9 @@ For example the following modified version of `examples/http.js` can be run dire
 
 ### Contributing
 
-To contribute to this project, you can start by trying to run the tests on your system and posting your results (even if all tests pass) on the issue tracker.
+To contribute to this project, you can start by trying to run the tests on your system and posting any failures on the issue tracker. It is advised that you use the version in master for doing this, which you can install via:
+
+    npm install -g https://github.com/olegp/common-node/tarball/master
 
 If you run into any issues along the way, whether related to using this library
 in your own project or to the documentation, please post your comments on the [issue tracker](https://github.com/olegp/common-node/issues/). The tracker is also a great place to contribute ideas and find out what needs doing.
