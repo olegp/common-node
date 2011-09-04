@@ -134,11 +134,13 @@ in your own project or to the documentation, please post your comments on the [i
 
 If you're coming from Ringo or Narwhal, please try running the tests for some of your existing packages. If the tests pass and the packages is compatible with Common Node, feel free to add it to the [wiki](https://github.com/olegp/common-node/wiki).
 
-Finally, to find specific issues not listed on the tracker, you can run the following command from inside the `common-node` directory.
+To find specific issues not listed on the tracker, you can run the following command from inside the `common-node` directory.
 
     grep 'TODO' lib/*  
 
 To contribute code: fork the project, make and commit your changes and send a pull request.
+
+A number of higher level goals, such as descriptions of packages that would complement Common Node are listed on the [TODO wiki page](https://github.com/olegp/common-node/wiki/TODO).
 
 ### Acknowledgements
 
