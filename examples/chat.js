@@ -2,7 +2,7 @@
  * @fileoverview Implementation of a Telnet chat server. After running, telnet
  * to port 8080.
  */
-var Socket = require("socket").Socket;
+var Socket = require('socket').Socket;
 var TextStream = require('io').TextStream;
 
 var clients = [], server = new Socket().bind('localhost', 8080);
