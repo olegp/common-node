@@ -14,7 +14,9 @@ while(true) {
 		while((line = stream.readLine()).length) {
 			if(line.length > 1) {
 				clients.forEach(function(client) {
-					client.write(line);
+					if(stream != client) {
+						client.write(line);
+					}
 				});
 			}
 		}
