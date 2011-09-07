@@ -134,7 +134,7 @@ To contribute to this project, you can start by trying to run the tests on your 
 If you run into any issues along the way, whether related to using this library
 in your own project or to the documentation, please post your comments on the [issue tracker](https://github.com/olegp/common-node/issues/). The tracker is also a great place to contribute ideas and find out what needs doing.
 
-If you're coming from Ringo or Narwhal, please try running the tests for some of your existing packages. If the tests pass and the packages is compatible with Common Node, feel free to add it to the [wiki](https://github.com/olegp/common-node/wiki).
+If you're coming from Ringo or Narwhal, please try running the tests for some of your existing packages. If the tests pass and the package is compatible with Common Node, feel free to add it to the [wiki](https://github.com/olegp/common-node/wiki).
 
 To find specific issues not listed on the tracker, you can run the following command from inside the `common-node` directory.
 
