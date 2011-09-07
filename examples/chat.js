@@ -11,11 +11,11 @@ while(true) {
 	spawn(function() {
 		var stream = client, line;
 		while((line = stream.read(null)).length) {
-				clients.forEach(function(client) {
-					if(stream != client) {
-						client.write(line);
-					}
-				});
+			clients.forEach(function(client) {
+				if(stream != client) {
+					client.write(line);
+				}
+			});
 		}
 		clients.splice(clients.indexOf(stream), 1);
 	});
