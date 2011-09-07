@@ -24,7 +24,9 @@ The following modules are included:
 
 ### Installation
 
-If you don't already have them, [install Node version 0.5.2 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and [Node Package Manager](http://npmjs.org). Install `common-node` as a global package:
+If you don't already have them, [install Node version 0.5.2 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and [Node Package Manager](http://npmjs.org). It's also highly recommended that you have your $NODE_PATH variable set correctly.
+
+Install `common-node` as a global package:
 
     sudo npm -g install common-node  
 
