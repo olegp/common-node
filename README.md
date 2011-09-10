@@ -49,6 +49,7 @@ A number of examples are available in [common-node/examples](https://github.com/
   * `sleep.js` -  sleeps for one second before returning a response
   * `spawn.js` -  spawns a new fiber which prints to stdout ten seconds after processing a request
   * `twitter.js` - an example of using Twitter's streaming API, uses HttpClient & TextStream for reading one line at a time
+  * `chat.js` - Telnet chat server, compare this to an [async implementation](http://pastebin.com/Rhbbr6Tf)
 
 For more usage examples, please refer to the tests in the  [common-node/test](https://github.com/olegp/common-node/tree/master/test) directory.
 
