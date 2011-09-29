@@ -25,7 +25,7 @@ var stream = new TextStream(new HttpClient({
 }).finish().body);
 
 var line;
-for(;;) {
+while(true) {
 	// returns an empty string in case of EOF or '\n' in case of empty line
 	line = stream.readLine();
 	// EOF
