@@ -9,7 +9,7 @@ proposals on top of [Node.js](http://nodejs.org) using
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
-If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way](audio included).
+If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way) (audio included).
 
 The following modules are included:
 
@@ -21,7 +21,7 @@ The following modules are included:
 * fs - [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A)
 * jsgi - [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2)
 * httpclient - [HTTP Client/A](http://wiki.commonjs.org/wiki/HTTP_Client/A)
-* subprocess - methods for launching subprocesses modeled after Ringo (work in progress)
+* subprocess - methods for launching subprocesses modeled after Ringo
 * socket - [Sockets/A](http://wiki.commonjs.org/wiki/Sockets/A) (work in progress)
 
 ### Installation
