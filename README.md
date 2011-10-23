@@ -9,6 +9,8 @@ proposals on top of [Node.js](http://nodejs.org) using
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
+If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way](audio included).
+
 The following modules are included:
 
 * assert - [Unit Testing/1.0](http://wiki.commonjs.org/wiki/Unit_Testing/1.0) (available in Node) & a suite for running tests
