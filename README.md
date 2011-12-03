@@ -13,6 +13,8 @@ If you have a spare 20 minutes, you can also check out [this presentation](http:
 
 If you have any questions, you can find help on IRC, channel [#common-node](irc://irc.freenode.net/common-node) on freenode. 
 
+For a real world application using Common Node, take a look at the [Minimal CMS](https://github.com/olegp/mcms).
+
 The following modules are included:
 
 * assert - [Unit Testing/1.0](http://wiki.commonjs.org/wiki/Unit_Testing/1.0) (available in Node) & a suite for running tests
