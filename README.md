@@ -4,7 +4,7 @@ This package implements a number of [CommonJS](http://www.commonjs.org)
 proposals on top of [Node.js](http://nodejs.org) using 
 [node-fibers](https://github.com/laverdet/node-fibers). Fibers are used to emulate multi-threading within a single process, allowing one to use a synchronous programming style and as a result:
 
-* write fast CRUD webapps that run on Node.js without messy callbacks
+* write fast CRUD webapps that run on Node.js without messy callbacks and with very little overhead
 * run [webapps, middleware and libraries](https://github.com/olegp/common-node/wiki) written for [RingoJS](http://ringojs.org), [Narwhal](http://narwhaljs.org/), [Akshell](http://www.akshell.com), [Erbix](http://www.erbix.com/), [Wakanda](http://www.wakanda.org/), [v8cgi](http://code.google.com/p/v8cgi/) and [other implementations](http://wiki.commonjs.org/wiki/Implementations)
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
@@ -12,6 +12,8 @@ proposals on top of [Node.js](http://nodejs.org) using
 If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way) (audio included).
 
 If you have any questions, you can find help on IRC, channel [#common-node](irc://irc.freenode.net/common-node) on freenode. 
+
+For a real world application using Common Node, take a look at the [Minimal CMS](https://github.com/olegp/mcms).
 
 The following modules are included:
 
@@ -153,6 +155,7 @@ A number of higher level goals, such as descriptions of packages that would comp
 
 ### Acknowledgements
 
+  * Marcel Laverdet for [node-fibers](https://github.com/laverdet/node-fibers)
   * Hannes Wallnoefer and others from [RingoJS](http://ringojs.org) - this project uses a number of its tests & the Ringo code was used as a starting point for some modules
   * Kris Kowal, Tom Robinson, Isaac Schlueter for [Narwhal](http://narwhaljs.org/) - this project used a number of its modules as a starting point and some methods in e.g. Binary have been copied as is
   * everybody on the [CommonJS](http://groups.google.com/group/commonjs) mailing list
