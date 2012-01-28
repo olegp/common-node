@@ -1,7 +1,4 @@
 #!/bin/bash
-if [ ! -n "$NODE_PATH" ]; then
-  NODE_PATH="$(npm root -g)"
-fi
-COMMON_PATH="$NODE_PATH/common-node/lib/"
+COMMON_PATH="$(npm root -g)/common-node/lib/"
 export NODE_PATH="$NODE_PATH:$COMMON_PATH"
 exec node $COMMON_PATH/run.js "$@"
