@@ -9,11 +9,9 @@ proposals on top of [Node.js](http://nodejs.org) using
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
-If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way) (audio included).
+If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way) (audio included). If you have any questions, you can find help on IRC, channel [#common-node](irc://irc.freenode.net/common-node) on freenode. 
 
-If you have any questions, you can find help on IRC, channel [#common-node](irc://irc.freenode.net/common-node) on freenode. 
-
-For a real world application using Common Node, take a look at the [Minimal CMS](https://github.com/olegp/mcms). If you're looking for an Express like framework that works with Common Node, take a look at [Stick](https://github.com/olegp/stick/), in particular the [skeleton app](https://github.com/olegp/stick/tree/master/examples/skeleton) in examples.
+For a real world application using Common Node, take a look at the [Minimal CMS](https://github.com/olegp/mcms).
 
 The following modules are included:
 
@@ -32,9 +30,9 @@ The following modules are included:
 
 If you don't already have them, [install Node version 0.5.2 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and [Node Package Manager](http://npmjs.org). It's also highly recommended that you have your $NODE_PATH variable [set correctly](https://github.com/olegp/common-node/issues/20).
 
-Install `common-node` as a global package:
+Install `common-node` as a global package (use `sudo` if you're on Ubuntu):
 
-    sudo npm -g install common-node  
+    npm -g install common-node  
 
 Run the "Hello World" example:
 
@@ -58,6 +56,10 @@ A number of examples are available in [common-node/examples](https://github.com/
   * `chat.js` - Telnet chat server, compare this to an [async implementation](http://pastebin.com/Rhbbr6Tf)
 
 For more usage examples, please refer to the tests in the  [common-node/test](https://github.com/olegp/common-node/tree/master/test) directory.
+
+If you're looking for an Express like framework that works with Common Node, take a look at [Stick](https://github.com/olegp/stick/), in particular the [skeleton app](https://github.com/olegp/stick/tree/master/examples/skeleton) in examples.
+
+Common Node also works well with [CoffeeScript](http://coffeescript.org/), check out [this example](https://gist.github.com/1447709).
 
 ### Documentation
 
