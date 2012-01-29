@@ -57,7 +57,7 @@ A number of examples are available in [common-node/examples](https://github.com/
 
 For more usage examples, please refer to the tests in the  [common-node/test](https://github.com/olegp/common-node/tree/master/test) directory.
 
-If you're looking for an Express like framework that works with Common Node, take a look at [Stick](https://github.com/olegp/stick/), in particular the [skeleton app](https://github.com/olegp/stick/tree/master/examples/skeleton) in examples.
+If you're looking for an Express like framework that works with Common Node, take a look at [Stick](https://github.com/olegp/stick/). There's also the [Notes example webapp](https://github.com/olegp/notes) which uses Stick and a MongoDB data store.
 
 Common Node also works well with [CoffeeScript](http://coffeescript.org/), check out [this example](https://gist.github.com/1447709).
 
