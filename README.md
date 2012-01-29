@@ -117,6 +117,7 @@ To use the package in your existing app, you will need to:
 
   * run your app with `node` instead of `common-node`
   * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;` or update your NODE_PATH to include `common-node/lib` (see `bin/common-node` for an example)
+  * make sure any synchronous code is inside a fiber that has been created with `spawn` (in the example below each call of exports.app runs in a new fiber)
   
 For example the following modified version of `examples/http.js` can be run directly via `node http.js`
 
