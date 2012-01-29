@@ -13,7 +13,7 @@ If you have a spare 20 minutes, you can also check out [this presentation](http:
 
 If you have any questions, you can find help on IRC, channel [#common-node](irc://irc.freenode.net/common-node) on freenode. 
 
-For a real world application using Common Node, take a look at the [Minimal CMS](https://github.com/olegp/mcms).
+For a real world application using Common Node, take a look at the [Minimal CMS](https://github.com/olegp/mcms). If you're looking for an Express like framework that works with Common Node, take a look at [Stick](https://github.com/olegp/stick/), in particular the [skeleton app](https://github.com/olegp/stick/tree/master/examples/skeleton) in examples.
 
 The following modules are included:
 
