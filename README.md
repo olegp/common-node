@@ -167,7 +167,7 @@ A number of higher level goals, such as descriptions of packages that would comp
 
 (The MIT License)
 
-Copyright (c) 2011 Oleg Podsechin
+Copyright (c) 2011+ Oleg Podsechin
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
