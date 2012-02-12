@@ -9,9 +9,7 @@ proposals on top of [Node.js](http://nodejs.org) using
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
-If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way) (audio included).
-
-If you have any questions, you can find help on IRC, channel [#common-node](irc://irc.freenode.net/common-node) on freenode. 
+If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way) (audio included). If you have any questions, you can find help on IRC, channel [#common-node](irc://irc.freenode.net/common-node) on freenode. 
 
 For a real world application using Common Node, take a look at the [Minimal CMS](https://github.com/olegp/mcms).
 
@@ -32,9 +30,9 @@ The following modules are included:
 
 If you don't already have them, [install Node version 0.5.2 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and [Node Package Manager](http://npmjs.org). It's also highly recommended that you have your $NODE_PATH variable [set correctly](https://github.com/olegp/common-node/issues/20).
 
-Install `common-node` as a global package:
+Install `common-node` as a global package (use `sudo` if you're on Ubuntu):
 
-    sudo npm -g install common-node  
+    npm -g install common-node  
 
 Run the "Hello World" example:
 
@@ -58,6 +56,10 @@ A number of examples are available in [common-node/examples](https://github.com/
   * `chat.js` - Telnet chat server, compare this to an [async implementation](http://pastebin.com/Rhbbr6Tf)
 
 For more usage examples, please refer to the tests in the  [common-node/test](https://github.com/olegp/common-node/tree/master/test) directory.
+
+If you're looking for an Express like framework that works with Common Node, take a look at [Stick](https://github.com/olegp/stick/). There's also the [Notes example webapp](https://github.com/olegp/notes) which uses Stick and a MongoDB data store.
+
+Common Node also works well with [CoffeeScript](http://coffeescript.org/), check out [this example](https://gist.github.com/1447709).
 
 ### Documentation
 
@@ -115,6 +117,7 @@ To use the package in your existing app, you will need to:
 
   * run your app with `node` instead of `common-node`
   * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;` or update your NODE_PATH to include `common-node/lib` (see `bin/common-node` for an example)
+  * make sure any synchronous code is inside a fiber that has been created with `spawn` (in the example below each call of exports.app runs in a new fiber)
   
 For example the following modified version of `examples/http.js` can be run directly via `node http.js`
 
@@ -164,7 +167,7 @@ A number of higher level goals, such as descriptions of packages that would comp
 
 (The MIT License)
 
-Copyright (c) 2011 Oleg Podsechin
+Copyright (c) 2011+ Oleg Podsechin
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
