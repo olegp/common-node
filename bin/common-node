@@ -1,4 +1,4 @@
-#!/bin/bash
-COMMON_PATH="$(npm root -g)/common-node/lib/"
-export NODE_PATH="$NODE_PATH:$COMMON_PATH"
-exec node $COMMON_PATH/run.js "$@"
+#!/usr/bin/env node
+process.argv.shift();
+require('../lib/run')();
+
