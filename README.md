@@ -113,7 +113,22 @@ Any patches or suggestions on how to improve performance would be greatly apprec
   
 ### Embedding
 
-To use the package in your existing app, you will need to:
+You can use Common Node without invoking the `common-node` binary. There are two ways to do this:
+
+  * the bootstrapped approach allows you to run your Common Node code as is, but prevents you from accessing core Node modules such as `fs` (by over-riding that with Common Node's `fs` module instead)
+  * the mixed mode approach allows you to use Commo Node along side your existing Node specific code
+
+#### Bootstrapped
+
+To bootstrap Common Node & assuming your app's entry point is in `main.js`, simply add an `index.js` with the following contents to the same directory:
+
+    require('common-node').run('./main');
+
+Then, instead of starting your app with `common-node main.js`, run `node index.js`.
+
+#### Mixed Mode
+
+To use Common Node alongside your existing Node code, you will need to:
 
   * run your app with `node` instead of `common-node`
   * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;` or update your NODE_PATH to include `common-node/lib` (see `bin/common-node` for an example)
