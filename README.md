@@ -21,7 +21,7 @@ The following modules are included:
 * binary - [Binary/B](http://wiki.commonjs.org/wiki/Binary/B)
 * io - [IO/A](http://wiki.commonjs.org/wiki/IO/A), including a `ByteArray` backed `MemoryStream`
 * fs - [Filesystem/A](http://wiki.commonjs.org/wiki/Filesystem/A)
-* jsgi - [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2)
+* httpserver - [JSGI 0.3](http://wiki.commonjs.org/wiki/JSGI/Level0/A/Draft2) compatible HTTP server
 * httpclient - [HTTP Client/A](http://wiki.commonjs.org/wiki/HTTP_Client/A)
 * subprocess - methods for launching subprocesses modeled after Ringo
 * socket - [Sockets/A](http://wiki.commonjs.org/wiki/Sockets/A) (work in progress)
