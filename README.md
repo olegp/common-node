@@ -32,16 +32,24 @@ If you don't already have them, [install Node version 0.5.2 or later](https://gi
 
 Install `common-node` as a global package (use `sudo` if you're on Ubuntu or Mac):
 
-    npm -g install common-node  
+
+```bash
+npm -g install common-node
+```
 
 Run the "Hello World" example:
 
-    common-node $NODE_PATH/common-node/examples/hello.js
+
+```bash
+common-node $NODE_PATH/common-node/examples/hello.js
+```
 
 You shouldn't see any output. To test that it's working, make an HTTP request from another prompt:
 
-    curl http://localhost:8080/
 
+```bash
+curl http://localhost:8080/
+```
 
 ### Examples
 
@@ -67,18 +75,27 @@ The API reference is available at <http://olegp.github.com/common-node/doc/>
 
 To generate the documentation, install RingoJS and run:
 
-    ringo-doc -n "Common Node" -s ./lib -d ./doc --file-urls
+
+```bash
+ringo-doc -n "Common Node" -s ./lib -d ./doc --file-urls
+```
 
 ### Tests
 
 To run the unit tests run:
 
-    node test/all.js
+
+```bash
+node test/all.js
+```
 
 You can also run individual tests or sets of tests, for example:
 
-    node test/io.js
-    node test/fs-base/all.js
+
+```bash
+node test/io.js
+node test/fs-base/all.js
+```
 
 ### Benchmarks
 
@@ -96,8 +113,11 @@ The benchmarks have the following dependencies:
   
 To run them and generate graphs, execute the following command:
 
-    cd benchmarks/; ./run; ./graph
-    
+
+```bash
+cd benchmarks/; ./run; ./graph
+```
+
 This will generate PNG images of the graphs in `benchmarks/results/graphs/`. Some results are provided below: 
 
   * [buffer-alloc](http://olegp.github.com/common-node/graphs/buffer-alloc.png) - creates a number of byte arrays per request; the difference in performance compared to Node is due to the [array being cleared](https://github.com/olegp/common-node/issues/6)
@@ -107,10 +127,10 @@ This will generate PNG images of the graphs in `benchmarks/results/graphs/`. Som
   * [set-timeout](http://olegp.github.com/common-node/graphs/set-timeout.png) - sleep for 100ms before returning a response
   * [static-file](http://olegp.github.com/common-node/graphs/static-file.png) - returns a file served from the file system
   * [string-alloc](http://olegp.github.com/common-node/graphs/string-alloc.png)
-  
+
 As you can see from the results and given no profiling or optimization work has been done so far, there's room for improvement. 
 Any patches or suggestions on how to improve performance would be greatly appreciated.
-  
+
 ### Embedding
 
 You can use Common Node without invoking the `common-node` binary. There are two ways to do this:
@@ -122,7 +142,10 @@ You can use Common Node without invoking the `common-node` binary. There are two
 
 To bootstrap Common Node & assuming your app's entry point is in `main.js`, simply add an `index.js` with the following contents to the same directory:
 
-    require('common-node').run('./main');
+
+```js
+require('common-node').run('./main');
+```
 
 Then, instead of starting your app with `common-node main.js`, run `node index.js`.
 
@@ -133,30 +156,36 @@ To use Common Node alongside your existing Node code, you will need to:
   * run your app with `node` instead of `common-node`
   * change the way in which you require modules from `var io = require('io');` to `var io = require('common-node').io;` or update your NODE_PATH to include `common-node/lib` (see `bin/common-node` for an example)
   * make sure any synchronous code is inside a fiber that has been created with `spawn` (in the example below each call of exports.app runs in a new fiber)
-  
+
 For example the following modified version of `examples/http.js` can be run directly via `node http.js`
 
-    var HttpClient = require('common-node').httpclient.HttpClient;
-    
-    exports.app = function(request) {
-  	  return {
-    		status: 200,
-    		headers: {},
-    		body: new HttpClient({
-    			url: 'http://google.com'
-    		}).finish().body
-    	};
-    };
-    
-    if(require.main == module) {
-    	require('common-node').run(exports);
-    }
+
+```js
+var HttpClient = require('common-node').httpclient.HttpClient;
+
+exports.app = function(request) {
+  return {
+    status: 200,
+    headers: {},
+    body: new HttpClient({
+      url: 'http://google.com'
+    }).finish().body
+  };
+};
+
+if (require.main == module) {
+  require('common-node').run(exports);
+}
+```
 
 ### Contributing
 
 To contribute to this project, you can start by trying to run the tests on your system and posting any failures on the issue tracker. It is advised that you use the version in master for doing this, which you can install via:
 
-    npm install -g https://github.com/olegp/common-node/tarball/master
+
+```bash
+npm install -g https://github.com/olegp/common-node/tarball/master
+```
 
 If you run into any issues along the way, whether related to using this library
 in your own project or to the documentation, please post your comments on the [issue tracker](https://github.com/olegp/common-node/issues/). The tracker is also a great place to contribute ideas and find out what needs doing.
@@ -165,7 +194,10 @@ If you're coming from Ringo or Narwhal, please try running the tests for some of
 
 To find specific issues not listed on the tracker, you can run the following command from inside the `common-node` directory.
 
-    grep 'TODO' lib/*  
+
+```bash
+grep 'TODO' lib/*
+```
 
 To contribute code: fork the project, make and commit your changes and send a pull request.
 
@@ -177,8 +209,8 @@ A number of higher level goals, such as descriptions of packages that would comp
   * Hannes Wallnoefer and others from [RingoJS](http://ringojs.org) - this project uses a number of its tests & the Ringo code was used as a starting point for some modules
   * Kris Kowal, Tom Robinson, Isaac Schlueter for [Narwhal](http://narwhaljs.org/) - this project used a number of its modules as a starting point and some methods in e.g. Binary have been copied as is
   * everybody on the [CommonJS](http://groups.google.com/group/commonjs) mailing list
-    
-### License 
+
+### License
 
 (The MIT License)
 
