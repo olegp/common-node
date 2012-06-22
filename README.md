@@ -34,7 +34,7 @@ Install `common-node` as a global package:
 
 
 ```bash
-sudo npm -g install common-node
+[sudo] npm -g install common-node
 ```
 
 Run the "Hello World" example:
