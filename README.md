@@ -30,11 +30,11 @@ The following modules are included:
 
 If you don't already have them, [install Node version 0.5.2 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and [Node Package Manager](http://npmjs.org). It's also highly recommended that you have your $NODE_PATH variable [set correctly](https://github.com/olegp/common-node/issues/20).
 
-Install `common-node` as a global package (use `sudo` if you're on Ubuntu or Mac):
+Install `common-node` as a global package:
 
 
 ```bash
-npm -g install common-node
+[sudo] npm -g install common-node
 ```
 
 Run the "Hello World" example:
