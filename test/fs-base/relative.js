@@ -1,6 +1,6 @@
 var assert = require('../../lib/assert');
 var fs = require('../../lib/fs-base');
-var separator = '/';
+var separator = fs.separator;
 
 var tests;
 tests = [['', '', ''], ['.', '', ''], ['', '.', ''], ['.', '.', ''],
