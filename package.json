@@ -2,7 +2,11 @@
   "name": "common-node",
   "keywords": ["commonjs"],
   "description": "Synchronous CommonJS compatibility layer using node-fibers",
+<<<<<<< HEAD
   "version": "0.2.10",
+=======
+  "version": "0.2.11",
+>>>>>>> 3baa404f31e849d12a5333da126168c681f1bbfd
   "author": "Oleg Podsechin <oleg@ionsquare.com>",
   "directories" : {
     "lib" : "./lib",
