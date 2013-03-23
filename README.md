@@ -52,6 +52,8 @@ You shouldn't see any output. To test that it's working, make an HTTP request fr
 curl http://localhost:8080/
 ```
 
+Note: by default the port used is 8080 - to change this add the port number you want as the last command line argument.
+
 ### Examples
 
 A number of examples are available in [common-node/examples](https://github.com/olegp/common-node/tree/master/examples):
