@@ -7,6 +7,6 @@ exports['Filesystem'] = require('./fs-base/all');
 // exports['JSGI'] = require('./jsgi');
 exports['HTTP Client'] = require('./httpclient');
 
-if (require.main == module) {
-	require("../lib/test").run(exports);
+if (require.main === module) {
+  require("../lib/test").run(exports);
 }
