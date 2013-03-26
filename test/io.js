@@ -77,5 +77,5 @@ exports.testWrite = test.fs(1, function(file) {
 });
 
 if (require.main === module) {
-	require("../lib/test").run(exports, true);
+	require("../lib/test").run(exports);
 }
