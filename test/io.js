@@ -71,15 +71,26 @@ exports.testReadLine = function() {
 };
 
 exports.testWrite = function() {
-	var file = '/tmp/test' + getRandomInt(0, 1000000);
-	var io = new Stream(fs.createWriteStream(file));
-	io.write(new ByteArray('test'));
-	io.flush();
-	io.close();
-	var resource = getContents(file);
-	assert.strictEqual('test', resource);
+  var dir = './tmp';
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
+  var file = dir + '/test' + getRandomInt(0, 1000000);
+  try {
+    var io = new Stream(fs.createWriteStream(file));
+    io.write(new ByteArray('test'));
+    io.flush();
+    io.close();
+    var resource = getContents(file);
+    assert.strictEqual('test', resource);
+  } finally {
+    if (fs.existsSync(file)) {
+      fs.unlinkSync(file);
+    }
+    fs.rmdirSync('./tmp');
+  }
 };
 
-if (require.main == module) {
-	require("../lib/test").run(exports);
+if (require.main === module) {
+	require("../lib/test").run(exports, true);
 }
