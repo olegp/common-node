@@ -1,6 +1,7 @@
 var fs = require('fs');
 var assert = require("../lib/assert");
 var io = require('../lib/io');
+var test = require('../lib/test');
 var Stream = io.Stream;
 var TextStream = io.TextStream;
 var ByteArray = require('../lib/binary').ByteArray;
@@ -70,26 +71,14 @@ exports.testReadLine = function() {
 	assert.equal(lines.length, resource.replace(/\n$/, "").split(/\n/).length);
 };
 
-exports.testWrite = function() {
-  var dir = './tmp';
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir);
-  }
-  var file = dir + '/test' + getRandomInt(0, 1000000);
-  try {
-    var io = new Stream(fs.createWriteStream(file));
-    io.write(new ByteArray('test'));
-    io.flush();
-    io.close();
-    var resource = getContents(file);
-    assert.strictEqual('test', resource);
-  } finally {
-    if (fs.existsSync(file)) {
-      fs.unlinkSync(file);
-    }
-    fs.rmdirSync('./tmp');
-  }
-};
+exports.testWrite = test.fs(1, function(file) {
+  var io = new Stream(fs.createWriteStream(file));
+  io.write(new ByteArray('test'));
+  io.flush();
+  io.close();
+  var resource = getContents(file);
+  assert.strictEqual('test', resource);
+});
 
 if (require.main === module) {
 	require("../lib/test").run(exports, true);
