@@ -6,6 +6,7 @@ exports['IO'] = require('./io');
 exports['Filesystem'] = require('./fs-base/all');
 // exports['JSGI'] = require('./jsgi');
 exports['HTTP Client'] = require('./httpclient');
+exports['Subprocess'] = require('./subprocess');
 
 if (require.main === module) {
   require("../lib/test").run(exports);
