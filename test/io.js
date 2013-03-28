@@ -102,10 +102,15 @@ exports.testMemoryStreamEmpty = function() {
   [new MemoryStream(), new MemoryStream(resource.length)].forEach(function(io) {
     checkRW(io, true, true);
     checkCursors(io, 0, 0);
-    io.position = 42;
-    checkCursors(io, 0, 0);
     write(io);
     read(io);
+    var length = io.length;
+    io.position = 42;
+    checkCursors(io, 42, length);
+    io.length = 1;
+    checkCursors(io, 1, 1);
+    io.position = 42;
+    checkCursors(io, 1, 1);
     io.close();
     noWrite(io);
   });
@@ -117,6 +122,13 @@ exports.testMemoryStreamArray = function() {
   checkCursors(io, 0, resource.length);
   write(io);
   read(io);
+  var length = io.length;
+  io.position = 42;
+  checkCursors(io, 42, length);
+  io.length = 1;
+  checkCursors(io, 1, 1);
+  io.position = 42;
+  checkCursors(io, 1, 1);
   io.close();
   noWrite(io);
 };
@@ -126,6 +138,11 @@ exports.testMemoryStreamString = function() {
   checkRW(io, true, false);
   checkCursors(io, 0, resource.length);
   read(io);
+  var length = io.length;
+  io.position = 42;
+  checkCursors(io, 42, length);
+  io.length = 1;
+  checkCursors(io, 42, length);
   noWrite(io);
 };
 
