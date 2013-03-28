@@ -7,6 +7,3 @@ exports.app = function() {
   };
 };
 
-if (require.main === module) {
-  require("ringo/httpserver").main(module.id);
-}
