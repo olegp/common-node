@@ -3,8 +3,11 @@ var assert = require("../lib/assert");
 var io = require('../lib/io');
 var test = require('../lib/test');
 var Stream = io.Stream;
+var MemoryStream = io.MemoryStream;
 var TextStream = io.TextStream;
-var ByteArray = require('../lib/binary').ByteArray;
+var binary = require('../lib/binary');
+var ByteArray = binary.ByteArray;
+var ByteString = binary.ByteString;
 
 function getStream(file) {
   return new Stream(fs.createReadStream(file));
@@ -68,6 +71,53 @@ exports.testWrite = test.fs(1, function(file) {
   var resource = getContents(file);
   assert.strictEqual('test', resource);
 });
+
+exports.testMemoryStream = function() {
+  var resource = getContents('./lib/assert.js');
+
+  function checkRW(readable, writable) {
+    assert.strictEqual(io.readable(), readable);
+    assert.strictEqual(io.writable(), writable);
+  }
+
+  function checkCursors(position, length) {
+    assert.strictEqual(io.position, position);
+    assert.strictEqual(io.length, length);
+  }
+
+  function noWrite() {
+    assert.throws(function() {
+      io.write('');
+    });
+  }
+
+  function stuff() {
+    io.write(resource);
+    checkCursors(resource.length, resource.length);
+    io.write(new ByteArray(resource));
+    checkCursors(resource.length * 2, resource.length * 2);
+    io.position = 0;
+    io.write(new ByteString(resource));
+    checkCursors(resource.length, resource.length * 2);
+  }
+
+  var io = new MemoryStream();
+  checkRW(true, true);
+  checkCursors(0, 0);
+  stuff();
+  io.close();
+  noWrite();
+  io = new MemoryStream(new ByteArray(resource));
+  checkRW(true, true);
+  checkCursors(0, resource.length);
+  stuff();
+  io.close();
+  noWrite();
+  io = new MemoryStream(new ByteString(resource));
+  checkRW(true, false);
+  checkCursors(0, resource.length);
+  noWrite();
+};
 
 if (require.main === module) {
   test.run(exports);
