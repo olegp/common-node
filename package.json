@@ -1,11 +1,26 @@
 {
   "name": "common-node",
-  "keywords": ["commonjs"],
+  "keywords": [
+    "commonjs"
+  ],
   "description": "Synchronous CommonJS compatibility layer using node-fibers",
-  "version": "0.2.13",
-  "author": "Oleg Podsechin <oleg@ionsquare.com>",
-  "directories" : {
-    "lib" : "./lib",
+  "version": "0.10.10",
+  "author": {
+    "name": "Oleg Podsechin",
+    "email": "oleg@ionsquare.com"
+  },
+  "contributors": [
+    {
+      "name": "Alex Lam",
+      "email": "alex.lam@starthq.com"
+    },
+    {
+      "name": "Oleg Podsechin",
+      "email": "oleg@ionsquare.com"
+    }
+  ],
+  "directories": {
+    "lib": "./lib",
     "example": "./examples"
   },
   "repository": {
@@ -14,9 +29,19 @@
   },
   "homepage": "http://github.com/olegp/common-node/",
   "main": "./lib/all.js",
-  "bin": { "common-node": "./bin/common-node" },
-  "engines": { "node": ">= 0.5.2" },
-  "dependencies" : { "fibers": ">= 0.6.7" },
+  "bin": {
+    "common-node": "./bin/common-node"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "fibers": ">= 1.0.0"
+  },
   "preferGlobal": true,
-  "licenses": [ { "type": "MIT" } ]
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
 }
