@@ -17,17 +17,18 @@ function getContents(file) {
   return fs.readFileSync(file, "utf8");
 }
 
-exports.testReadFixed = function() {
+exports.testStreamReadFixed = function() {
+  var resource = getContents('./lib/assert.js');
   var io = getStream('./lib/io.js');
   var bytes = io.read(7);
   assert.strictEqual(bytes.length, 7);
-
+  assert.strictEqual(bytes.decodeToString(), resource.substr(0, 7));
   bytes = io.read(5);
   assert.strictEqual(bytes.length, 5);
-  // assert.strictEqual(bytes.decodeToString(), 'include');
+  assert.strictEqual(bytes.decodeToString(), resource.substr(7, 5));
 };
 
-exports.testReadIndefinite = function() {
+exports.testStreamReadIndefinite = function() {
   var resource = getContents('./lib/assert.js');
   var io = getStream('./lib/assert.js');
   var bytes = io.read();
@@ -48,7 +49,7 @@ exports.testStreamForEach = function() {
   assert.strictEqual(str, resource);
 };
 
-exports.testReadInto = function() {
+exports.testStreamReadInto = function() {
   var resource = getContents('./lib/assert.js');
   var io = getStream('./lib/assert.js');
   var bytes = new ByteArray(7);
@@ -56,14 +57,14 @@ exports.testReadInto = function() {
   assert.equal(bytes.decodeToString(), resource.substring(0, 7));
 };
 
-exports.testReadLine = function() {
+exports.testTextStreamReadLine = function() {
   var resource = getContents('./lib/assert.js');
   var io = new TextStream(getStream('./lib/assert.js'));
   var lines = io.readLines();
   assert.equal(lines.length, resource.replace(/\n$/, "").split(/\n/).length);
 };
 
-exports.testWrite = test.fs(1, function(file) {
+exports.testStreamWrite = test.fs(1, function(file) {
   var io = new Stream(fs.createWriteStream(file));
   io.write(new ByteArray('test'));
   io.flush();
@@ -91,7 +92,7 @@ exports.testMemoryStream = function() {
     });
   }
 
-  function exercise() {
+  function write() {
     io.write(resource);
     checkCursors(resource.length, resource.length);
     io.write(new ByteArray(resource));
@@ -99,27 +100,40 @@ exports.testMemoryStream = function() {
     io.position = 0;
     io.write(new ByteString(resource));
     checkCursors(resource.length, resource.length * 2);
-    assert.strictEqual(io.read(resource.length).decodeToString(), resource);
-    checkCursors(resource.length * 2, resource.length * 2);
   }
 
-  var io = new MemoryStream();
-  checkRW(true, true);
-  checkCursors(0, 0);
-  io.position = 42;
-  checkCursors(0, 0);
-  exercise();
-  io.close();
-  noWrite();
+  function read() {
+    var position = io.position;
+    var length = io.length;
+    var bytes = io.read(resource.length);
+    assert.strictEqual(bytes.length, resource.length);
+    assert.strictEqual(bytes.decodeToString(), resource);
+    checkCursors(position + resource.length, length);
+  }
+
+  var io;
+  [new MemoryStream(), new MemoryStream(resource.length)].forEach(function(stream) {
+    io = stream;
+    checkRW(true, true);
+    checkCursors(0, 0);
+    io.position = 42;
+    checkCursors(0, 0);
+    write();
+    read();
+    io.close();
+    noWrite();
+  });
   io = new MemoryStream(new ByteArray(resource));
   checkRW(true, true);
   checkCursors(0, resource.length);
-  exercise();
+  write();
+  read();
   io.close();
   noWrite();
   io = new MemoryStream(new ByteString(resource));
   checkRW(true, false);
   checkCursors(0, resource.length);
+  read();
   noWrite();
 };
 
