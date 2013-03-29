@@ -14,10 +14,6 @@ function getContents(file) {
 	return fs.readFileSync(file, "utf8");
 }
 
-function getRandomInt(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 exports.testReadFixed = function() {
 	var io = getStream('./lib/io.js');
 	var bytes = io.read(7);
