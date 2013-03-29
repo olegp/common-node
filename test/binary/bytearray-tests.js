@@ -74,7 +74,7 @@ exports.testByteArrayResizing = function() {
 	b1.length = 3;
 	assert.strictEqual(3, b1.length, "Length should change to 3");
 	assert.strictEqual(0, b1.get(0));
-	assert.ok(isNaN(b1.get(4)));
+	assert.ok(isNaN(b1.get(3)));
 
 	b1.length = 9;
 	assert.strictEqual(9, b1.length, "Length should change to 9");
