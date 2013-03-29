@@ -91,7 +91,7 @@ exports.testMemoryStream = function() {
     });
   }
 
-  function stuff() {
+  function exercise() {
     io.write(resource);
     checkCursors(resource.length, resource.length);
     io.write(new ByteArray(resource));
@@ -99,18 +99,22 @@ exports.testMemoryStream = function() {
     io.position = 0;
     io.write(new ByteString(resource));
     checkCursors(resource.length, resource.length * 2);
+    assert.strictEqual(io.read(resource.length).decodeToString(), resource);
+    checkCursors(resource.length * 2, resource.length * 2);
   }
 
   var io = new MemoryStream();
   checkRW(true, true);
   checkCursors(0, 0);
-  stuff();
+  io.position = 42;
+  checkCursors(0, 0);
+  exercise();
   io.close();
   noWrite();
   io = new MemoryStream(new ByteArray(resource));
   checkRW(true, true);
   checkCursors(0, resource.length);
-  stuff();
+  exercise();
   io.close();
   noWrite();
   io = new MemoryStream(new ByteString(resource));
