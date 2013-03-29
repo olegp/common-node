@@ -12,10 +12,13 @@ function hijack(run) {
   var err = new MemoryStream();
   system.stdout = {raw:out};
   system.stderr = {raw:err};
-  run();
-  system.stdout = stdout;
-  system.stderr = stderr;
-  return {out:out.content.decodeToString(), err:err.content.decodeToString()};
+  try {
+    run();
+    return {out:out.content.decodeToString(), err:err.content.decodeToString()};
+  } finally {
+    system.stdout = stdout;
+    system.stderr = stderr;
+  }
 }
 
 exports.testCreateProcess = function() {
@@ -52,6 +55,8 @@ exports.testCreateProcess = function() {
     assert.strictEqual(proc.stdout.read().length, 0);
     assert.notStrictEqual(proc.stderr.read().length, 0);
   });
+  var proc = p.createProcess({command:'nosuchprocess'});
+  assert.notStrictEqual(proc.wait(), 0);
 };
 
 exports.testCommand = function() {
@@ -81,6 +86,9 @@ exports.testCommand = function() {
       p.command.apply(null, args);
     });
   });
+  assert.throws(function() {
+    p.command('nosuchprocess');
+  });
 };
 
 exports.testSystem = function() {
@@ -93,7 +101,7 @@ exports.testSystem = function() {
     ['node', '-v', {binary:true, encoding:'utf-8'}]
   ].forEach(function(args) {
     var std = hijack(function() {
-      p.system.apply(null, args);
+      assert.strictEqual(p.system.apply(null, args), 0);
     });
     assert.strictEqual(std.out.trim(), process.version);
     assert.strictEqual(std.err.length, 0);
@@ -107,11 +115,16 @@ exports.testSystem = function() {
     ['node', 'nosuchscriptfile', {binary:true, encoding:'utf-8'}]
   ].forEach(function(args) {
     var std = hijack(function() {
-      p.system.apply(null, args);
+      assert.notStrictEqual(p.system.apply(null, args), 0);
     });
     assert.strictEqual(std.out.length, 0);
     assert.notStrictEqual(std.err.length, 0);
   });
+  var std = hijack(function() {
+    assert.notStrictEqual(p.system('nosuchprocess'), 0);
+  });
+  assert.strictEqual(std.out.length, 0);
+  assert.strictEqual(std.err.length, 0);
 };
 
 if (require.main === module) {
