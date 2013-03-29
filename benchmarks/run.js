@@ -1,4 +1,5 @@
 var system = require("system");
+var fs = require("fs-base");
 var get = require("ringo/httpclient").get;
 
 var running = true;
@@ -15,9 +16,11 @@ function poke() {
 }
 
 if (require.main === module) {
-  var benchmark = 'benchmarks/' + system.args[2] + '/common-node.js';
+  var benchmark = system.args[2] + '/common-node.js';
   console.log('Launching "' + benchmark + '"...');
-  require('child_process').spawn('node', ['lib/run', benchmark]);
+  require('child_process').spawn('node', ['../lib/run', benchmark], {
+    cwd:fs.absolute('./benchmarks')
+  });
   console.log('Attacking...');
 
   var past = Date.now();
