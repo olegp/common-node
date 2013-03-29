@@ -96,6 +96,11 @@ function read(io) {
   assert.strictEqual(bytes.length, resource.length);
   assert.strictEqual(bytes.decodeToString(), resource);
   checkCursors(io, position + resource.length, length);
+  var bytes = new ByteArray(7);
+  io.position = position;
+  io.readInto(bytes);
+  assert.equal(bytes.decodeToString(), resource.substring(0, 7));
+  checkCursors(io, position + 7, length);
 }
 
 exports.testMemoryStreamEmpty = function() {
