@@ -21,7 +21,7 @@ function hijack(run) {
   }
 }
 
-exports.testCreateProcess = function() {
+exports.testCreateProcessText = function() {
   [
     {command:'node -v'},
     {command:['node', '-v']},
@@ -32,6 +32,9 @@ exports.testCreateProcess = function() {
     assert.strictEqual(proc.stdout.read().trim(), process.version);
     assert.strictEqual(proc.stderr.read().length, 0);
   });
+};
+
+exports.testCreateProcessBinary = function() {
   [
     {command:'node -v', binary:true},
     {command:['node', '-v'], binary:true},
@@ -42,6 +45,9 @@ exports.testCreateProcess = function() {
     assert.strictEqual(proc.stdout.read().decodeToString().trim(), process.version);
     assert.strictEqual(proc.stderr.read().length, 0);
   });
+};
+
+exports.testCreateProcessError = function() {
   [
     {command:'node nosuchscriptfile'},
     {command:['node', 'nosuchscriptfile']},
@@ -59,7 +65,7 @@ exports.testCreateProcess = function() {
   assert.notStrictEqual(proc.wait(), 0);
 };
 
-exports.testCommand = function() {
+exports.testCommandText = function() {
   [
     ['node -v'],
     ['node', '-v'],
@@ -67,6 +73,9 @@ exports.testCommand = function() {
   ].forEach(function(args) {
     assert.strictEqual(p.command.apply(null, args).trim(), process.version);
   });
+};
+
+exports.testCommandBinary = function() {
   [
     ['node -v', {binary:true}],
     ['node', '-v', {binary:true}],
@@ -74,6 +83,9 @@ exports.testCommand = function() {
   ].forEach(function(args) {
     assert.strictEqual(p.command.apply(null, args).decodeToString().trim(), process.version);
   });
+};
+
+exports.testCommandError = function() {
   [
     ['node nosuchscriptfile'],
     ['node', 'nosuchscriptfile'],
@@ -106,6 +118,9 @@ exports.testSystem = function() {
     assert.strictEqual(std.out.trim(), process.version);
     assert.strictEqual(std.err.length, 0);
   });
+};
+
+exports.testSystemError = function() {
   [
     ['node nosuchscriptfile'],
     ['node', 'nosuchscriptfile'],
