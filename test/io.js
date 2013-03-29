@@ -32,13 +32,6 @@ exports.testReadIndefinite = function() {
   assert.strictEqual(bytes.decodeToString(), resource);
 };
 
-exports.testReadBlock = function() {
-  // var resource = getContents('./lib/assert.js');
-  // var io = getStream('./lib/assert.js');
-  // var bytes = io.read(null);
-  // assert.notEqual(bytes.length, resource.length);
-};
-
 exports.testStreamForEach = function() {
   var resource = getContents('./lib/assert.js');
   var io = getStream('./lib/assert.js');
