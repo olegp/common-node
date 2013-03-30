@@ -206,7 +206,7 @@ To contribute code: fork the project, make and commit your changes and send a pu
 
 A number of higher level goals, such as descriptions of packages that would complement Common Node are listed on the [TODO wiki page](https://github.com/olegp/common-node/wiki/TODO).
 
-### Contributors
+### Maintainers
 
   * [Alex Lam](http://github.com/alexlamsl)
   * [Oleg Podsechin](http://github.com/olegp)
