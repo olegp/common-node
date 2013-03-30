@@ -4,19 +4,35 @@ var get = require("http").get;
 
 var running = true;
 
+function noop() {
+}
+
+function onError() {
+  error++;
+  setTimeout(poke, 0);
+}
+
 function poke() {
   if (running) {
-    try {
-      get({host:'localhost', port:8080, agent:false}, function() {
+    var s;
+    function next() {
+      if (s) {
+        s.destroy();
+        s = undefined;
         count++;
         setTimeout(poke, 0);
-      }, function() {
-        error++;
-        setTimeout(poke, 0);
-      });
+      }
+    }
+    try {
+      get({
+        host:'localhost',
+        port:8080,
+        agent:false
+      }, next).on('error', onError).on('socket', function(socket) {
+        s = socket;
+      }).on('data', next).on('end', next).on('close', next);
     } catch (e) {
-      error++;
-      setTimeout(poke, 0);
+      onError();
     }
   }
 }
