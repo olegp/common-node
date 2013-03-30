@@ -286,12 +286,10 @@ exports.testForEach = function() {
   item = log[0];
   assert.ok(thisObj === item.thisObj, "block called with correct thisObj");
   assert.strictEqual(3, item.args.length, "block called with three args");
-  assert
-    .strictEqual(b.get(0), item.args[0], "block called with correct item 0");
+  assert.strictEqual(b.get(0), item.args[0], "block called with correct item 0");
 
   item = log[3];
-  assert
-    .strictEqual(b.get(3), item.args[0], "block called with correct item 3");
+  assert.strictEqual(b.get(3), item.args[0], "block called with correct item 3");
 
 };
 
