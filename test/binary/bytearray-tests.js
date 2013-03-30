@@ -315,68 +315,69 @@ exports.testConcat = function() {
   assert.strictEqual(b.length + b1.length + b2.length + b2.length, b3.length);
 
 };
+
 exports.testSlice = function() {
-  var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-  var b = new ByteArray(a);
-  var s = b.slice();
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(10, s.length);
-  assert.deepEqual(a, s.toArray());
+  [
+    [],
+    [3, 6],
+    [3, 4],
+    [3, 3],
+    [3, 2],
+    [7],
+    [3, -2],
+    [-2],
+    [50],
+    [-100, 100],
+    ["foo"],
+    ["foo", "bar"],
+    ["foo", 4],
+    [3, "bar"]
+  ].forEach(function(test) {
+    var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+    var b = new ByteArray(a);
+    var s = a.slice.apply(a, test);
+    var t = b.slice.apply(b, test);
+    assert.ok(t instanceof ByteArray, test);
+    assert.strictEqual(s.length, t.length, test);
+    assert.deepEqual(s, t.toArray(), test);
+  });
+};
 
-  s = b.slice(3, 6);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(3, s.length);
-  assert.deepEqual(a.slice(3, 6), s.toArray());
-
-  s = b.slice(3, 4);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(1, s.length);
-  assert.deepEqual(a.slice(3, 4), s.toArray());
-
-  s = b.slice(3, 3);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(0, s.length);
-  assert.deepEqual(a.slice(3, 3), s.toArray());
-
-  s = b.slice(3, 2);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(0, s.length);
-  assert.deepEqual(a.slice(3, 2), s.toArray());
-
-  s = b.slice(7);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(3, s.length);
-  assert.deepEqual(a.slice(7), s.toArray());
-
-  s = b.slice(3, -2);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(5, s.length);
-  assert.deepEqual(a.slice(3, -2), s.toArray());
-
-  s = b.slice(-2);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(2, s.length);
-  assert.deepEqual(a.slice(-2), s.toArray());
-
-  s = b.slice(50);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(0, s.length);
-  assert.deepEqual(a.slice(50), s.toArray());
-
-  s = b.slice(-100, 100);
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(10, s.length);
-  assert.deepEqual(a.slice(-100, 100), s.toArray());
-
-  s = b.slice("foo");
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(10, s.length);
-  assert.deepEqual(a.slice("foo"), s.toArray());
-
-  s = b.slice("foo", "bar");
-  assert.ok(s instanceof ByteArray);
-  assert.strictEqual(0, s.length);
-  assert.deepEqual(a.slice("foo", "bar"), s.toArray());
+exports.testSplice = function() {
+  var c = [42, 47];
+  var tests = [];
+  [
+    [],
+    [3, 6],
+    [3, 4],
+    [3, 3],
+    [3, 2],
+    [7],
+    [3, -2],
+    [-2],
+    [50],
+    [-100, 100],
+    ["foo"],
+    ["foo", "bar"],
+    ["foo", 4],
+    [3, "bar"]
+  ].forEach(function(test) {
+    tests.push(test.concat());
+    test[0] |= 0;
+    test[1] |= 0;
+    tests.push(test.concat(c));
+  });
+  tests.forEach(function(test) {
+    var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+    var b = new ByteArray(a);
+    var s = a.splice.apply(a, test);
+    var t = b.splice.apply(b, test);
+    assert.strictEqual(a.length, b.length, 'modified: ' + test);
+    assert.deepEqual(a, b.toArray(), 'modified: ' + test);
+    assert.ok(t instanceof ByteArray, test);
+    assert.strictEqual(s.length, t.length, 'removed: ' + test);
+    assert.deepEqual(s, t.toArray(), 'removed: ' + test);
+  });
 };
 
 if (require.main === module) {
