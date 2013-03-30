@@ -58,6 +58,11 @@ if (require.main === module) {
     process.exit(1);
   }
   var child = launcher(process.argv[3]);
+  process.on('uncaughtException', function(e) {
+    console.error(e.stack);
+    child.kill('SIGINT');
+    process.exit(1);
+  });
 
   var past = Date.now();
   var count = 0;
@@ -69,14 +74,35 @@ if (require.main === module) {
     setTimeout(poke, 1000);
   }
 
+  var cur = 0, max = 10, pts = [];
+  pts.sum = 0;
+  pts.sqSum = 0;
+
+  function pad(string, length) {
+    return (new Array(Math.max(length + 1 - string.length, 0))).join(' ') + string;
+  }
+
   var previous = 0;
   var id = setInterval(function() {
     var now = Date.now();
     var next = count;
-    console.log((1e3 * (next - previous) / (now - past)).toFixed(2) + ' req/s (' + error + ')');
+    var p = 1e3 * (next - previous) / (now - past);
+    var q = pts[cur] || 0;
+    pts.sum += p - q;
+    pts.sqSum += Math.pow(p, 2) - Math.pow(q, 2);
+    pts[cur] = p;
+    process.stdout.clearLine();
+    process.stdout.cursorTo(0);
+    var s = pad(pts[cur].toFixed(2), 8);
+    var mean = pts.sum / pts.length;
+    s += '     ' + pad(mean.toFixed(2), 8);
+    var sd = Math.sqrt(pts.sqSum / pts.length - Math.pow(mean, 2));
+    s += ' +/- ' + pad(sd.toFixed(2), 6);
+    process.stdout.write(s + ' req/s     (' + error + ')');
     past = now;
     previous = next;
-  }, 10000);
+    cur = (cur + 1) % max;
+  }, 3000);
 
   var r = readline.createInterface({
     input:process.stdin,
