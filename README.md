@@ -29,7 +29,7 @@ The following modules are included:
 
 ### Installation
 
-If you don't already have them, [install Node version 0.5.2 or later](https://github.com/joyent/node/wiki/Installation) (for Node 0.4.X check out the v0.4 branch of Common Node) and [Node Package Manager](http://npmjs.org). It's also highly recommended that you have your $NODE_PATH variable [set correctly](https://github.com/olegp/common-node/issues/20).
+If you don't already have them, [install Node version 0.10.0 or later](https://github.com/joyent/node/wiki/Installation) (previous versions for Node going back as far as 0.4.0 are also available in NPM) and [Node Package Manager](http://npmjs.org). It's also highly recommended that you have your $NODE_PATH variable [set correctly](https://github.com/olegp/common-node/issues/20).
 
 Install `common-node` as a global package:
 
