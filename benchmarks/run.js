@@ -1,11 +1,27 @@
-var path = require("path");
 var readline = require("readline");
 var http = require("http");
+var spawn = require("child_process").spawn;
 
 var options = {
   host:'localhost',
   port:8080,
   agent:new http.Agent()
+};
+var launchers = {
+  c:function(test) {
+    var benchmark = test + '/common-node.js';
+    console.log('Launching "' + benchmark + '"...');
+    return spawn('node', ['../lib/run', benchmark], {
+      stdio:'inherit'
+    });
+  },
+  n:function(test) {
+    var benchmark = test + '/node.js';
+    console.log('Launching "' + benchmark + '"...');
+    return spawn('node', [benchmark], {
+      stdio:'inherit'
+    });
+  }
 };
 var running = true;
 
@@ -36,17 +52,18 @@ function poke() {
 }
 
 if (require.main === module) {
-  var benchmark = process.argv[2] + '/common-node.js';
-  console.log('Launching "' + benchmark + '"...');
-  var child = require('child_process').spawn('node', ['../lib/run', benchmark], {
-    cwd:path.resolve(process.cwd(), './benchmarks'),
-    stdio:'inherit'
-  });
+  var launcher = process.argv[2] && process.argv[2].length > 0 && launchers[process.argv[2].charAt(0).toLowerCase()];
+  if (process.argv.length < 3 || !launcher) {
+    console.log('node run.js <common-node|node> <test name> [<concurrency>]');
+    process.exit(1);
+  }
+  var child = launcher(process.argv[3]);
 
   var past = Date.now();
   var count = 0;
   var error = 0;
-  var n = process.argv[3] || 20;
+  var n = process.argv[4] || 20;
+  console.log('Concurrency = ' + n);
   options.agent.maxSockets = n;
   for (var i = 0; i < n; i++) {
     setTimeout(poke, 1000);
