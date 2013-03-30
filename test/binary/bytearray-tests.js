@@ -296,24 +296,25 @@ exports.testForEach = function() {
 };
 
 exports.testConcat = function() {
+  var a = [];
   var b = new ByteArray();
 
-  var b1 = b.concat(new ByteArray([1, 2, 3]));
-  assert.strictEqual(3, b1.length);
-  assert.strictEqual(1, b1.get(0));
-  assert.strictEqual(2, b1.get(1));
-  assert.strictEqual(3, b1.get(2));
+  var a1 = [1, 2, 3];
+  var b1 = b.concat(new ByteArray(a1));
+  a1 = a.concat(a1);
+  assert.strictEqual(a1.length, b1.length);
+  assert.deepEqual(a1, b1.toArray());
 
-  var b2 = b1.concat(new ByteString([4, 5, 6]));
-  assert.strictEqual(6, b2.length);
-  assert.strictEqual(1, b2.get(0));
-  assert.strictEqual(3, b2.get(2));
-  assert.strictEqual(4, b2.get(3));
-  assert.strictEqual(6, b2.get(5));
+  var a2 = [4, 5, 6];
+  var b2 = b1.concat(new ByteString(a2));
+  a2 = a1.concat(a2);
+  assert.strictEqual(a2.length, b2.length);
+  assert.deepEqual(a2, b2.toArray());
 
+  var a3 = a2.concat(a, a1, a2, [], []);
   var b3 = b2.concat(b, b1, b2, new ByteString(), new ByteArray());
-  assert.strictEqual(b.length + b1.length + b2.length + b2.length, b3.length);
-
+  assert.strictEqual(a3.length, b3.length);
+  assert.deepEqual(a3, b3.toArray());
 };
 
 exports.testSlice = function() {
