@@ -217,6 +217,28 @@ exports.testSplit = function() {
   assert.strictEqual(5, a1[1].get(1));
 };
 
+exports.testConcat = function() {
+  var a = [];
+  var b = new ByteString();
+
+  var a1 = [1, 2, 3];
+  var b1 = b.concat(new ByteString(a1));
+  a1 = a.concat(a1);
+  assert.strictEqual(a1.length, b1.length);
+  assert.deepEqual(a1, b1.toArray());
+
+  var a2 = [4, 5, 6];
+  var b2 = b1.concat(new ByteString(a2));
+  a2 = a1.concat(a2);
+  assert.strictEqual(a2.length, b2.length);
+  assert.deepEqual(a2, b2.toArray());
+
+  var a3 = a2.concat(a, a1, a2, [], []);
+  var b3 = b2.concat(b, b1, b2, new ByteString(), new ByteArray());
+  assert.strictEqual(a3.length, b3.length);
+  assert.deepEqual(a3, b3.toArray());
+};
+
 exports.testSlice = function() {
   var b1 = new ByteString([0, 1, 2, 3, 4, 5]), b2;
 
