@@ -1,44 +1,62 @@
-var system = require("system");
-var fs = require("fs-base");
-var get = require("ringo/httpclient").get;
+var path = require("path");
+var readline = require("readline");
+var get = require("http").get;
 
 var running = true;
 
 function poke() {
-  while (running) {
+  if (running) {
     try {
-      get('http://localhost:8080/');
-      count++;
+      get({host:'localhost', port:8080, agent:false}, function() {
+        count++;
+        setTimeout(poke, 0);
+      }, function() {
+        error++;
+        setTimeout(poke, 0);
+      });
     } catch (e) {
       error++;
+      setTimeout(poke, 0);
     }
   }
 }
 
 if (require.main === module) {
-  var benchmark = system.args[2] + '/common-node.js';
+  var benchmark = process.argv[2] + '/common-node.js';
   console.log('Launching "' + benchmark + '"...');
-  require('child_process').spawn('node', ['../lib/run', benchmark], {
-    cwd:fs.absolute('./benchmarks')
+  var child = require('child_process').spawn('node', ['../lib/run', benchmark], {
+    cwd:path.resolve(process.cwd(), './benchmarks')
   });
-  console.log('Attacking...');
 
   var past = Date.now();
   var count = 0;
   var error = 0;
-  for (var i = 0; i < 5; i++) {
-    spawn(poke);
+  var n = process.argv[3] || 20;
+  for (var i = 0; i < n; i++) {
+    setTimeout(poke, 0);
   }
 
   var previous = 0;
-  setInterval(function() {
-    var now = Date.now();
-    var next = count;
-    console.log((1e3 * (next - previous) / (now - past)).toFixed(2), ' req/s (' + error + ')');
-    past = now;
-    previous = next;
-  }, 10000).unref();
+  var id = setInterval(function() {
+    if (running) {
+      var now = Date.now();
+      var next = count;
+      console.log((1e3 * (next - previous) / (now - past)).toFixed(2), ' req/s (' + error + ')');
+      past = now;
+      previous = next;
+    } else {
+      console.log('Cleaning up...');
+      clearInterval(id);
+      child.kill('SIGINT');
+    }
+  }, 10000);
 
-  system.stdin.readLine();
-  running = false;
+  var r = readline.createInterface({
+    input:process.stdin,
+    output:process.stdout
+  });
+  r.question('Press ENTER to terminate...\n', function() {
+    running = false;
+    r.close();
+  });
 }
