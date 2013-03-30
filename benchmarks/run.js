@@ -1,7 +1,12 @@
 var path = require("path");
 var readline = require("readline");
-var get = require("http").get;
+var http = require("http");
 
+var options = {
+  host:'localhost',
+  port:8080,
+  agent:new http.Agent()
+};
 var running = true;
 
 function noop() {
@@ -24,11 +29,9 @@ function poke() {
         setTimeout(poke, 1000);
       }
     }
-    get({
-      host:'localhost',
-      port:8080,
-      agent:false
-    }, next).on('error', err);
+    http.get(options, function(response) {
+      response.on('error', err).on('end', next).on('close', err).resume();
+    }).on('error', err);
   }
 }
 
@@ -36,13 +39,15 @@ if (require.main === module) {
   var benchmark = process.argv[2] + '/common-node.js';
   console.log('Launching "' + benchmark + '"...');
   var child = require('child_process').spawn('node', ['../lib/run', benchmark], {
-    cwd:path.resolve(process.cwd(), './benchmarks')
+    cwd:path.resolve(process.cwd(), './benchmarks'),
+    stdio:'inherit'
   });
 
   var past = Date.now();
   var count = 0;
   var error = 0;
   var n = process.argv[3] || 20;
+  options.agent.maxSockets = n;
   for (var i = 0; i < n; i++) {
     setTimeout(poke, 1000);
   }
