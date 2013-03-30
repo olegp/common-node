@@ -7,11 +7,6 @@ var running = true;
 function noop() {
 }
 
-function onError() {
-  error++;
-  setTimeout(poke, 0);
-}
-
 function poke() {
   if (running) {
     var s;
@@ -23,16 +18,24 @@ function poke() {
         setTimeout(poke, 0);
       }
     }
+    function err() {
+      if (s) {
+        s.destroy();
+        s = undefined;
+        error++;
+        setTimeout(poke, 0);
+      }
+    }
     try {
       get({
         host:'localhost',
         port:8080,
         agent:false
-      }, next).on('error', onError).on('socket', function(socket) {
+      }, next).on('error', err).on('socket', function(socket) {
         s = socket;
       }).on('data', next).on('end', next).on('close', next);
     } catch (e) {
-      onError();
+      err();
     }
   }
 }
