@@ -9,34 +9,26 @@ function noop() {
 
 function poke() {
   if (running) {
-    var s;
+    var first = true;
     function next() {
-      if (s) {
-        s.destroy();
-        s = undefined;
+      if (first) {
+        first = false;
         count++;
         setTimeout(poke, 0);
       }
     }
     function err() {
-      if (s) {
-        s.destroy();
-        s = undefined;
+      if (first) {
+        first = false;
         error++;
-        setTimeout(poke, 0);
+        setTimeout(poke, 1000);
       }
     }
-    try {
-      get({
-        host:'localhost',
-        port:8080,
-        agent:false
-      }, next).on('error', err).on('socket', function(socket) {
-        s = socket;
-      }).on('data', next).on('end', next).on('close', next);
-    } catch (e) {
-      err();
-    }
+    get({
+      host:'localhost',
+      port:8080,
+      agent:false
+    }, next).on('error', err);
   }
 }
 
