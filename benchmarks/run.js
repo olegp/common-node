@@ -33,7 +33,7 @@ if (require.main === module) {
   var error = 0;
   var n = process.argv[3] || 20;
   for (var i = 0; i < n; i++) {
-    setTimeout(poke, 0);
+    setTimeout(poke, 1000);
   }
 
   var previous = 0;
