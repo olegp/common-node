@@ -57,17 +57,11 @@ if (require.main === module) {
 
   var previous = 0;
   var id = setInterval(function() {
-    if (running) {
-      var now = Date.now();
-      var next = count;
-      console.log((1e3 * (next - previous) / (now - past)).toFixed(2), ' req/s (' + error + ')');
-      past = now;
-      previous = next;
-    } else {
-      console.log('Cleaning up...');
-      clearInterval(id);
-      child.kill('SIGINT');
-    }
+    var now = Date.now();
+    var next = count;
+    console.log((1e3 * (next - previous) / (now - past)).toFixed(2), ' req/s (' + error + ')');
+    past = now;
+    previous = next;
   }, 10000);
 
   var r = readline.createInterface({
@@ -77,5 +71,10 @@ if (require.main === module) {
   r.question('Press ENTER to terminate...\n', function() {
     running = false;
     r.close();
+    console.log('Cleaning up...');
+    clearInterval(id);
+    setTimeout(function() {
+      child.kill('SIGINT');
+    }, 5000);
   });
 }
