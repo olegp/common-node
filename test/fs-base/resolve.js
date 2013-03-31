@@ -22,6 +22,17 @@ tests.forEach(function(args) {
   };
 });
 
+tests.forEach(function(args) {
+  if (args[0].length > 1) {
+    exports['testPath ' + JSON.stringify(args[0])] = function() {
+      args[0] = args[0].map(localize);
+      var path = fs.path(args[0].shift());
+      var result = path.resolve.apply(path, args[0]);
+      assert.strictEqual(localize(args[1]), result.toString());
+    };
+  }
+});
+
 function localize(path) {
   return path.replace(/^\//, roots[0]).replace(/\//g, separator);
 }
