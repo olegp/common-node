@@ -5,12 +5,19 @@ var tests;
 tests = [['', '.'], ['.', '.'], ['foo', '.'], ['foo/bar', 'foo']];
 
 tests.forEach(function(dirs) {
-	exports['test "' + dirs[0] + '"'] = function() {
-		var actual = fs.directory(dirs[0]);
-		assert.strictEqual(dirs[1], actual);
-	};
+  exports['test "' + dirs[0] + '"'] = function() {
+    var actual = fs.directory(dirs[0]);
+    assert.strictEqual(dirs[1], actual);
+  };
 });
 
-if(require.main == module) {
-	require("../../lib/test").run(exports);
+tests.forEach(function(dirs) {
+  exports['testPath "' + dirs[0] + '"'] = function() {
+    var actual = new fs.Path(dirs[0]).directory();
+    assert.strictEqual(dirs[1], actual.toString());
+  };
+});
+
+if (require.main === module) {
+  require("../../lib/test").run(exports);
 }
