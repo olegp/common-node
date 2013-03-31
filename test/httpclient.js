@@ -1,6 +1,15 @@
 var assert = require("../lib/assert");
 var HttpClient = require("../lib/httpclient").HttpClient;
 
+exports.testRead = function() {
+  assert.throws(function() {
+    new HttpClient({
+      method:"GET",
+      url:"http://google.com/"
+    }).read();
+  });
+};
+
 exports.testGet = function() {
   var response = new HttpClient({
     method:"GET",
