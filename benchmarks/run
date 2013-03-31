@@ -57,10 +57,10 @@ echo "$ABFLAGS" > results/flags
 # Run benchmarks
 log $AB $ABFLAGS $ADDR
 bm buffer-alloc
+bm file-read
+bm file-stream
 bm hello-world
 bm no-alloc
 bm parse-json
 bm set-timeout
-bm static-file /README.md
 bm string-alloc
-

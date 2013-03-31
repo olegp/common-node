@@ -75,12 +75,11 @@ gnuplot results/$1.p
 mkdir -p results/graphs
 
 graph buffer-alloc "buffer alloc"
+graph file-read "file read"
+graph file-stream "file stream"
 graph hello-world "hello world"
 graph no-alloc "no alloc"
 graph parse-json "parse json"
 graph set-timeout "set timeout"
 graph static-file "static file"
 graph string-alloc "string alloc"
-
-
-
