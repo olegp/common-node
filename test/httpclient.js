@@ -15,6 +15,7 @@ exports.testGet = function() {
     method:"GET",
     url:"http://google.com/"
   }).finish();
+  response.body.close();
   assert.strictEqual(response.status, 301);
 };
 
@@ -23,6 +24,7 @@ exports.testPut = function() {
     method:"PUT",
     url:"http://google.com/"
   }).finish();
+  response.body.close();
   assert.strictEqual(response.status, 405);
 };
 
@@ -31,10 +33,8 @@ exports.testHttpsGet = function() {
     method:"GET",
     url:"https://google.com/"
   }).finish();
+  response.body.close();
   assert.strictEqual(response.status, 301);
-};
-
-exports.testPutBody = function() {
 };
 
 if (require.main === module) {
