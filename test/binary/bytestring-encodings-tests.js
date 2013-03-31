@@ -16,14 +16,22 @@ exports.testByteStringConstructorEncodings = function() {
 
 exports.testToByteArrayEncodings = function() {
   var testString = "I ♥ JS";
-  assert.strictEqual(testString, new ByteString(testString, "UTF-8")
-    .toByteArray("UTF-8", "UTF-16").decodeToString("UTF-16"));
+  var b = testString.toByteString("UTF-16");
+  var c = b.decodeToString("UTF-8");
+  assert.ok(typeof c === 'string');
+  assert.notStrictEqual(testString, c);
+  var d = c.toByteArray("UTF-8");
+  assert.strictEqual(testString, d.decodeToString("UTF-16"));
 };
 
 exports.testToByteStringEncodings = function() {
   var testString = "I ♥ JS";
-  assert.strictEqual(testString, new ByteString(testString, "UTF-8")
-    .toByteString("UTF-8", "UTF-16").decodeToString("UTF-16"));
+  var b = testString.toByteString("UTF-16");
+  var c = b.decodeToString("UTF-8");
+  assert.ok(typeof c === 'string');
+  assert.notStrictEqual(testString, c);
+  var d = c.toByteString("UTF-8");
+  assert.strictEqual(testString, d.decodeToString("UTF-16"));
 };
 
 exports.testToArrayEncodings = function() {
