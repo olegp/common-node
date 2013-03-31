@@ -2,10 +2,11 @@ var assert = require('../../lib/assert');
 var fs = require('../../lib/fs-base');
 var separator = fs.separator;
 
-var tests;
-tests = [['', ''], ['.', ''], ['./', ''], ['../', '../'], ['../a', '../a'],
+var tests = [
+  ['', ''], ['.', ''], ['./', ''], ['../', '../'], ['../a', '../a'],
   ['../a/', '../a/'], ['a/..', ''], ['a/../', ''], ['a/../b', 'b'],
-  ['a/../b/', 'b/'], ];
+  ['a/../b/', 'b/']
+];
 
 tests.forEach(function(args) {
   exports['test "' + args[0] + '"'] = function() {
