@@ -13,7 +13,7 @@ tests.forEach(function(dirs) {
 
 tests.forEach(function(dirs) {
   exports['testPath "' + dirs[0] + '"'] = function() {
-    var actual = new fs.Path(dirs[0]).directory();
+    var actual = fs.path(dirs[0]).directory();
     assert.strictEqual(dirs[1], actual.toString());
   };
 });
