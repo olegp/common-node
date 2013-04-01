@@ -5,7 +5,7 @@ exports['Binary'] = require('./binary/all');
 exports['IO'] = require('./io');
 exports['Filesystem'] = require('./fs-base/all');
 // exports['JSGI'] = require('./jsgi');
-exports['HTTP Client'] = require('./httpclient');
+exports['HTTP'] = require('./http');
 exports['Subprocess'] = require('./subprocess');
 
 if (require.main === module) {
