@@ -20,6 +20,15 @@ require("../lib/httpserver").main(function(request) {
 
 var app;
 
+function checkHeaders(original, response) {
+  for (var key in original) {
+    var h1 = Array.isArray(original[key]) ? original[key] : original[key].split(', ');
+    key = key.toLowerCase();
+    var h2 = Array.isArray(response[key]) ? response[key] : response[key].split(', ');
+    assert.deepEqual(h1, h2);
+  }
+}
+
 exports.testRead = function() {
   assert.throws(function() {
     new HttpClient({
@@ -35,11 +44,20 @@ exports.testGet = function() {
   var content = "Hello\nWorld!";
   var headers = {
     'Content-Type':'text/plain',
-    'Cache-Control':'max-age=42, must-revalidate'
+    'Cache-Control':'max-age=42, must-revalidate, private'
   };
   app = function(request) {
+    var status = code;
+    if (request.method !== method.toUpperCase()) {
+      status = 599;
+    }
+    try {
+      checkHeaders(headers, request.headers);
+    } catch (e) {
+      status = 598;
+    }
     return {
-      status:request.method === method.toUpperCase() ? code : 503,
+      status:status,
       headers:headers,
       body:[content]
     };
@@ -47,12 +65,13 @@ exports.testGet = function() {
 
   var response = new HttpClient({
     method:method,
-    url:"http://localhost:8080/"
+    url:"http://localhost:8080/",
+    headers:headers
   }).finish();
+  assert.notStrictEqual(599, response.status, 'request method mismatch');
+  assert.notStrictEqual(598, response.status, 'request header mismatch');
   assert.strictEqual(code, response.status);
-  for (var key in headers) {
-    assert.strictEqual(headers[key], response.headers[key.toLowerCase()]);
-  }
+  checkHeaders(headers, response.headers);
   assert.strictEqual(content, response.body.read().decodeToString());
   response.body.close();
 };
@@ -63,11 +82,20 @@ exports.testPost = function() {
   var content = "Hello\nWorld!";
   var headers = {
     'Content-Type':'text/plain;charset=utf-16',
-    'Cache-Control':'max-age=42, must-revalidate'
+    'Cache-Control':['max-age=42', 'must-revalidate', 'private']
   };
   app = function(request) {
+    var status = code;
+    if (request.method !== method.toUpperCase()) {
+      status = 599;
+    }
+    try {
+      checkHeaders(headers, request.headers);
+    } catch (e) {
+      status = 598;
+    }
     return {
-      status:request.method === method.toUpperCase() ? code : 503,
+      status:status,
       headers:headers,
       body:[content]
     };
@@ -75,12 +103,13 @@ exports.testPost = function() {
 
   var response = new HttpClient({
     method:method,
-    url:"http://localhost:8080/"
+    url:"http://localhost:8080/",
+    headers:headers
   }).connect().read();
+  assert.notStrictEqual(599, response.status, 'request method mismatch');
+  assert.notStrictEqual(598, response.status, 'request header mismatch');
   assert.strictEqual(code, response.status);
-  for (var key in headers) {
-    assert.strictEqual(headers[key], response.headers[key.toLowerCase()]);
-  }
+  checkHeaders(headers, response.headers);
   assert.strictEqual(content, response.body.read().decodeToString('UTF-16'));
   response.body.close();
 };
@@ -89,12 +118,20 @@ exports.testPut = function() {
   var code = 409;
   var method = "put";
   var headers = {
-    'Content-Type':'text/plain',
-    'Cache-Control':'max-age=42, must-revalidate'
+    'Content-Type':'text/plain'
   };
   app = function(request) {
+    var status = code;
+    if (request.method !== method.toUpperCase()) {
+      status = 599;
+    }
+    try {
+      checkHeaders(headers, request.headers);
+    } catch (e) {
+      status = 598;
+    }
     return {
-      status:request.method === method.toUpperCase() ? code : 503,
+      status:status,
       headers:headers,
       body:getStream('./lib/assert.js')
     };
@@ -102,12 +139,13 @@ exports.testPut = function() {
 
   var response = new HttpClient({
     method:method,
-    url:"http://localhost:8080/"
+    url:"http://localhost:8080/",
+    headers:headers
   }).connect().read();
+  assert.notStrictEqual(599, response.status, 'request method mismatch');
+  assert.notStrictEqual(598, response.status, 'request header mismatch');
   assert.strictEqual(code, response.status);
-  for (var key in headers) {
-    assert.strictEqual(headers[key], response.headers[key.toLowerCase()]);
-  }
+  checkHeaders(headers, response.headers);
   assert.strictEqual(resource.toString(), response.body.read().decodeToString());
   response.body.close();
 };
