@@ -62,14 +62,14 @@ exports.testPost = function() {
   var method = "POST";
   var content = "Hello\nWorld!";
   var headers = {
-    'Content-Type':'text/plain',
+    'Content-Type':'text/plain;charset=utf-16',
     'Cache-Control':'max-age=42, must-revalidate'
   };
   app = function(request) {
     return {
       status:request.method === method.toUpperCase() ? code : 503,
       headers:headers,
-      body:[new ByteString(content)]
+      body:[content]
     };
   };
 
@@ -81,14 +81,13 @@ exports.testPost = function() {
   for (var key in headers) {
     assert.strictEqual(headers[key], response.headers[key.toLowerCase()]);
   }
-  assert.strictEqual(content, response.body.read().decodeToString());
+  assert.strictEqual(content, response.body.read().decodeToString('UTF-16'));
   response.body.close();
 };
 
 exports.testPut = function() {
   var code = 409;
   var method = "put";
-  var content = "Hello\nWorld!";
   var headers = {
     'Content-Type':'text/plain',
     'Cache-Control':'max-age=42, must-revalidate'
