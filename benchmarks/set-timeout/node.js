@@ -4,5 +4,5 @@ http.createServer(function(req, res) {
   setTimeout(function() {
     res.writeHead(200);
     res.end();
-  }, 100);
+  }, 20);
 }).listen(8080);
