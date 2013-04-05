@@ -61,6 +61,5 @@ bm file-read
 bm file-stream
 bm hello-world
 bm no-alloc
-bm parse-json
 bm set-timeout
 bm string-alloc

@@ -1,9 +1,11 @@
-var openRaw = require('fs-base').openRaw;
+var fs = require('fs-base');
+var ByteArray = require('binary').ByteArray;
 
+fs.write('test.dat', new ByteArray(128 * 1024, false));
 exports.app = function() {
   return {
     status:200,
     headers:{'Content-Type':'text/plain; charset=utf-8'},
-    body:openRaw('../README.md')
+    body:fs.openRaw('test.dat')
   };
 };

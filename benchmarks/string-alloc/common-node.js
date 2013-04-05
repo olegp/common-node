@@ -1,18 +1,16 @@
 var ByteArray = require('binary').ByteArray;
 
-var n = 1024;
+var n = 128 * 1024;
 var b = new ByteArray(n);
-for( var i = 0; i < n; i++)
-	b[i] = 100;
-
+for (var i = 0; i < n; i++) {
+  b[i] = Math.floor(32 + (127 - 32) * Math.random());
+}
 exports.app = function(request) {
-	for( var i = 1; i <= 50; i++)
-		b.decodeToString("ascii");
-	return {
-		status: 200,
-		headers: {
-			"Content-Type": "text/plain"
-		},
-		body: [b]
-	};
+  return {
+    status:200,
+    headers:{
+      "Content-Type":"text/plain"
+    },
+    body:[b.decodeToString("ascii")]
+  };
 };
