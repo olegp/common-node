@@ -22,9 +22,11 @@ var app;
 
 function checkHeaders(original, response) {
   for (var key in original) {
-    var h1 = Array.isArray(original[key]) ? original[key] : original[key].split(', ');
-    key = key.toLowerCase();
-    var h2 = Array.isArray(response[key]) ? response[key] : response[key].split(', ');
+    var h1 = original[key];
+    if (!Array.isArray(h1) && ~h1.indexOf(', ')) {
+      h1 = h1.split(', ');
+    }
+    var h2 = response[key.toLowerCase()];
     assert.deepEqual(h1, h2);
   }
 }
