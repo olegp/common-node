@@ -23,7 +23,7 @@ var app;
 function checkHeaders(original, response) {
   for (var key in original) {
     var h1 = original[key];
-    if (!Array.isArray(h1) && ~h1.indexOf(', ')) {
+    if (!Array.isArray(h1)) {
       h1 = h1.split(', ');
     }
     var h2 = response[key.toLowerCase()];
