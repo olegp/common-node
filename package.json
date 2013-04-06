@@ -4,7 +4,7 @@
     "commonjs"
   ],
   "description":"Synchronous CommonJS compatibility layer using node-fibers",
-  "version":"0.10.1",
+  "version":"0.10.2",
   "author":{
     "name":"Oleg Podsechin",
     "email":"oleg@ionsquare.com"
