@@ -39,8 +39,17 @@ exports.testRead = function() {
 exports.testWrite = test.fs(1, function(file) {
   fs.write(file, new ByteString('test'));
   var resource = getContents(file);
-
   assert.strictEqual('test', resource);
+
+  fs.write(file, 'test');
+  var resource = getContents(file);
+  assert.strictEqual('test', resource);
+
+  fs.write(file, '');
+  fs.write(file, new ByteString('test'), {append:true});
+  fs.write(file, 'test', {append:true});
+  var resource = getContents(file);
+  assert.strictEqual('testtest', resource);
 });
 
 if (require.main === module) {
