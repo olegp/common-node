@@ -31,6 +31,71 @@ function checkHeaders(original, response) {
   }
 }
 
+exports.testWrite = function() {
+  var data = 'Hello\nWorld!'.toByteString();
+  var headers = {
+    'Content-Type':'text/plain',
+    'Cache-Control':'max-age=42, must-revalidate, private'
+  };
+  var headers2 = {
+    'Content-Type':'text/plain',
+    'Content-Length':47,
+    'Cache-Control':'max-age=42, must-revalidate, private'
+  };
+
+  assert.throws(function() {
+    var request = new HttpClient({
+      method:"GET",
+      url:"http://localhost:8080/",
+      body:data
+    });
+    request.write(data);
+  });
+  assert.throws(function() {
+    var request = new HttpClient({
+      method:"GET",
+      url:"http://localhost:8080/",
+      headers:headers,
+      body:data
+    });
+    request.write(data);
+  });
+  assert.throws(function() {
+    var request = new HttpClient({
+      method:"GET",
+      url:"http://localhost:8080/",
+      headers:headers2,
+      body:data
+    });
+    request.write(data);
+  });
+
+  var request = new HttpClient({
+    method:"GET",
+    url:"http://localhost:8080/",
+    body:[]
+  });
+  request.write(data);
+  assert.ok(!request._headers.hasOwnProperty('Content-Length'));
+  request = new HttpClient({
+    method:"GET",
+    url:"http://localhost:8080/",
+    headers:headers,
+    body:[]
+  });
+  request.write(data);
+  assert.ok(!request._headers.hasOwnProperty('Content-Length'));
+
+  request = new HttpClient({
+    method:"GET",
+    url:"http://localhost:8080/",
+    headers:headers2,
+    body:[]
+  });
+  request.write(data);
+  assert.strictEqual(request._headers['Content-Length'], 47 + data.length);
+};
+
 exports.testRead = function() {
   assert.throws(function() {
     new HttpClient({
