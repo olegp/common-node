@@ -31,6 +31,28 @@ function checkHeaders(original, response) {
   }
 }
 
+exports.testSetHeader = function() {
+  var headers = {
+    'Content-Type':'text/plain',
+    'Cache-Control':['max-age=42', 'must-revalidate', 'private']
+  };
+  var request = new HttpClient({
+    method:"GET",
+    url:"http://localhost:8080/",
+    headers:headers
+  });
+
+  var expected = {};
+  for (var key in headers) {
+    var value = headers[key];
+    var newKey = key.toLowerCase();
+    var newValue = Array.isArray(value) ? value.concat('changed') : value + ', changed';
+    request.setHeader(newKey, newValue);
+    expected[newKey] = newValue;
+  }
+  assert.deepEqual(expected, request._headers);
+};
+
 exports.testWrite = function() {
   var data = 'Hello\nWorld!'.toByteString();
   var headers = {
