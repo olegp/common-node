@@ -9,6 +9,8 @@ proposals on top of [Node.js](http://nodejs.org) using
 * mix & match synchronous/asynchronous styles and use the best tool for the job by writing maintainable business logic in a synchronous manner
 * write concise, legible shell scripts
 
+For an example of a production app using Common Node, check out [StartHQ](https://starthq.com).
+
 If you have a spare 20 minutes, you can also check out [this presentation](http://www.slideshare.net/olegp/server-side-javascript-going-all-the-way) (audio included). 
 If you have any questions about Common Node, or [`mongo-sync`](https://github.com/olegp/mongo-sync), [`stick`](https://github.com/olegp/stick) and other libraries built on top of it, please post them to the [Common Node mailing list](https://groups.google.com/forum/#!forum/common-node) or IRC, channel [#common-node](irc://irc.freenode.net/common-node) on Freenode. 
 
