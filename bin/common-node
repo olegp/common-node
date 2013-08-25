@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 process.argv.shift();
+process.execPath = 'common-node';
 require('../lib/run')();
 
