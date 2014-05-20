@@ -164,6 +164,22 @@ exports.testGet = function() {
   checkHeaders(headers, response.headers);
   assert.strictEqual(content, response.body.read().decodeToString());
   response.body.close();
+
+  var headers2 = JSON.parse(JSON.stringify(headers));
+  headers2['Accept-Encoding'] = 'gzip';
+  var headers3 = JSON.parse(JSON.stringify(headers));
+  headers3['Content-Encoding'] = 'gzip';
+  var response = new HttpClient({
+    method:method,
+    url:"http://localhost:8080/",
+    headers:headers2
+  }).finish();
+  assert.notStrictEqual(599, response.status, 'request method mismatch');
+  assert.notStrictEqual(598, response.status, 'request header mismatch');
+  assert.strictEqual(code, response.status);
+  checkHeaders(headers3, response.headers);
+  assert.strictEqual(content, response.body.read().decodeToString());
+  response.body.close();
 };
 
 exports.testPost = function() {
