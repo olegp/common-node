@@ -33,6 +33,7 @@ function checkHeaders(original, response) {
 
 exports.testSetHeader = function() {
   var headers = {
+    'Accept-Encoding':'gzip',
     'Content-Type':'text/plain',
     'Cache-Control':['max-age=42', 'must-revalidate', 'private']
   };
@@ -242,10 +243,10 @@ exports.testPut = function() {
 exports.testHttpsGet = function() {
   var response = new HttpClient({
     method:"GET",
-    url:"https://google.com/"
+    url:"https://github.com/"
   }).finish();
   response.body.close();
-  assert.strictEqual(response.status, 301);
+  assert.strictEqual(response.status, 200);
 };
 
 if (require.main === module) {
