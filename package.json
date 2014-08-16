@@ -29,6 +29,9 @@
   },
   "homepage":"http://github.com/olegp/common-node/",
   "main":"./lib/all.js",
+  "scripts": {
+    "test": "node test/all.js"
+  },
   "bin":{
     "common-node":"./bin/common-node"
   },
