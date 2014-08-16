@@ -88,6 +88,8 @@ ringo-doc -n "Common Node" -s ./lib -d ./doc --file-urls
 
 ### Tests
 
+[![Build Status](https://travis-ci.org/olegp/common-node.svg?branch=master)](https://travis-ci.org/olegp/common-node)
+
 To run the unit tests run:
 
 
