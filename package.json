@@ -1,50 +1,50 @@
 {
-  "name": "common-node",
-  "keywords": [
+  "name":"common-node",
+  "keywords":[
     "commonjs"
   ],
-  "description": "Synchronous CommonJS compatibility layer using node-fibers",
-  "version": "0.10.16",
-  "author": {
-    "name": "Oleg Podsechin",
-    "email": "oleg@ionsquare.com"
+  "description":"Synchronous CommonJS compatibility layer using node-fibers",
+  "version":"0.10.17",
+  "author":{
+    "name":"Oleg Podsechin",
+    "email":"oleg@ionsquare.com"
   },
-  "contributors": [
+  "contributors":[
     {
-      "name": "Alex Lam",
-      "email": "alex.lam@starthq.com"
+      "name":"Alex Lam",
+      "email":"alex.lam@nikao-tech.com"
     },
     {
-      "name": "Oleg Podsechin",
-      "email": "oleg@ionsquare.com"
+      "name":"Oleg Podsechin",
+      "email":"oleg@ionsquare.com"
     }
   ],
-  "directories": {
-    "lib": "./lib",
-    "example": "./examples"
+  "directories":{
+    "lib":"./lib",
+    "example":"./examples"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/olegp/common-node.git"
+  "repository":{
+    "type":"git",
+    "url":"git://github.com/olegp/common-node.git"
   },
-  "homepage": "http://github.com/olegp/common-node/",
-  "main": "./lib/all.js",
-  "scripts": {
-    "test": "node test/all.js"
+  "homepage":"http://github.com/olegp/common-node/",
+  "main":"./lib/all.js",
+  "scripts":{
+    "test":"node test/all.js"
   },
-  "bin": {
-    "common-node": "./bin/common-node"
+  "bin":{
+    "common-node":"./bin/common-node"
   },
-  "engines": {
-    "node": ">=0.10.0"
+  "engines":{
+    "node":">=0.10.0"
   },
-  "dependencies": {
-    "fibers": ">=1.0.0"
+  "dependencies":{
+    "fibers":">=1.0.0"
   },
-  "preferGlobal": true,
-  "licenses": [
+  "preferGlobal":true,
+  "licenses":[
     {
-      "type": "MIT"
+      "type":"MIT"
     }
   ]
 }
